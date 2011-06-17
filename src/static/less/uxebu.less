@@ -1,0 +1,117 @@
+/* ====== Base ====== */
+body {
+	color: @text-base-color;
+	font-family: DINPro, sans-serif;
+	font-size: 112.5%;
+	font-weight: 200;
+	line-height: 1.5;
+	text-rendering: optimizeLegibility;
+	background: #131313;
+}
+
+/* ====== Elements ====== */
+h1,h2,h3,h4,h5,h6{
+	font-family: DINPro;
+	font-weight: 600;
+}
+code{font-family:Inconsolata;}
+
+/* ====== Button ====== */
+.button, .button:visited {
+	.border-radius(4px);
+	.background-gradient(@button-color-1, @button-color-2);
+	.box-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
+
+	color: rgba(255, 255, 255, 1);
+	font-family: DINPro, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1;
+	.phl;
+	.pvm;
+	text-rendering: optimizeLegibility;
+	text-shadow: rgba(0, 0, 0, 0.8) 0px -1px 0px;
+}
+
+.button:active {
+	.box-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
+	.background-gradient(
+		darken(@button-color-1, 10%),
+		darken(@button-color-2, 10%)
+	);
+	.background-clip;
+	color: rgba(255, 255, 255, 0.8);
+	text-shadow: none;
+}
+
+.button:focus {
+	outline: auto 5px @button-color-1;
+	outline-offset: -2px;
+}
+
+.button::-moz-focus-inner {
+	border: none;
+}
+
+/* ====== Navigation ====== */
+.nav .list-el a{padding:3px;color:#AAA;margin-top:1px;width:150px;}
+.nav .list-el-hz a{margin:0;margin-right:1px;}
+
+/* ====== Modules ====== */
+/* from oocss: 2011-02-03 */
+.mod-skin1 {
+	.border-radius(6px);
+	.box-shadow(0px 0px 15px #000);
+	background: url(../img/stripe.png) repeat left top;
+	margin-left:1px; /* fixes spacing for ff, when box-shadow is used */
+	margin-top: 2px;
+	margin-right: 2px;
+	.mbx;
+}
+
+/* dialog module */
+.dialog-container {
+	background: rgba(0, 0, 0, 0.3);
+	display: none;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+
+	.dialog {
+		margin: 100px auto 0 auto;
+		width: 600px;
+	}
+
+	.close-button {
+		background: url("../img/closer.png") no-repeat right;
+		float: right;
+		margin: @large-margin;
+		padding-right: 16px; /* No variable used since closer image has custom width/height */
+		font-size: 14px;
+		cursor: pointer;
+		line-height: 1;
+	}
+}
+
+.container {
+	.pvx;
+}
+
+.container-alt {
+}
+
+/* input elements font */
+input, textarea {
+	font-family: DINPro;
+	font-size: 18px;
+	font-weight: 200;
+}
+
+.font-small {
+	font-size: .8em;
+}
+
+.uni-form fieldset legend{margin-bottom:10px;color:#AAA;font-weight:400;}
+.uni-form .form-hint{font-size:80%;color:#AAA;}
+.uni-form label{font-weight:400;color:#AAA;}

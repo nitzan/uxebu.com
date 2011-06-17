@@ -1,0 +1,86 @@
+/* ====== Form Elements (adapted from http://sprawsm.com/uni-form/) ======= */
+.uni-form fieldset{}
+.uni-form fieldset legend{display:inline-block;font-size:100%;margin-bottom:5px;padding:4px 0;text-indent:10px;width:100%;}
+.uni-form fieldset legend{*margin-left:-17px;}
+
+/*.uni-form .ctrl-holder{.clear-safe;}*/
+.uni-form .button-holder, .uni-form .ctrl-holder{margin:@large-margin;}
+
+.uni-form:after,.ctrl-holder:after,.inline-label:after,.button-holder:after{.clear-safe-after}
+.uni-form label,.uni-form .label{display:block;margin:0;margin-top:0.5em;}
+.uni-form .text-input, .uni-form .file-upload, .uni-form .select-input, .uni-form select, .uni-form textarea{width:60%;margin:0;}
+.uni-form .form-hint{width:80%;margin:0;clear:none;}
+
+/* Position the elements inside combo boxes (multiple inputs/selects/checkboxes/radio buttons per unit) */
+.uni-form ul{width:60%;margin:0;padding:0;}
+
+.uni-form ul.alternate li{float:left;width:30%;margin-right:3%;}
+.uni-form ul.alternate li label{float:none;display:block;width:98%;}
+.uni-form ul .text-input,.uni-form ul .select-input,.uni-form ul select,.uni-form ul.alternate .text-input,.uni-form ul.alternate .select-input,.uni-form ul.alternate select{width:93%;margin-top:.5em;display:block;float:none;}
+
+.uni-form .extra-small {width:20% !important;}
+.uni-form .small {width:30%;}
+.uni-form .medium{width:45%;}
+.uni-form .large {width:100%;}
+
+.uni-form .error-container {
+	.font-small;
+	color: #AE2C96;
+}
+
+.uni-form .error ul {
+	width: auto;
+	float: none;
+	list-style: none;
+	border: 1px solid #AE2C96;
+	color: #AE2C96;
+	background: #f2e3ef;
+	.pam;
+	.mal;
+}
+
+.uni-form .error li {
+	.man;
+}
+
+.uni-form .error-container p {
+	.man;
+}
+
+.uni-form .full-width .textinput,
+.uni-form .full-width .passwordinput {
+	width: 100%;
+}
+
+/* inline-labels */
+.uni-form .inline-labels2 label {
+	display: inline;
+}
+.uni-form .inline-labels label,.uni-form .inline-labels .label{float:left;margin:.3em 2% 0 0;padding:0;line-height:1;position:relative;width:32%;}
+.uni-form .inline-labels .text-input,.uni-form .inline-labels .file-upload,.uni-form .inline-labels .select-input,.uni-form .inline-labels select,.uni-form .inline-labels textarea{float:left;width:61%;}
+.uni-form .inline-labels .form-hint{clear:both;float:none;width:auto;margin-left:34%;position:static;}
+.uni-form .inline-labels ul{float:left;width:66%;}
+.uni-form .inline-labels ul li{margin:.5em 0;}
+.uni-form .inline-labels ul li label{float:none;display:block;width:100%;}
+.uni-form .inline-labels ul.alternate li{margin-right:3%;margin-top:.25em;}
+.uni-form .inline-labels ul li label .text-input,.uni-form .inline-labels ul li label textarea,.uni-form .inline-labels ul li label select{float:none;display:block;width:93%;}
+.uni-form .inline-labels .no-label ul{margin-left:34%;/* Match to width of label + gap to field */}
+
+/* Mobile */
+@media handheld, only screen and (max-width: 767px) {
+	
+	.uni-form .form-hint, .uni-form .text-input, .uni-form .file-upload, .uni-form .select-input, .uni-form select, .uni-form textarea, .uni-form ul,
+	.uni-form .inline-labels .text-input, .uni-form .inline-labels .file-upload, .uni-form .inline-labels .select-input, .uni-form .inline-labels select, .uni-form .inline-labels textarea,
+	.uni-form .inline-labels ul li label .text-input, .uni-form .inline-labels ul li label textarea, .uni-form .inline-labels ul li label select, .uni-form .inline-labels label, .uni-form .inline-labels .label, .uni-form .inline-labels .form-hint, .uni-form .inline-labels ul, .uni-form .inline-labels .no-label ul {
+		display:block;
+		float:none;
+		width:85%;
+		margin-left:0;
+		position:relative;
+	}
+
+	.uni-form ul .text-input, .uni-form ul .select-input, .uni-form ul select, .uni-form ul.alternate .text-input, .uni-form ul.alternate .select-input, .uni-form ul.alternate select,
+	.uni-form .inline-labels ul li label .text-input, .uni-form .inline-labels ul li label textarea, .uni-form .inline-labels ul li label select {
+		width:100%;
+	}
+}
