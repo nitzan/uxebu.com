@@ -6,21 +6,23 @@ body {
 	font-weight: 200;
 	line-height: 1.5;
 	text-rendering: optimizeLegibility;
-	background: red;
+	background: url("../img/bg_nebula.jpg") repeat fixed center top #191919;
 }
 
 /* ====== Elements ====== */
 h1,h2,h3,h4,h5,h6{
 	font-family: DINPro;
-	font-weight: 600;
+	font-weight: 400;
 }
+.lucent{background: url("../img/bg_trans.png") repeat center top;padding:@large-padding;}
+.upper{text-transform:uppercase;}
 code{font-family:Inconsolata;}
 
 /* ====== Button ====== */
 .button, .button:visited {
 	.border-radius(4px);
 	.background-gradient(@button-color-1, @button-color-2);
-	.box-shadow(0px 0px 2px rgba(0, 0, 0, 0.5), 2px, #000000);
+	.box-shadow(0px 0px 2px rgba(0, 0, 0, 0.5), 2, #000000);
 
 	color: rgba(255, 255, 255, 1);
 	font-family: DINPro, sans-serif;
@@ -34,7 +36,7 @@ code{font-family:Inconsolata;}
 }
 
 .button:active {
-	.box-shadow(0px 0px 2px rgba(0, 0, 0, 0.5), 2px, #000000);
+	.box-shadow(0px 0px 2px rgba(0, 0, 0, 0.5), 2, #000000);
 	.background-gradient(
 		darken(@button-color-1, 10%),
 		darken(@button-color-2, 10%)
@@ -61,12 +63,24 @@ code{font-family:Inconsolata;}
 /* from oocss: 2011-02-03 */
 .mod-skin1 {
 	.border-radius(6px);
-	.box-shadow(0px 0px 15px #000, 15px, #000000);
-	background: url(../img/stripe.png) repeat left top;
-	margin-left:1px; /* fixes spacing for ff, when box-shadow is used */
+	.box-shadow(0px 0px 15px #000, 15, #000000);
+	background: url(../img/bg_stripe.png) repeat left top;
 	margin-top: 2px;
 	margin-right: 2px;
 	.mbx;
+	.mhl;
+}
+
+.mod-skin2 {
+	.border-radius(6px);
+	background: url(../img/bg_trans_white.png);
+	.box-shadow(0px 0px 5px #000, 5, #000000);
+	.mbx;
+	.mhl;
+	
+	* {
+		color:#000;
+	}
 }
 
 /* dialog module */
