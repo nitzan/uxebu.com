@@ -38,6 +38,7 @@
 	-moz-border-radius-bottomright: @radius;
 	-webkit-border-bottom-right-radius: @radius;
 	border-radius-bottomright: @radius;
+	.background-clip; /*fixes bleeding webkit */
 }
 
 .border-radius (@radius) {
@@ -45,12 +46,15 @@
 	-moz-border-radius: @radius;
 	-webkit-border-radius: @radius;
 	border-radius: @radius;
+	-webkit-background-clip: padding-box;
+	.background-clip; /*fixes bleeding in webkit */
 }
 
-.box-shadow (@value) {
+.box-shadow (@value, @strength, @color) {
 	-moz-box-shadow: @value;
 	-webkit-box-shadow: @value;
 	box-shadow: @value;
+	filter: ~`"progid:DXImageTransform.Microsoft.Shadow(color=" + "@{color}" + ",strength=" + "@{strength}" + ")"`;
 }
 
 .border (@color) {
