@@ -6,7 +6,7 @@ body {
 	font-weight: 200;
 	line-height: 1.5;
 	text-rendering: optimizeLegibility;
-	background: #343434 url("../img/bg_nebula.jpg") repeat fixed center top;
+	background: #250802 url("../img/bg_orange.jpg") no-repeat center top;
 }
 
 /* ====== Elements ====== */
@@ -203,3 +203,39 @@ input, textarea {
 	background: @link-color-alt;
 	.box-shadow (0 0 3px @link-color-alt, 3, @link-color-alt);
 }
+
+a.tag, .tag{
+	.border-radius(4px);
+	color:#fff;background-color:#000;
+	display:inline-block;
+	padding:2px 5px;
+	margin-right:0.2em;
+	margin-bottom:0.5em;
+	text-decoration:none;
+	font-size:0.75em;
+	cursor:pointer;
+	
+}
+a.tag:hover, a.tag:focus, a.tag:visited,
+.tag:hover, .tag:focus, .tag:visited{
+	background:#444;
+}
+
+.sprite{ background: url(../img/icons-sprite.png) no-repeat top left; }
+.sprite-arrow_blue{ background-position: 0 0; width: 33px; height: 34px; } 
+.sprite-arrow_down{ background-position: 0 -54px; width: 38px; height: 39px; } 
+.sprite-arrow_up{ background-position: 0 -113px; width: 38px; height: 39px; } 
+.sprite-arrow_yellow{ background-position: 0 -172px; width: 33px; height: 34px; } 
+.sprite-banner_human{ background-position: 0 -226px; width: 129px; height: 129px; } 
+.sprite-box_yellow{ background-position: 0 -375px; width: 38px; height: 38px; } 
+.sprite-dropdown_arrow{ background-position: 0 -433px; width: 31px; height: 31px; } 
+.sprite-dropdown_arrow_active{ background-position: 0 -484px; width: 31px; height: 31px; } 
+.sprite-email{ background-position: 0 -535px; width: 32px; height: 25px; } 
+.sprite-flag_blue{ background-position: 0 -580px; width: 54px; height: 64px; } 
+.sprite-flag_yellow{ background-position: 0 -664px; width: 55px; height: 64px; } 
+.sprite-github{ background-position: 0 -748px; width: 31px; height: 32px; } 
+.sprite-linkedin{ background-position: 0 -800px; width: 32px; height: 32px; } 
+.sprite-loupe{ background-position: 0 -852px; width: 22px; height: 25px; } 
+.sprite-star_blue{ background-position: 0 -897px; width: 38px; height: 36px; } 
+.sprite-twitter{ background-position: 0 -953px; width: 36px; height: 33px; } 
+.sprite-wedge{ background-position: 0 -1006px; width: 21px; height: 10px; }
