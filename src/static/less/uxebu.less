@@ -6,13 +6,14 @@ body {
 	font-weight: 200;
 	line-height: 1.5;
 	text-rendering: optimizeLegibility;
-	background: #343434; /* url("../img/bg_nebula.jpg") repeat fixed center top  */
+	background: #343434 url("../img/bg_nebula.jpg") repeat fixed center top;
 }
 
 /* ====== Elements ====== */
 h1,h2,h3,h4,h5,h6{
 	font-family: DINPro;
 	font-weight: 300;
+	text-shadow: -1px -1px 5px;
 }
 .lucent{background: url("../img/bg_trans.png") repeat center top;padding:@large-padding;}
 .upper{text-transform:uppercase;}
@@ -162,3 +163,41 @@ input, textarea {
 .uni-form fieldset legend{margin-bottom:10px;color:#AAA;font-weight:400;}
 .uni-form .form-hint{font-size:80%;color:#AAA;}
 .uni-form label{font-weight:400;}
+
+.geek {
+	border-color:@link-color;
+	.box-shadow(0 0 3px @link-color, 3, @link-color);
+}
+
+.business {
+	border-color:@link-color-alt;
+	.box-shadow (0 0 3px @link-color-alt, 3, @link-color-alt);
+}
+
+.line {
+	border-width:0;
+	box-shadow:none;
+	position:relative;
+	margin-bottom:1em;
+}
+
+.line:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 3px;
+	background: white;
+	position: absolute;
+	.box-shadow (0 0 3px #FFFFFF, 3, #FFFFFF);
+	margin-top:.3em;
+}
+
+.line.geek:after {
+	background: @link-color;
+	.box-shadow(0 0 3px @link-color, 3, @link-color);
+}
+
+.line.business:after {
+	background: @link-color-alt;
+	.box-shadow (0 0 3px @link-color-alt, 3, @link-color-alt);
+}

@@ -13,7 +13,6 @@
 		.style-head{
 			color:#FEF75F;
 			text-transform:uppercase;
-			text-shadow: 0 0 10px;
 		}
 		h2.style-head{
 			margin-top:0.5em;
@@ -54,9 +53,7 @@
 		</div>
 	</div>
 	<div class="container container-alt">
-		<div class="row">
-			<hr style="border-width:0 0 3px;border-color:#FEF75F;box-shadow:0 0 3px #FEF75F;">
-			<hr style="border-width:0 0 3px;border-color:#07B0FF;box-shadow:0 0 3px #07B0FF;">
+		<div class="row">	
 			<h2 id="basic" class="lucent upper">Basic styles</h2>
 			<div class="col-6">
 				<h3 class="style-head">Headings</h3>
@@ -66,6 +63,9 @@
 				<h4>&lt;h4&gt;Heading 4 / class="h4"&lt;/h4&gt;</h4>
 				<h5>&lt;h5&gt;Heading 5 / class="h5"&lt;/h5&gt;</h5>
 				<h6>&lt;h6&gt;Heading 6 / class="h6"&lt;/h6&gt;</h6>
+				<h2 class="line">&lt;h2 class="line"&gt;&lt;/h2&gt;</h2>
+				<h3 class="line geek">&lt;h3 class="line geek"&gt;&lt;/h3&gt;</h3>
+				<h4 class="line business">&lt;h4 class="line business"&gt;&lt;/h4&gt;</h4>
 				<h3 class="style-head">Other inline elements</h3>
 				<p>
 					<em>&lt;em&gt;Emphasis&lt;/em&gt;</em><br/>
@@ -103,6 +103,10 @@ function fucking(param1, param2) {
 				</pre>
 				<h3 class="style-head">&lt;hr/&gt;</h3>
 				<hr/>
+				<h3 class="style-head">&lt;hr class="geek"/&gt;</h3>
+				<hr class="geek"/>
+				<h3 class="style-head">&lt;hr class="business"/&gt;</h3>
+				<hr class="business"/>
 			</div>
 		</div>
 		<div class="row">
