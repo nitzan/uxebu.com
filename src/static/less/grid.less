@@ -1,5 +1,11 @@
 /* ====== CSS Grid (adapted from http://cssgrid.net/) ====== */
 .container {
+	_width: 1140px;
+	_text-align: left;
+}
+
+body {
+	_text-align: center;
 }
 
 .row {
@@ -12,6 +18,7 @@
 
 .col (@num) {
 	width: @num * (3.483% + 4.85%);
+	_overflow:hidden;
 }
 
 .col-center-normal {
