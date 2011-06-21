@@ -234,50 +234,13 @@ a.tag:hover, a.tag:focus, a.tag:visited,
 .sprite-flag_blue{ background-position: 0 -580px; width: 54px; height: 64px; } 
 .sprite-flag_yellow{ background-position: 0 -664px; width: 55px; height: 64px; } 
 .sprite-github{ background-position: 0 -748px; width: 31px; height: 32px; } 
-.sprite-linkedin{ background-position: 0 -800px; width: 32px; height: 32px; } 
-.sprite-loupe{ background-position: 0 -852px; width: 22px; height: 25px; } 
-.sprite-star_blue{ background-position: 0 -897px; width: 38px; height: 36px; } 
-.sprite-twitter{ background-position: 0 -953px; width: 36px; height: 33px; } 
-.sprite-wedge{ background-position: 0 -1006px; width: 21px; height: 10px; }
-
-.business-flag {
-	position:relative;
-}
-
-.business-flag:before {
-	content:"";
-	.sprite;
-	.sprite-flag_blue;
-	position:absolute;
-	right:20px;
-	top:-7px;
-}
-
-.geek-flag {
-	position:relative;
-}
-
-.geek-flag:before {
-	content:"";
-	.sprite;
-	.sprite-flag_yellow;
-	position:absolute;
-	right:20px;
-	top:-8px;
-}
-
-.banner-human {
-	position:relative;
-}
-
-.banner-human:before {
-	content:"";
-	.sprite;
-	.sprite-banner_human;
-	position:absolute;
-	right:-8px;
-	top:-8px;
-}
+.sprite-html5{ background-position: 0 -800px; width: 30px; height: 42px; } 
+.sprite-linkedin{ background-position: 0 -862px; width: 32px; height: 32px; } 
+.sprite-loupe{ background-position: 0 -914px; width: 22px; height: 25px; } 
+.sprite-marker{ background-position: 0 -959px; width: 14px; height: 22px; } 
+.sprite-star_blue{ background-position: 0 -1001px; width: 38px; height: 36px; } 
+.sprite-twitter{ background-position: 0 -1057px; width: 36px; height: 33px; } 
+.sprite-wedge{ background-position: 0 -1110px; width: 21px; height: 10px; } 
 
 .icon-before{content:"";.sprite;position:absolute;left:0;}
 .arrow-business{padding-left:33px; position:relative;}
@@ -296,6 +259,9 @@ a.tag:hover, a.tag:focus, a.tag:visited,
 .box-geek:before{.icon-before;.sprite-box_yellow;}
 .star-business{padding-left:38px;position:relative;}
 .star-business:before{.icon-before;.sprite-star_blue;}
+.marker{padding-left:14px;position:relative;}
+.marker:before{.icon-before;.sprite-marker;}
+
 .dropdown-arrow{padding-right:31px;position:relative;}
 .dropdown-arrow:before{.icon-before;.sprite-dropdown_arrow;right:0;left:auto;}
 .dropdown-arrow:hover{padding-right:31px;position:relative;}
@@ -305,3 +271,22 @@ a.tag:hover, a.tag:focus, a.tag:visited,
 .big-arrow-down:after{content:"";.sprite;.sprite-arrow_down;position:absolute;bottom:-39px;left:50%;margin-left:-19px;}
 .big-arrow-up{margin-top:39px;display:block;position:relative;}
 .big-arrow-up:after{content:"";.sprite;.sprite-arrow_up;position:absolute;top:-39px;left:50%;margin-left:-19px;}
+
+/* resetting padding for ie6/7 as they don't support :after/:before */
+.ie6, .ie7 {
+	.arrow-business, .arrow-geek,
+	.email, .github, .linkedin, 
+	.twitter, .box-geek,
+	.star-business {padding-left:0;}
+	.dropdown-arrow {padding-right:0;}
+	.big-arrow-down{margin-bottom:0;}
+	.big-arrow-up{margin-top:0;}
+}
+.business-flag {position:relative;}
+.business-flag:before {content:"";.sprite;.sprite-flag_blue;position:absolute;right:20px;top:-7px;}
+
+.geek-flag {position:relative;}
+.geek-flag:before {content:"";.sprite;.sprite-flag_yellow;position:absolute;right:20px;top:-8px;}
+
+.banner-human {position:relative;}
+.banner-human:before {content:"";.sprite;.sprite-banner_human;position:absolute;right:-8px;top:-8px;}
