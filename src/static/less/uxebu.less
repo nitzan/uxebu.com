@@ -221,6 +221,25 @@ a.tag:hover, a.tag:focus, a.tag:visited,
 	background:#444;
 }
 
+.sprite{ background: url(../img/icons_sprite.png) no-repeat top left; }
+.sprite-arrow_blue{ background-position: 0 0; width: 33px; height: 34px; } 
+.sprite-arrow_down{ background-position: 0 -54px; width: 38px; height: 39px; } 
+.sprite-arrow_up{ background-position: 0 -113px; width: 38px; height: 39px; } 
+.sprite-arrow_yellow{ background-position: 0 -172px; width: 33px; height: 34px; } 
+.sprite-banner_human{ background-position: 0 -226px; width: 129px; height: 129px; } 
+.sprite-box_yellow{ background-position: 0 -375px; width: 38px; height: 38px; } 
+.sprite-dropdown_arrow{ background-position: 0 -433px; width: 31px; height: 31px; } 
+.sprite-dropdown_arrow_active{ background-position: 0 -484px; width: 31px; height: 31px; } 
+.sprite-email{ background-position: 0 -535px; width: 32px; height: 25px; } 
+.sprite-flag_blue{ background-position: 0 -580px; width: 54px; height: 64px; } 
+.sprite-flag_yellow{ background-position: 0 -664px; width: 55px; height: 64px; } 
+.sprite-github{ background-position: 0 -748px; width: 31px; height: 32px; } 
+.sprite-linkedin{ background-position: 0 -800px; width: 32px; height: 32px; } 
+.sprite-loupe{ background-position: 0 -852px; width: 22px; height: 25px; } 
+.sprite-star_blue{ background-position: 0 -897px; width: 38px; height: 36px; } 
+.sprite-twitter{ background-position: 0 -953px; width: 36px; height: 33px; } 
+.sprite-wedge{ background-position: 0 -1006px; width: 21px; height: 10px; }
+
 .business-flag {
 	position:relative;
 }
@@ -260,21 +279,29 @@ a.tag:hover, a.tag:focus, a.tag:visited,
 	top:-8px;
 }
 
-.sprite{ background: url(../img/icons_sprite.png) no-repeat top left; }
-.sprite-arrow_blue{ background-position: 0 0; width: 33px; height: 34px; } 
-.sprite-arrow_down{ background-position: 0 -54px; width: 38px; height: 39px; } 
-.sprite-arrow_up{ background-position: 0 -113px; width: 38px; height: 39px; } 
-.sprite-arrow_yellow{ background-position: 0 -172px; width: 33px; height: 34px; } 
-.sprite-banner_human{ background-position: 0 -226px; width: 129px; height: 129px; } 
-.sprite-box_yellow{ background-position: 0 -375px; width: 38px; height: 38px; } 
-.sprite-dropdown_arrow{ background-position: 0 -433px; width: 31px; height: 31px; } 
-.sprite-dropdown_arrow_active{ background-position: 0 -484px; width: 31px; height: 31px; } 
-.sprite-email{ background-position: 0 -535px; width: 32px; height: 25px; } 
-.sprite-flag_blue{ background-position: 0 -580px; width: 54px; height: 64px; } 
-.sprite-flag_yellow{ background-position: 0 -664px; width: 55px; height: 64px; } 
-.sprite-github{ background-position: 0 -748px; width: 31px; height: 32px; } 
-.sprite-linkedin{ background-position: 0 -800px; width: 32px; height: 32px; } 
-.sprite-loupe{ background-position: 0 -852px; width: 22px; height: 25px; } 
-.sprite-star_blue{ background-position: 0 -897px; width: 38px; height: 36px; } 
-.sprite-twitter{ background-position: 0 -953px; width: 36px; height: 33px; } 
-.sprite-wedge{ background-position: 0 -1006px; width: 21px; height: 10px; }
+.icon-before{content:"";.sprite;position:absolute;left:0;}
+.arrow-business{padding-left:33px; position:relative;}
+.arrow-business:before{.icon-before;.sprite-arrow_blue;}
+.arrow-geek{padding-left:33px;position:relative;}
+.arrow-geek:before{.icon-before;.sprite-arrow_yellow;}
+.email{padding-left:32px;position:relative;}
+.email:before{.icon-before;.sprite-email;}
+.github{padding-left:31px;position:relative;}
+.github:before{.icon-before;.sprite-github;}
+.linkedin{padding-left:32px;position:relative;}
+.linkedin:before{.icon-before;.sprite-linkedin;}
+.twitter{padding-left:36px;position:relative;}
+.twitter:before{.icon-before;.sprite-twitter;}
+.box-geek{padding-left:38px;position:relative;}
+.box-geek:before{.icon-before;.sprite-box_yellow;}
+.star-business{padding-left:38px;position:relative;}
+.star-business:before{.icon-before;.sprite-star_blue;}
+.dropdown-arrow{padding-right:31px;position:relative;}
+.dropdown-arrow:before{.icon-before;.sprite-dropdown_arrow;right:0;left:auto;}
+.dropdown-arrow:hover{padding-right:31px;position:relative;}
+.dropdown-arrow:hover:before{.icon-before;.sprite-dropdown_arrow_active;right:0;left:auto;}
+
+.big-arrow-down{margin-bottom:39px;display:block;position:relative;}
+.big-arrow-down:after{content:"";.sprite;.sprite-arrow_down;position:absolute;bottom:-39px;left:50%;margin-left:-19px;}
+.big-arrow-up{margin-top:39px;display:block;position:relative;}
+.big-arrow-up:after{content:"";.sprite;.sprite-arrow_up;position:absolute;top:-39px;left:50%;margin-left:-19px;}
