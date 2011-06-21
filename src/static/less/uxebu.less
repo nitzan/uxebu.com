@@ -6,14 +6,14 @@ body {
 	font-weight: 200;
 	line-height: 1.5;
 	text-rendering: optimizeLegibility;
-	background: #250802 url("../img/bg_orange.jpg") no-repeat center top;
+	background: #250802 url("../img/bg_orange.jpg") no-repeat center top; /* #*/
 }
 
 /* ====== Elements ====== */
 h1,h2,h3,h4,h5,h6 {
 	font-family: DINPro;
 	font-weight: 300;
-	text-shadow: -1px -1px 5px;
+	text-shadow: -1px -1px 5px white;
 }
 pre {
 	margin:@large-margin;
@@ -178,7 +178,7 @@ input, textarea {
 
 .line {
 	border-width:0;
-	box-shadow:none;
+	.box-shadow(none, 0, #FFFFFF);
 	position:relative;
 	margin-bottom:1em;
 }
@@ -219,6 +219,45 @@ a.tag, .tag{
 a.tag:hover, a.tag:focus, a.tag:visited,
 .tag:hover, .tag:focus, .tag:visited{
 	background:#444;
+}
+
+.business-flag {
+	position:relative;
+}
+
+.business-flag:before {
+	content:"";
+	.sprite;
+	.sprite-flag_blue;
+	position:absolute;
+	right:20px;
+	top:-7px;
+}
+
+.geek-flag {
+	position:relative;
+}
+
+.geek-flag:before {
+	content:"";
+	.sprite;
+	.sprite-flag_yellow;
+	position:absolute;
+	right:20px;
+	top:-8px;
+}
+
+.banner-human {
+	position:relative;
+}
+
+.banner-human:before {
+	content:"";
+	.sprite;
+	.sprite-banner_human;
+	position:absolute;
+	right:-8px;
+	top:-8px;
 }
 
 .sprite{ background: url(../img/icons-sprite.png) no-repeat top left; }
