@@ -1,0 +1,16 @@
+Tools used
+===========
+
+Compiling css
+---------------
+
+1. Installing lessc: git clone https://github.com/cloudhead/less.js.git
+2. Compile less (sever side): node_modules/.bin/lessc less/style.less > style.css
+
+
+Generating sprites
+------------------
+
+1. Submitting zip-file of the icons-folder to http://spritegen.website-performance.org/ with the following options: vertical / 20px / Use Background Colour for Transparency = checked / Compress Image with OptiPNG (the rest is default)
+2. Downloaded the sprite to icons-sprite.png.
+3. Added sprite CSS to uxebu.less and make adoptions.
