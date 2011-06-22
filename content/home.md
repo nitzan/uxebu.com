@@ -1,26 +1,18 @@
-Address & Phone
-===============
-
-fdsafads  
-fdfdsfa  
-asdf fdas  
-
-
-Rotator
-=======
-
-* fdasfdas
-* fdsa
-* fdsafdsa
-* fsd gsfdgdf
-
 We are uxebu
 ============
 
-We habfdsfds fa
-gfdgg gdg gfds gfds
+We habfdsfds fa  
+gfdg **g gdg gfds** gfds  
+Hello
 
-[Contact](http://uxebu.com)
+We habfdsfds fa
+gfdg g gdg gfds gfds
+
+
+We habfdsfds fa
+gfdg g gdg gfds gfds
+
+[Contact](http://uxebu.com/contact)
 
 We are geeks
 ============
@@ -52,13 +44,8 @@ uxebu team
 Address & Phone
 ===============
 
-fdsafads  
-fdfdsfa  
-asdf fdas  
-
 *uxebu Consulting Ltd*
 ..
-
 
 
 
