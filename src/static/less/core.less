@@ -1,0 +1,139 @@
+/* ====== Headings ====== */
+/* .h1-.h6 classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings */
+h1,.h1{font-size:210%;font-weight:normal;font-style:normal;color:@heading-base-color;}
+h2,.h2{font-size:196%;font-weight:normal;font-style:normal;color:@heading-base-color;}
+h3,.h3{font-size:167%;font-weight:normal;font-style:normal;color:@heading-base-color;}
+h4,.h4{font-size:146.5%;font-weight:normal;font-style:normal;color:@heading-base-color;}
+h5,.h5{font-size:123.1%;font-weight:bold;font-style:normal;color:@heading-base-color;}
+h6,.h6{font-size:108%;font-weight:normal;font-style:italic;color:@heading-base-color;}
+
+/* ====== Standard Module ====== */
+/* from oocss: 2011-02-03 */
+.bd,.ft,.hd{.clear-safe}
+
+/* ====== Media ====== */
+/* from oocss: 2011-02-03 */
+.media{margin: 0px;.clear-safe;}
+.media .bd{display:table-cell;zoom:1;}
+.media .bd > :first-child{margin-top:0;}
+.media .bd > :last-child{margin-bottom:0;}
+.media .img{float:left;}
+.media .img img{display:block;border:1px solid #fff;}
+.media .img-ext{float:right;}
+
+/* for scaling the content within the .img box */
+.media-xxs {width: 16px;height: 16px;}
+.media-xs {width: 40px;height: 40px;}
+.media-s {width: 50px;height: 50px;}
+
+/* ====== Spacing ====== */
+/* from oocss: 2011-02-03 */
+/**
+* Spacing classes
+* Should be used to modify the default spacing between objects (not between nodes of the same object)
+* Please use judiciously. You want to be using defaults most of the time, these are exceptions!
+* <type><location><size>
+*/
+h1,h2,h3,h4,h5,h6,ul,ol,dl,p,blockquote,table,.media{margin:@large-margin;}
+h1,h2,h3,h4,h5,h6,img{.pbn;}
+pre{background:#111;color:#fff;padding:@large-padding;overflow:auto;}
+pre ol{margin:0;}
+table h1,table h2,table h3,table h4,table h5,table h6,table p,table ul,table ol,table dl{padding:0;margin-left:0;margin-right:0;}
+/* spacing helpers
+p,m = padding,margin
+a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
+s,m,l,n = small(5px),medium(10px),large(20px),none(0px)
+*/
+.ptn,.pvn,.pan{padding-top:0;}
+.ptm,.pvm,.pam{padding-top:@medium-padding;}
+.pts,.pvs,.pas{padding-top:@small-padding;}
+.ptl,.pvl,.pal{padding-top:@large-padding;}
+.ptx,.pvx,.pax{padding-top:@extra-large-padding;}
+.prn,.phn,.pan{padding-right:0;}
+.prm,.phm,.pam{padding-right:@medium-padding;}
+.prs,.phs,.pas{padding-right:@small-padding;}
+.prl,.phl,.pal{padding-right:@large-padding;}
+.pbn,.pvn,.pan{padding-bottom:0;}
+.pbm,.pvm,.pam{padding-bottom:@medium-padding;}
+.pbs,.pvs,.pas{padding-bottom:@small-padding;}
+.pbl,.pvl,.pal{padding-bottom:@large-padding;}
+.pbx,.pvx,.pax{padding-bottom:@extra-large-padding;}
+.pln,.phn,.pan{padding-left:0;}
+.plm,.phm,.pam{padding-left:@medium-padding;}
+.pll,.phl,.pal{padding-left:@large-padding;}
+.pls,.phs,.pas{padding-left:@small-padding;}
+.mtx,.mvx,.max{margin-top:@extra-large-margin;}
+.mtl,.mvl,.mal{margin-top:@large-margin;}
+.mtn,.mvn,.man{margin-top:0;}
+.mtm,.mvm,.mam{margin-top:@medium-margin;}
+.mts,.mvs,.mas{margin-top:@small-margin;}
+.mrn,.mhn,.man{margin-right:0;}
+.mrm,.mhm,.mam{margin-right:@medium-margin;}
+.mrs,.mhs,.mas{margin-right:@small-margin;}
+.mrl,.mhl,.mal{margin-right:@large-margin;}
+.mrx,.mhx,.max{margin-right:@extra-large-margin;}
+.mbn,.mvn,.man{margin-bottom:0;}
+.mbx,.mvx,.max{margin-bottom:@extra-large-margin;}
+.mbl,.mvl,.mal{margin-bottom:@large-margin;}
+.mbm,.mvm,.mam{margin-bottom:@medium-margin;}
+.mbs,.mvs,.mas{margin-bottom:@small-margin;}
+.mln,.mhn,.man{margin-left:0;}
+.mlx,.mhx,.max{margin-left:@extra-large-margin;}
+.mll,.mhl,.mal{margin-left:@large-margin;}
+.mlm,.mhm,.mam{margin-left:@medium-margin;}
+.mls,.mhs,.mas{margin-left:@small-margin;}
+
+/* ====== Data Table ====== */
+/* from oocss: 2011-02-03 */
+
+/**
+* Allows you to align various table cells so that the alignment class can be placed on either the table, table row, or table cell
+* Cell takes precedence over table row and table
+* Table row takes precedence over table
+*/
+.data{position:relative;zoom:1;vertical-align:top;text-align:left;/*border-right:solid 1px transparent;*//* border fixes a FF2 bug which causes the data table to overlay its borders*/}
+.data table {width:100%;table-layout:fixed;}
+th,td{/*vertical-align:top;*/}
+/* horizontal alignment */
+.txtC,table .txtC td,table .txtC th,.data .txtC th,.data .txtC td{text-align:center;}
+.txtL,table .txtL td,table .txtL th,.data .txtL th,.data .txtL td{text-align:left;}
+.txtR,table .txtR td,table .txtR th,.data .txtR th,.data .txtR td{text-align:right;}
+/* vertical alignment */
+.txtT,table .txtT td,table .txtT th,.data .txtT th,.data .txtT td{vertical-align:top;}
+.txtB,table .txtB td,table .txtB th,.data .txtB th,.data .txtB td{vertical-align:bottom;}
+.txtM,table .txtM td,table .txtM th,.data .txtM th,.data .txtM td{vertical-align:middle;}
+.data th,.data td{padding:3px 20px}
+
+/* ====== Links ====== */
+a{color:@link-color;text-decoration:none;}
+a:focus,a:hover{text-decoration:underline;}
+a:focus{}
+a:visited{color:@link-color;}
+
+/* ====== Lists ====== */
+/* simple list */
+ul.simple-list{list-style-type:square;}
+ol.simple-list{list-style-type:decimal;}
+ol.simple-list li{list-style-type:inherit;margin-left:20px;}
+ul.simple-list li{list-style-type:inherit;margin-left:20px;}
+
+/* ====== File Input ====== */
+.file-input{position:relative;overflow:hidden;display:inline-block;}
+.file-input-real{position:absolute;z-index:2;opacity:0;filter:e("alpha(opacity:0)");right:0px;top:0px;font-size:2em;}
+.file-input-info{display:block;vertical-align:top;overflow:hidden;white-space:nowrap;max-width:100px;_width:100px;}
+
+/* ====== Elements ====== */
+img{display:block;}
+em{font-style: italic;}
+strong{font-weight:500;}
+hr{border-style:solid;border-color:#FFFFFF;border-width:0 0 3px;box-shadow:0 0 3px #FFFFFF; .mvl; .mhl; }
+
+/* ====== Navigation ====== */
+.list-el a{display:inline-block;}
+.list-el-hz{display:inline;}
+.list-el-hz a{/*float:right;*/}
+.list-el-fixed-width a{display:block;width:100px;}
+
+/* ====== Scroll Modules ====== */
+.scroller-box, .scroller .bd{height:347px;overflow:auto;}
+.scroller-box{border:1px solid #CCCCCC;}
