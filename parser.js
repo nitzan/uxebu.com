@@ -6,24 +6,32 @@ var util   = require('util');
 var exec  = require('child_process').exec;
 
 var srcDir = './src';
+
+console.log('Welcome to the epic');
+
 fs.readdir(srcDir, function(err, data){
+	console.log('Reading HTML files to render');
 	data.forEach(function(item){
 		if (item.indexOf('.html') > -1){
 			renderView(item.split('.html')[0]);
 		}
 	});
-	exec('rm -rf ./release/img ./release/css', function(err, stdout, stderr){
-		exec('cp -r ./src/img ./src/css ./release/',
+	moveFiles();
+});
+
+function moveFiles(){
+	exec('rm -rf ./release/static', function(err, stdout, stderr){
+		exec('cp -r ./src/static ./release/',
 			function (err, stdout, stderr) {
-				console.log('stdout: ' + stdout);
-				console.log('stderr: ' + stderr);
 				if (err !== null) {
-					console.log('exec error: ' + error);
+					console.log('Error copying static files: ' + error);
+				}else{
+					console.log('Copied static files');
 				}
 			}
 		);
 	})
-});
+}
 
 function mixin(target, obj){
 	for (var prop in obj){
@@ -33,6 +41,7 @@ function mixin(target, obj){
 
 function renderView(item){
 	fs.readFile(srcDir + '/' + item + '.html', 'utf-8', function(err, template){
+		console.log('Reading and parsing' + item + '.md');
 		fs.readFile('content/' + item + '.md', 'utf-8', function(arr, markdown){
 			var tree = parseMarkdown(markdown);
 			var c = {};

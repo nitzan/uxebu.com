@@ -42,6 +42,5 @@ exports.listBox = function(block){
     // Now we expect a "ul"
     // We take all the "li"s and pass them separately into the list-array that we iterate over in the tpl.
     view.list = block[0].slice(1).map(function(i){ var split = i[1].split("\n"); return {header:split[0], text:split[1]}; });
-console.log(JSON.stringify(view.list))
     return view;
 }
