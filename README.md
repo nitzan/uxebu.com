@@ -13,7 +13,7 @@ Building HTML
 Content editing
 ---------------
 
-All content lies in the ./content directory.
+All content lies in the ./content directory.  
 Make sure that you write the content as it is required by the containing box.
 
 Template editing
