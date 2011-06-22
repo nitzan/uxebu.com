@@ -5,16 +5,17 @@ fs.readFile('home.md', 'utf-8', function (err, data) {
   if (err) throw err;
   var tree = md.toHTMLTree(data);
   var blocks = [];
-  var str = '';
   var block = [];
-  tree.splice(1).forEach(function(item, index){
-  	if (item[0] == 'h1' && block.length){
+  tree = tree.splice(1);
+  while(tree.length){
+    if (block.length && tree[0][0] == 'h1'){
 		blocks.push(block);
 		block = [];
 	} else {
-		block.push(item);
+		block.push(tree.shift());
 	}
-  });
+  };
+  blocks.puhs(block);
 
   console.log(blocks);
 //  console.log(md.renderJsonML(['html', ['h1', 'fdsafdas']]));
