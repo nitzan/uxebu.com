@@ -1,26 +1,29 @@
-We are uxebuuuu
-===============
+We are uxebu
+============
 
-We have a really good message for you, just imagine that you would like 
-JavaScript and nobody else does, then we would be your friends. Come
-out on the street and play with us!
-gfdgg gdg gfds gfds
+We have proven that latest web technologies can run on any platform. We can help your (mobile) web app to go where no other web app has gone before:  
+To any app store in the world!
+
+We are pioneers. We do stuff that others just can’t do, because it has never been done before. R&D is essential for our daily work.
+
+Please get in touch so we can discuss your web development project!
 
 [Contact](http://uxebu.com)
-
 
 
 We are geeks
 ============
 
-We have a really good message for you, just imagine that you would like 
-JavaScript and nobody else does, then we would be your friends. 
-We can [even put links in our website](http://uxebu.com) doh. 
-We can [even put MANY links in our website](http://uxebu.com) doh.
-Come
-out on the street and play with us!
-gfdgg gdg gfds gfds
+We embrace Open Source and Web Technologies. JavaScript and HTML5 is what we live and breathe.
 
+We believe in worldwide creative collaboration.
+We build our own tools, and we have created a range of relevant open source software.
+
+We actively contribute to open source  projects and push new technologies to the maximum.
+
+We also openly share our knowledge and thoughts, live on events and on our blog.
+
+[Blog & Events](http://uxebu.com)
 
 
 Client Projects
