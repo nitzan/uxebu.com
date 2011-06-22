@@ -32,51 +32,71 @@
 		<div class="row">
 			<h1 id="basic" class="lucent upper">We bring your web apps</h1>
 		</div>
+        
 		<div class="row">
+            {{#block0}}
+			{{!simpleBox}}
 			<div class="col-6">
 				<div class="mod mod-skin1 big-arrow-down">
-					<div class="hd"><h2 class="h3 line business">We are uxebu.</h2></div>
+					<div class="hd"><h2 class="h3 line business">{{title}}</h2></div>
 					<div class="bd">
-						<p>Lorem blabla</p>
+						<p>{{content}}</p>
 					</div>
 				</div>
 			</div>
-			<div class="col-6 last">
+        	{{/block0}} 
+
+            {{#block1}}
+    		{{!simpleBox}}
+            <div class="col-6 last">
 				<div class="mod mod-skin1 big-arrow-down">
-					<div class="hd"><h2 class="h3 line geek">We are geeks.</h2></div>
+					<div class="hd"><h2 class="h3 line geek">{{title}}</h2></div>
 					<div class="bd">
-						<p>Lorem blabla</p>
+						<p>{{content}}</p>
 					</div>
 				</div>
 			</div>
+            {{/block1}}
 		</div>
+        
 		<div class="row">
+            {{#block2}}
+            {{!listBox}}
 			<div class="col-6">
 				<div class="mod mod-skin1 business-flag">
-					<div class="hd"><h2>Client Projects</h2></div>
+					<div class="hd"><h2>{{title}}</h2></div>
 					<div class="bd">
+                        {{#list}}
 						<ul>
 							<li class="star-business">
-								<h4>Woodwing Reader</h4>
-								<p>Universal tablet publishing tool.<p>
+								<h4>{{header}}</h4>
+								<p>{{text}}<p>
 							</li>
 						</ul>
+                        {{/list}}
 					</div>
 				</div>
 			</div>
+            {{/block2}}
+            
+            {{#block3}}
+            {{!listBox}}
 			<div class="col-6 last">
 				<div class="mod mod-skin1 geek-flag">
 					<div class="hd"><h2>Open Source Projects</h2></div>
 					<div class="bd">
+                        {{#list}}
 						<ul>
 							<li class="box-geek">
-								<h4>apparat.io</h4>
-								<p>Package your HTML5 apps<p>
+    							<h4>{{header}}</h4>
+								<p>{{text}}<p>
 							</li>
 						</ul>
+                        {{/list}}
 					</div>
 				</div>
 			</div>
+            {{/block3}}
 		</div>
 		<div class="row">
 			<div class="mod mod-skin1 banner-human">

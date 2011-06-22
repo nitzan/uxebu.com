@@ -1,7 +1,7 @@
 var fs = require('fs');
 var md = require('markdown').markdown;
 var mustache = require('mustache');
-var blocks = require('./blocks/blocks');
+var blocks = require('./blocks/block');
 
 var srcDir = './src';
 fs.readdir(srcDir, function(err, data){
@@ -21,13 +21,15 @@ function mixin(target, obj){
 function renderView(item){
 	console.log(item);
 	fs.readFile(srcDir + '/' + item + '.html', 'utf-8', function(err, template){
-		fs.readFile('content/home.md', 'utf-8', function(arr, markdown){
+		fs.readFile('content/' + item + '.md', 'utf-8', function(arr, markdown){
 			var tree = parseMarkdown(markdown);
 			var c = {};
 			tree.forEach(function(block, index){
+console.log(block);
 				c['block' + index] = function(){
 					return function(text, parse){
-						return mustache.to_html(text, blocks.simpleTextBox(block));
+                        var func = text.match(/[\s\S]*{{!(\w+)}}/)[1] || "simpleBox";
+						return mustache.to_html(text, blocks[func](block));
 					}
 				}
 			});
@@ -40,6 +42,7 @@ function renderView(item){
 			    return markup;
   			});
 			console.log(out);
+            fs.writeFile('release/' + item + '.html', out, encoding='utf8');
 		});
 	});
 }
