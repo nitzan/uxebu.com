@@ -290,3 +290,21 @@ a.tag:hover, a.tag:focus, a.tag:visited,
 
 .banner-human {position:relative;}
 .banner-human:before {content:"";.sprite;.sprite-banner_human;position:absolute;right:-8px;top:-8px;}
+
+.nav {
+	position:relative;
+}
+
+.active a {
+	position:relative;
+	margin-top:20px;
+}
+
+.active a:after {
+	content:"";
+	position:absolute;
+	.sprite;
+	.sprite-wedge;
+	left:20%;
+	bottom:-30px;
+}
