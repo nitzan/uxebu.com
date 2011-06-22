@@ -2,6 +2,8 @@ var fs = require('fs');
 var md = require('markdown').markdown;
 var mustache = require('mustache');
 var blocks = require('./blocks/block');
+var util   = require('util');
+var exec  = require('child_process').exec;
 
 var srcDir = './src';
 fs.readdir(srcDir, function(err, data){
@@ -10,6 +12,17 @@ fs.readdir(srcDir, function(err, data){
 			renderView(item.split('.html')[0]);
 		}
 	});
+	exec('rm -rf ./release/img ./release/css', function(err, stdout, stderr){
+		exec('cp -r ./src/img ./src/css ./release/',
+			function (err, stdout, stderr) {
+				console.log('stdout: ' + stdout);
+				console.log('stderr: ' + stderr);
+				if (err !== null) {
+					console.log('exec error: ' + error);
+				}
+			}
+		);
+	})
 });
 
 function mixin(target, obj){
@@ -19,13 +32,11 @@ function mixin(target, obj){
 }
 
 function renderView(item){
-	console.log(item);
 	fs.readFile(srcDir + '/' + item + '.html', 'utf-8', function(err, template){
 		fs.readFile('content/' + item + '.md', 'utf-8', function(arr, markdown){
 			var tree = parseMarkdown(markdown);
 			var c = {};
 			tree.forEach(function(block, index){
-console.log(block);
 				c['block' + index] = function(){
 					return function(text, parse){
                         var func = text.match(/[\s\S]*{{!(\w+)}}/)[1] || "simpleBox";
@@ -41,7 +52,6 @@ console.log(block);
 			    markup += voidTags.test(tagName) ? " />" : "></" + tagName + ">";
 			    return markup;
   			});
-			console.log(out);
             fs.writeFile('release/' + item + '.html', out, encoding='utf8');
 		});
 	});
@@ -63,34 +73,3 @@ function parseMarkdown(tree){
     blocks.push(block);
 	return blocks;
 }
-/*
-fs.readFile('home.md', 'utf-8', function (err, data) {
-    if (err) throw err;
-    var tree = md.toHTMLTree(data);
-    console.log(tree);
-    var blocks = [];
-    var block = [];
-    tree = tree.splice(1);
-    while(tree.length){
-        if (block.length && tree[0][0] == 'h1'){
-        	blocks.push(block);
-        	block = [];
-        } else {
-        	block.push(tree.shift());
-        }
-    };
-    blocks.push(block);
-
-
-    var b = blocks[0];
-    var view = {
-      title: b[0][1],
-      content: b.slice(1).map(function(i){return md.renderJsonML(["html", i])}).join(" ")
-//      link: md.renderJsonML(b[2])
-    };
-    var template ='<h1>{{title}}</h1><p>{{content}}</p>';
-    var html = mustache.to_html(template, view);
-
-    console.log(html.replace(/</g, "-").replace(/>/g, "-"));
-});
-*/
