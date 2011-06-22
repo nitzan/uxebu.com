@@ -3,10 +3,9 @@
 .uni-form fieldset legend{display:inline-block;font-size:100%;margin-bottom:5px;padding:4px 0;text-indent:10px;width:100%;}
 .uni-form fieldset legend{*margin-left:-17px;}
 
-/*.uni-form .ctrl-holder{.clear-safe;}*/
-.uni-form .button-holder, .uni-form .ctrl-holder{margin:@large-margin;zoom:1;}
+.uni-form .button-holder, .uni-form .ctrl-holder{margin:@large-margin;.clear-safe;}
 
-.uni-form:after,.ctrl-holder:after,.inline-label:after,.button-holder:after{.clear-safe-after}
+.uni-form, .uni-form .inline-label{.clear-safe;}
 .uni-form label,.uni-form .label{display:block;margin:0;margin-top:0.5em;}
 .uni-form .text-input, .uni-form .file-upload, .uni-form .select-input, .uni-form select, .uni-form textarea{width:60%;margin:0;}
 .uni-form .form-hint{width:80%;margin:0;clear:none;}

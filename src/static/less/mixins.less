@@ -1,9 +1,13 @@
 /* ====== LESS MIXINS mixins ======*/
-.clear-safe{
-	display:inline-block;width:100%;*display:block;*width:auto;zoom:1;
-}
-.clear-safe-after{
-	clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";
+.clear-safe {
+	&:before, &:after{
+		content:"";
+		display:table;
+	}
+	&:after{
+		clear:both;
+	}
+	zoom:1;
 }
 
 .background-gradient(@from, @to) {

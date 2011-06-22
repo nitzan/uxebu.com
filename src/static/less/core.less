@@ -10,18 +10,16 @@ h6,.h6{font-size:108%;font-weight:normal;font-style:italic;color:@heading-base-c
 /* ====== Standard Module ====== */
 /* from oocss: 2011-02-03 */
 .bd,.ft,.hd{.clear-safe}
-.hd:after,.bd:after,.ft:after{.clear-safe-after}
 
 /* ====== Media ====== */
 /* from oocss: 2011-02-03 */
-.media{margin: 0px;}
-.media:after{.clear-safe-after}
+.media{margin: 0px;.clear-safe;}
 .media .bd{display:table-cell;zoom:1;}
 .media .bd > :first-child{margin-top:0;}
 .media .bd > :last-child{margin-bottom:0;}
-.media .img{float:left;/*margin-right: 10px;*/}
+.media .img{float:left;}
 .media .img img{display:block;border:1px solid #fff;}
-.media .img-ext{float:right;/*margin-left: 10px;*/}
+.media .img-ext{float:right;}
 
 /* for scaling the content within the .img box */
 .media-xxs {width: 16px;height: 16px;}
