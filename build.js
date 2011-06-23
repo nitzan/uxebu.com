@@ -6,6 +6,7 @@ var util   = require('util');
 var exec  = require('child_process').exec;
 var kompressor = require('htmlKompressor');
 
+var debug = false;
 var srcDir = './src';
 
 console.log('Welcome to the epic');
@@ -64,7 +65,7 @@ function renderView(item){
 			    return markup;
   			});
 			console.log('Writing \t\t\trelease/' + item + '.html');
-            fs.writeFile('release/' + item + '.html', kompressor(out, true), encoding='utf8');
+            fs.writeFile('release/' + item + '.html', debug ? out : kompressor(out, true), encoding='utf8');
 		});
 	});
 }
