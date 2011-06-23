@@ -4,6 +4,7 @@ var mustache = require('mustache');
 var blocks = require('./blocks/block');
 var util   = require('util');
 var exec  = require('child_process').exec;
+var kompressor = require('htmlKompressor');
 
 var srcDir = './src';
 
@@ -63,7 +64,7 @@ function renderView(item){
 			    return markup;
   			});
 			console.log('Writing \t\t\trelease/' + item + '.html');
-            fs.writeFile('release/' + item + '.html', out, encoding='utf8');
+            fs.writeFile('release/' + item + '.html', kompressor(out, true), encoding='utf8');
 		});
 	});
 }
