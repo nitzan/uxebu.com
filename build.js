@@ -41,7 +41,7 @@ function mixin(target, obj){
 
 function renderView(item){
 	fs.readFile(srcDir + '/' + item + '.html', 'utf-8', function(err, template){
-		console.log('Reading and parsing' + item + '.md');
+		console.log('Reading and parsing \t\t' + srcDir + '/' + item + '.md');
 		fs.readFile('content/' + item + '.md', 'utf-8', function(arr, markdown){
 			var tree = parseMarkdown(markdown);
 			var c = {};
@@ -61,6 +61,7 @@ function renderView(item){
 			    markup += voidTags.test(tagName) ? " />" : "></" + tagName + ">";
 			    return markup;
   			});
+			console.log('Writing \t\t\trelease/' + item + '.html');
             fs.writeFile('release/' + item + '.html', out, encoding='utf8');
 		});
 	});
