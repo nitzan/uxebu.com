@@ -87,15 +87,15 @@ uxebu team
 
 * [Stephan Seidt](team/seidt.html)
   JS Prophet
-  ![Alt text](/path/to/img.jpg)
+  ![Alt text](static/img/team/seidt.png)
 
 * [Peter van der Zee](team/zee.html)
   JS Scientist
-  ![Alt text](/path/to/img.jpg)
+  ![Alt text](static/img/team/zee.png)
 
 * [John-David Dalton](team/dalton.html)
   JS Lawyer
-  ![Alt text](/path/to/img.jpg)
+  ![Alt text](static/img/team/dalton.png)
 
 
 Address & Phone
