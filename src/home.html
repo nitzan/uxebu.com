@@ -151,10 +151,18 @@
 						<h2 class="line business">Contact</h2>
 						<p>Form</p>
 					</div>
+
+					{{#block5}}
+					{{!simpleBox}}
 					<div class="col-6 last">
-						<h2 class="line business">Address &amp; Phone</h2>
-						<p>blubb</p>
+						<h2 class="line business">{{title}}</h2>
+						<p>{{{content}}}</p>
+            			<div class="ft">
+    						<p><a href="{{link}}" class="alternative">{{{linkContent}}}</a></p>
+    					</div>
 					</div>
+					{{/block5}}
+
 				</div>
 			</div>
 		</div>
