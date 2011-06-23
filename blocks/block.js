@@ -29,8 +29,10 @@ exports.simpleBox = function(block){
 
     var view = {};
     view.title = block.shift()[1]; // Remove the first element which is the title.
-    if (block[block.length-1][0]=='a'){
-        view.link = md.renderJsonML(["html", block.pop()]); // Remove the last element if it is an a-href.
+    if (block[block.length-1][1][0]=='a'){
+		var link = block.pop();
+        view.link = link[1][1].href;
+		view.linkContent = link[1][2];
     }
     view.content = block.map(function(i){return md.renderJsonML(["html", i]);}).join(" ");
 	return view;

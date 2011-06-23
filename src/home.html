@@ -30,7 +30,8 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			<h1 id="basic" class="lucent upper">We bring your web apps</h1>
+			<h1 id="basic" class="lucent upper mvn" style="display:inline-block;">WE BRING YOUR WEB APPS</h1>
+			<h1 class="lucent upper mvn" style="display:inline-block;">TO ANY APP STORE IN THE WORLD.</h1>
 		</div>
         
 		<div class="row">
@@ -39,8 +40,11 @@
 			<div class="col-6">
 				<div class="mod mod-skin1 big-arrow-down">
 					<div class="hd"><h2 class="h3 line business">{{title}}</h2></div>
-					<div class="bd">
+					<div class="bd" style="min-height: 300px;">
 						<p>{{{content}}}</p>
+					</div>
+					<div class="ft">
+						<p><a href="{{link}}" class="arrow-business alternative">{{{linkContent}}}</a></p>
 					</div>
 				</div>
 			</div>
@@ -51,8 +55,11 @@
             <div class="col-6 last">
 				<div class="mod mod-skin1 big-arrow-down">
 					<div class="hd"><h2 class="h3 line geek">{{title}}</h2></div>
-					<div class="bd">
+					<div class="bd" style="min-height: 300px;">
 						<p>{{{content}}}</p>
+					</div>
+					<div class="ft">
+						<p><a href="{{link}}" class="arrow-geek">{{{linkContent}}}</a></p>
 					</div>
 				</div>
 			</div>
@@ -67,8 +74,8 @@
 					<div class="hd"><h2>{{title}}</h2></div>
 					<div class="bd">
                         {{#list}}
-						<ul>
-							<li class="star-business">
+						<ul class="mtn">
+							<li class="star-business bullet">
 								<h4>{{header}}</h4>
 								<p>{{text}}<p>
 							</li>
@@ -86,8 +93,8 @@
 					<div class="hd"><h2>Open Source Projects</h2></div>
 					<div class="bd">
                         {{#list}}
-						<ul>
-							<li class="box-geek">
+						<ul class="mtn">
+							<li class="box-geek bullet">
     							<h4>{{header}}</h4>
 								<p>{{text}}<p>
 							</li>

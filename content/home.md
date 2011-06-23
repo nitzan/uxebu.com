@@ -8,7 +8,7 @@ We are pioneers. We do stuff that others just can’t do, because it has never b
 
 Please get in touch so we can discuss your web development project!
 
-[Contact](http://uxebu.com)
+[Contact](http://uxebu.com/test.html)
 
 
 We are geeks
@@ -30,13 +30,17 @@ Client Projects
 ===============
 
 * Woodwing reader
-  Universal tablet pub
+  Universal tablet pub.
 * Civiguard
-  Mobile App for disaster/crisi management
+  Mobile App for disaster/crisi management.
 * Vodafone
-  Mobile approach through cross platform web-technology widgets
+  Mobile cross-platform approach through widgets.
 * Chip App
-  A hand-selected iPhone AppStore catalog
+  A hand-selected iPhone AppStore catalog.
+* BMW
+  Web application for innovation management.
+* Deutsche Telekom
+  Media center web application.
 
 Open Source Projects
 ====================
