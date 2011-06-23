@@ -61,10 +61,41 @@ Open Source Projects
 uxebu team
 ==========
 
-* [Tobias von Klipstein|http://...]
+* [Tobias von Klipstein](team/klipstein.html)
   Cofounder
-* [..]
-  ..
+  ![Imagddde](team/klipstein.jpg)
+* [Wolfram Kriesing](team/kriesing.html)
+  Cofounder
+  ![Alttext](team/img.jpg)
+
+* [Nikolai Onken](team/onken.html)
+  Cofounder
+  ![Alt text](/path/to/img.jpg)
+
+* [David Aurelio](team/aurelio.html)
+  JS Ninja
+  ![Alt text](/path/to/img.jpg)
+
+* [Jens Arps](team/arps.html)
+  JS King
+  ![Alt text](/path/to/img.jpg)
+
+* [Tobias Schneider](team/schneider.html)
+  JS President
+  ![Alt text](/path/to/img.jpg)
+
+* [Stephan Seidt](team/seidt.html)
+  JS Prophet
+  ![Alt text](/path/to/img.jpg)
+
+* [Peter van der Zee](team/zee.html)
+  JS Scientist
+  ![Alt text](/path/to/img.jpg)
+
+* [John-David Dalton](team/dalton.html)
+  JS Lawyer
+  ![Alt text](/path/to/img.jpg)
+
 
 Address & Phone
 ===============
