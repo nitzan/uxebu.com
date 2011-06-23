@@ -1,3 +1,16 @@
+Trailer
+=======
+
+WE BRING YOUR WEB APPS
+TO ANY APP STORE IN THE WORLD.
+
+* * *
+
+<iframe src="http://mario.qfox.nl/">
+	Your Browser does not support iframes.
+	Please update to Internet Explorer 4!
+</iframe>
+
 We are uxebu
 ============
 
@@ -104,9 +117,15 @@ uxebu team
 Address & Phone
 ===============
 
-fdsafads  
-fdfdsfa  
-asdf fdas  
+uxebu was founded in 2008 and based in Munich, Amsterdam and Palo Alto
 
-*uxebu Consulting Ltd*
-..
+**uxebu Consulting Ltd. & Co. KG**  
+Richard-Strauss-Str. 21  
+81677 München  
+Germany  
+
+**Phone: +49 89 122 219 626**  
+Fax: +49 89 122 219 626 - 8  
+E-Mail: contact@uxebu.com
+
+[Impressum / Legal](http://uxebu.com/legal)

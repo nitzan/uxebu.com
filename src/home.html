@@ -30,12 +30,24 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			<h1 id="basic" class="lucent upper pbs" style="margin-top: 60px;">WE BRING YOUR WEB APPS</h1>
-			<h1 class="lucent upper" style="margin-bottom: 30px;">TO ANY APP STORE IN THE WORLD.</h1>
+			{{#block0}}
+			{{!trailerBox}}
+				{{#items}}
+					{{#twoLineText}}
+						<h1 id="basic" class="lucent upper pbs" style="margin-top: 60px;">{{one}}</h1>
+						<h1 class="lucent upper" style="margin-bottom: 30px;">{{two}}</h1>
+					{{/twoLineText}}
+					{{#iframe}}
+						<div style="display:none">
+							{{{iframe}}}
+						</div>
+					{{/iframe}}
+				{{/items}}
+        	{{/block0}} 
 		</div>
         
 		<div class="row">
-            {{#block0}}
+			{{#block1}}
 			{{!simpleBox}}
 			<div class="col-6">
 				<div class="mod mod-skin1 big-arrow-down">
@@ -48,9 +60,9 @@
 					</div>
 				</div>
 			</div>
-        	{{/block0}} 
+        	{{/block1}} 
 
-            {{#block1}}
+            {{#block2}}
     		{{!simpleBox}}
             <div class="col-6 last">
 				<div class="mod mod-skin1 big-arrow-down">
@@ -63,11 +75,11 @@
 					</div>
 				</div>
 			</div>
-            {{/block1}}
+            {{/block2}}
 		</div>
         
 		<div class="row">
-            {{#block2}}
+            {{#block3}}
             {{!listBox}}
 			<div class="col-6">
 				<div class="mod mod-skin1 business-flag">
@@ -84,9 +96,9 @@
 					</div>
 				</div>
 			</div>
-            {{/block2}}
+            {{/block3}}
             
-            {{#block3}}
+            {{#block4}}
             {{!listBox}}
 			<div class="col-6 last">
 				<div class="mod mod-skin1 geek-flag">
@@ -103,10 +115,10 @@
 					</div>
 				</div>
 			</div>
-            {{/block3}}
+            {{/block4}}
 		</div>
 		<div class="row">
-            {{#block4}}
+            {{#block5}}
 			{{!imageBox}}
 			<div class="mod mod-skin1 banner-human">
 				<div class="hd">
@@ -142,7 +154,7 @@
 					-->
 				</div>
 			</div>
-			{{/block4}}
+			{{/block5}}
 		</div>
 		<div class="row">
 			<div class="mod mod-skin1">
@@ -151,10 +163,18 @@
 						<h2 class="line business">Contact</h2>
 						<p>Form</p>
 					</div>
+
+					{{#block6}}
+					{{!simpleBox}}
 					<div class="col-6 last">
-						<h2 class="line business">Address &amp; Phone</h2>
-						<p>blubb</p>
+						<h2 class="line business">{{title}}</h2>
+						<p>{{{content}}}</p>
+            			<div class="ft">
+    						<p><a href="{{link}}" class="alternative">{{{linkContent}}}</a></p>
+    					</div>
 					</div>
+					{{/block6}}
+
 				</div>
 			</div>
 		</div>
