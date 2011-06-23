@@ -14,6 +14,9 @@
 			color:#FEF75F;
 			text-transform:uppercase;
 		}
+		.lucent {
+			display:block;
+		}
 		h2.style-head{
 			margin-top:0.5em;
 			margin-bottom:0.3em;
@@ -95,7 +98,7 @@
 					<div class="twitter">class="twitter"</div>
 					<div class="box-geek">class="box-geek"</div>
 					<div class="star-business">class="star-business"</div>
-					<div class="marker">class="star-business"</div>
+					<div class="marker">class="marker"</div>
 					<a class="dropdown-arrow">class="dropdown-arrow"</a>
 					<h4>class="sprite-html5"</h4>
 					<div class="sprite sprite-html5"></div>
@@ -249,7 +252,10 @@ function fucking(param1, param2) {
 
 						<div class="ctrl-holder">
 							<label>File upload</label>
-							<span class="file-input"><button class="button">Select a file to upload</button><input type="file" class="file-input-real"></span>
+							<span class="button file-button">
+								<input type=file>
+								Select a file to upload
+							</span>
 							<p class="form-hint">This is a form hint.</p>
 						</div>
 
@@ -360,7 +366,10 @@ function fucking(param1, param2) {
 
 						<div class="ctrl-holder">
 							<label>File upload</label>
-							<span class="file-input"><button class="button">Select a file to upload</button><input type="file" class="file-input-real"></span>
+							<span class="button file-button">
+								<input onchange="showFileName(this);" type="file">
+								Select a file to upload
+							</span>
 							<p class="form-hint">This is a form hint.</p>
 						</div>
 
@@ -471,15 +480,15 @@ function fucking(param1, param2) {
 					<a href="#" class="button disabled"><span>class="button"</span></a>
 				</div>
 
-				<h3 class="style-head">&lt;span class="file-input"&gt;&lt;button ...&gt;...&lt;/button&gt;&lt;input type="file" class="file-input-real"/&gt;&lt;/span&gt;</h3>
+				<h3 class="style-head">&lt;span class="button file-button"&gt;&lt;input type="file"&gt;&lt;/span&gt;</h3>
 				<div class="mam">
-					<span class="file-input">
-						<button class="button"><span>Select file</span></button>
-						<input onchange="showFileName(this);" type="file" class="file-input-real">
+					<span class="button file-button">
+						<input onchange="showFileName(this);" type="file">
+						Select file
 					</span>
-					<span class="file-input">
-						<button class="button"><span>Next to another file input</span></button>
-						<input onchange="showFileName(this);" type="file" class="file-input-real">
+					<span class="button file-button">
+						<input onchange="showFileName(this);" type="file">
+						Next to another file input
 					</span>
 				</div>
 			</div>
@@ -610,7 +619,7 @@ function fucking(param1, param2) {
 				</h3>
 				<div class="media">
 					<div class="img">
-						<img width="300" height="200" src="img/test_image.jpg" alt="testimage">
+						<img width="200" height="200" src="img/test_image.jpg" alt="testimage">
 					</div>
 					<div class="bd">
 						<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>

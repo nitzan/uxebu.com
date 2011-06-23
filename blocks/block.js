@@ -65,14 +65,13 @@ exports.imageBox = function(block){
 		}else{
 			console.log("Error: Content for imageBox is invalid! Please stick to following markup:\n\n[Name][link]\nTitle\n![Image Alt](imagelink)\n");
 		}
-console.log(item);
+
 		return {
-			title: item[1].replace('\n', '', "gm"),
-			img: '',
-			subtitle: '',
-			profile: ''
+			title: item[0][2].replace('\n', '', "gm"),
+			imgSrc: item[2][1].src,
+			subtitle: item[1],
+			profileUrl: item[0][1].href
 		}
 	});
-	console.log(view);
 	return view;
 }

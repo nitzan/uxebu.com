@@ -63,26 +63,27 @@ uxebu team
 
 * [Tobias von Klipstein](team/klipstein.html)
   Cofounder
-  ![Imagddde](team/klipstein.jpg)
+  ![Tobias von Klipstein](static/img/team/klipstein.png)
+
 * [Wolfram Kriesing](team/kriesing.html)
   Cofounder
-  ![Alttext](team/img.jpg)
+  ![Alttext](static/img/team/kriesing.png)
 
 * [Nikolai Onken](team/onken.html)
   Cofounder
-  ![Alt text](/path/to/img.jpg)
+  ![Alt text](static/img/team/onken.png)
 
 * [David Aurelio](team/aurelio.html)
   JS Ninja
-  ![Alt text](/path/to/img.jpg)
+  ![Alt text](static/img/team/aurelio.png)
 
 * [Jens Arps](team/arps.html)
   JS King
-  ![Alt text](/path/to/img.jpg)
+  ![Alt text](static/img/team/arps.png)
 
 * [Tobias Schneider](team/schneider.html)
   JS President
-  ![Alt text](/path/to/img.jpg)
+  ![Alt text](static/img/team/schneider.png)
 
 * [Stephan Seidt](team/seidt.html)
   JS Prophet

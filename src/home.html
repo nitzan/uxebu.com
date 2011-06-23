@@ -73,14 +73,14 @@
 				<div class="mod mod-skin1 business-flag">
 					<div class="hd"><h2>{{title}}</h2></div>
 					<div class="bd">
-                        {{#list}}
 						<ul class="mtn">
+							{{#list}}
 							<li class="star-business bullet">
 								<h4>{{header}}</h4>
 								<p>{{text}}<p>
 							</li>
+							{{/list}}
 						</ul>
-                        {{/list}}
 					</div>
 				</div>
 			</div>
@@ -92,14 +92,14 @@
 				<div class="mod mod-skin1 geek-flag">
 					<div class="hd"><h2>Open Source Projects</h2></div>
 					<div class="bd">
-                        {{#list}}
 						<ul class="mtn">
+							{{#list}}
 							<li class="box-geek bullet">
     							<h4>{{header}}</h4>
 								<p>{{text}}<p>
 							</li>
+							{{/list}}
 						</ul>
-                        {{/list}}
 					</div>
 				</div>
 			</div>
@@ -114,6 +114,17 @@
 				</div>
 				<div class="bd">
 					<ul class="photos">
+						{{#list}}
+						<li class="list-el list-el-hz">
+							<a href="{{profileUrl}}">
+								<img src="{{imgSrc}}"><br>
+								{{title}}<br>
+								{{subtitle}}
+							</a>
+						</li>
+						{{/list}}
+					</ul>
+					<!--
 						<li class="list-el list-el-hz">
 							<a href="#">
 								<img style="width:200px;height:250px;" src="static/img/test_image.jpg"><br>
@@ -127,8 +138,8 @@
 								John-Naked Dalton<br>
 								JS Freak
 							</a>
-						</li>
-					</ul>
+							</li>
+					-->
 				</div>
 			</div>
 			{{/block4}}
