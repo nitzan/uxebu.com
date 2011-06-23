@@ -7,6 +7,25 @@ function _prepareBlock(block){
     }
 }
 
+exports.trailerBox = function(block){
+	var view = {};
+	// [ 'h1', 'TEXT' ]
+    view.title = block.shift()[1]; // Remove the first element which is the title.
+	var items = view.items = [];
+	do{
+		var el = block.shift();
+		if (el[0]=='hr') continue;
+		if (el[1].substr(0,1)=="<"){
+			items.push({iframe:el[1]});
+		} else {
+			// todo check
+			var lines = el[1].split("\n");
+			items.push({twoLineText:true, one:lines[0], two:lines[1]});
+		}
+	} while(block.length);
+	return view;
+}
+
 exports.simpleBox = function(block){
 	// Summary:
 	// 		This is a simple textbox which renders a title, text
@@ -75,3 +94,4 @@ exports.imageBox = function(block){
 	});
 	return view;
 }
+
