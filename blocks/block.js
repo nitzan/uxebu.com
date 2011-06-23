@@ -28,9 +28,11 @@ exports.simpleBox = function(block){
 	//		link:
 
     var view = {};
+	// [ 'h1', 'TEXT' ]
     view.title = block.shift()[1]; // Remove the first element which is the title.
-    if (block[block.length-1][1][0]=='a'){
+    if (block[block.length-1][1][0]=='a'){ // [ 'p', [ 'a', {href: ''}, 'TEXT' ] ] ]
 		var link = block.pop();
+		// [ 'p', [ 'a', {href: ''}, 'TEXT' ] ] ]
         view.link = link[1][1].href;
 		view.linkContent = link[1][2];
     }
