@@ -44,6 +44,7 @@ function renderView(item){
 		console.log('Reading and parsing \t\t' + srcDir + '/' + item + '.md');
 		fs.readFile('content/' + item + '.md', 'utf-8', function(arr, markdown){
 			var tree = parseMarkdown(markdown);
+//console.log('tree = ', tree);
 			var c = {};
 			tree.forEach(function(block, index){
 				c['block' + index] = function(){
