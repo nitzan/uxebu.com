@@ -83,8 +83,12 @@ function renderView(name){
                             var parsedBlock = blocks[func]([].concat(block)); // Make a copy of the block, since the method modifies it inside.
                             return mustache.to_html(text, parsedBlock);
                         }catch(e){
-                            console.log('ERROR:\n\tSyntax error in "' + name + '.md", stopped parsing in block "' + block[0][1] +
-                                        '".\n' + blocks[func].__docs__ + '\n');
+                            console.log('\n\nERROR: Syntax error in "' + name + '.md", stopped parsing in block "' + block[0][1] +
+                                        '".\nIn the following find explaination about the syntax of this markdown block.\n\n');
+                            // We just do this magic because exit() would not print everything otherwise.
+                            blocks[func].__docs__.split("\n").forEach(function(line){console.log(line)});
+                            console.log('\n\n\n');
+                            process.exit(1);
                         }
                         return "";
                     }
