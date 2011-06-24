@@ -32,6 +32,10 @@
 		<div class="row">
 			{{#block0}}
 			{{!trailerBox}}
+				{{#errorMessage}}
+				<div class="errormessage">{{errorMessage}}</div>
+				{{/errorMessage}}
+				
 				{{#items}}
 					{{#twoLineText}}
 						<div>
@@ -51,6 +55,10 @@
 		<div class="row">
 			{{#block1}}
 			{{!simpleBox}}
+			
+			{{#errorMessage}}
+			<div class="errormessage">{{errorMessage}}</div>
+			{{/errorMessage}}
 			<div class="col-6">
 				<div class="mod mod-skin1 big-arrow-down">
 					<div class="hd"><h2 class="h3 line business">{{title}}</h2></div>
@@ -81,12 +89,15 @@
 		</div>
         
 		<div class="row">
-            {{#block3}}
-            {{!listBox}}
+			{{#block3}}
+			{{!listBox}}
 			<div class="col-6">
 				<div class="mod mod-skin1 business-flag">
 					<div class="hd"><h2>{{title}}</h2></div>
 					<div class="bd">
+						{{#errorMessage}}
+						<div class="errormessage">{{errorMessage}}</div>
+						{{/errorMessage}}
 						<ul class="mtn">
 							{{#list}}
 							<li class="star-business bullet">
@@ -102,10 +113,14 @@
             
             {{#block4}}
             {{!listBox}}
+			
 			<div class="col-6 last">
 				<div class="mod mod-skin1 geek-flag">
 					<div class="hd"><h2>Open Source Projects</h2></div>
 					<div class="bd">
+						{{#errorMessage}}
+						<div class="errormessage">{{errorMessage}}</div>
+						{{/errorMessage}}
 						<ul class="mtn">
 							{{#list}}
 							<li class="box-geek bullet">
@@ -127,6 +142,9 @@
 					<h2>{{title}}</h2>
 				</div>
 				<div class="bd">
+					{{#errorMessage}}
+					<div class="errormessage">{{errorMessage}}</div>
+					{{/errorMessage}}
 					<ul class="photos">
 						{{#list}}
 						<li class="list-el list-el-hz">
@@ -170,6 +188,9 @@
 					{{!simpleBox}}
 					<div class="col-6 last">
 						<h2 class="line business">{{title}}</h2>
+						{{#errorMessage}}
+						<div class="errormessage">{{errorMessage}}</div>
+						{{/errorMessage}}
 						<p>{{{content}}}</p>
             			<div class="ft">
     						<p><a href="{{link}}" class="alternative">{{{linkContent}}}</a></p>

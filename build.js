@@ -28,6 +28,7 @@ fs.readdir(srcDir, function(err, data){
     console.log('Reading HTML files from\t\t' + srcDir);
     data.forEach(function(item){
         if (item.indexOf('.html') > -1){
+            console.log("\t\t\t\t    " + item);
             renderView(item.split('.html')[0]);
         }
     });
@@ -83,14 +84,15 @@ function renderView(name){
                             var parsedBlock = blocks[func]([].concat(block)); // Make a copy of the block, since the method modifies it inside.
                             return mustache.to_html(text, parsedBlock);
                         }catch(e){
-                            console.log('\n\nERROR: Syntax error in "' + name + '.md", stopped parsing in block "' + block[0][1] +
-                                        '".\nIn the following find explaination about the syntax of this markdown block.\n\n');
+                            console.log('Syntax error in "' + name + '.md" in block "' + block[0][1] + '.');
+                            var errorMsg = '\n\nERROR: Syntax error in "' + name + '.md", stopped parsing in block "' + block[0][1] +
+                                            '".\nIn the following find explaination about the syntax of this markdown block.\n\n';
                             // We just do this magic because exit() would not print everything otherwise.
-                            blocks[func].__docs__.split("\n").forEach(function(line){console.log(line)});
-                            console.log('\n\n\n');
-                            process.exit(1);
+                            errorMsg += blocks[func].__docs__;
+                            //console.log('\n\n\n');
+                            //process.exit(1);
+                            return mustache.to_html(text, {title:block[0][1], errorMessage:errorMsg});
                         }
-                        return "";
                     }
                 }
             });
@@ -109,8 +111,8 @@ function renderView(name){
 
             // 6.
             // If debug is true we compress the HTML and write it to the filesystem
-            console.log('Writing \t\t\trelease/' + name + '.html');
-            fs.writeFile('release/' + name + '.html', debug ? out : kompressor(out, true), encoding='utf8');
+            console.log('Writing \t\t\t' + releaseDir + '/' + name + '.html');
+            fs.writeFile(releaseDir + '/' + name + '.html', debug ? out : kompressor(out, true), encoding='utf8');
         });
     });
 }
