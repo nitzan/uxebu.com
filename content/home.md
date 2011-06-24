@@ -110,10 +110,6 @@ uxebu team
   JS Lawyer
   ![Alt text](media/img/team/dalton.png)
 
-* [Pivotal “Penis” History](team/penis.html)
-  JS Penis
-  ![Alter Text](static/img/penis.png)
-
 Address & Phone
 ===============
 
