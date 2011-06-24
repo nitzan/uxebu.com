@@ -1,6 +1,7 @@
 var md = require('markdown').markdown;
 
 function _prepareBlock(block){
+	// still unused
     var obj = {
         h1: [""],
         ul: []
@@ -94,8 +95,25 @@ exports.simpleBox = function(block){
 };
 
 exports.listBox = function(block){
-    var view = {};
-    view.title = block.shift()[1]; // Remove the first element which is the title.
+	// Summary:
+	// 		This box renders a title and a list of content.
+	// 		The li item is split into two parts: header and text.
+	//
+	// Markdown:
+	// 		Sample markup:
+	//
+	// 		Client Projects											| Required header 
+	// 		===============											|
+	//																|
+	// 		* Woodwing reader										| The list of items, where the 
+	//		  Universal tablet pub.									| first line gets rendered into "list.header"
+	// 		* Civiguard												| and the second line into "list.text"
+	// 		  Mobile App for disaster/crisi management.				|
+	// 		* Vodafone												|
+	//		  Mobile cross-platform approach through widgets.		|
+	
+	var view = {};
+	view.title = block.shift()[1]; // Remove the first element which is the title.
     // Now we expect a "ul"
     // We take all the "li"s and pass them separately into the list-array that we iterate over in the tpl.
     view.list = block[0].slice(1).map(function(i){ 
@@ -129,3 +147,13 @@ exports.imageBox = function(block){
 	return view;
 }
 
+for (var func in exports){
+	var lines = exports[func].toString().split("\n").slice(1);
+	var docString = [];
+	var line = lines.shift().match(/^\s*\/\/(.*)/);
+	while (line){
+		docString.push(line[1]);
+		line = lines.shift().match(/^\s*\/\/(.*)/);
+	}
+	exports[func].__docs__ = docString.join("\n");
+}
