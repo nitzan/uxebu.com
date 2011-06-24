@@ -6,13 +6,27 @@ var util   = require('util');
 var exec  = require('child_process').exec;
 var kompressor = require('htmlKompressor');
 
-var debug = false;
+var consoleArgs = process.argv.slice(2);
+
+function hasConsoleArgs(args){
+    for (var i=0, l=args.length; i<l; i++){
+        if (consoleArgs.indexOf(args[i])!=-1){
+            return true;
+        }
+    }
+    return false;
+}
+
+var debug = hasConsoleArgs(['debug', '-d']);
+var verbose = hasConsoleArgs(['verbose', '-v']);
 var srcDir = './src'; // Template sources
 var releaseDir = './release'; // Website release
 var contentDir = './content'; // Markdown content
 
 console.log('Welcome to the epic');
-console.log('Debug mode\t\t\t' + debug);
+console.log('  Debug mode (-d)\t\t' + debug);
+console.log('  Verbose mode (-v)\t\t' + verbose);
+console.log('');
 
 // Simple mixin, note: it does not check for hasOwnProperty!
 function mixin(target, obj){
@@ -28,7 +42,7 @@ fs.readdir(srcDir, function(err, data){
     console.log('Reading HTML files from\t\t' + srcDir);
     data.forEach(function(item){
         if (item.indexOf('.html') > -1){
-            console.log("\t\t\t\t    " + item);
+            if (verbose) console.log("\t\t\t\t    " + item);
             renderView(item.split('.html')[0]);
         }
     });
@@ -84,11 +98,15 @@ function renderView(name){
                             var parsedBlock = blocks[func]([].concat(block)); // Make a copy of the block, since the method modifies it inside.
                             return mustache.to_html(text, parsedBlock);
                         }catch(e){
-                            console.log('Syntax error in "' + name + '.md" in block "' + block[0][1] + '.');
                             var errorMsg = '\n\nERROR: Syntax error in "' + name + '.md", stopped parsing in block "' + block[0][1] +
                                             '".\nIn the following find explaination about the syntax of this markdown block.\n\n';
                             // We just do this magic because exit() would not print everything otherwise.
                             errorMsg += blocks[func].__docs__;
+                            if (verbose){
+                                console.log(errorMsg);
+                            } else {
+                                console.log('ERROR: Syntax error in "' + name + '.md" in block "' + block[0][1] + '".');
+                            }
                             //console.log('\n\n\n');
                             //process.exit(1);
                             return mustache.to_html(text, {title:block[0][1], errorMessage:errorMsg});
