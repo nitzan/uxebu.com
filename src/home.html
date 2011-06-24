@@ -34,11 +34,13 @@
 			{{!trailerBox}}
 				{{#items}}
 					{{#twoLineText}}
-						<h1 id="basic" class="lucent upper pbs" style="margin-top: 60px;">{{one}}</h1>
-						<h1 class="lucent upper" style="margin-bottom: 30px;">{{two}}</h1>
+						<div>
+							<h1 id="basic" class="lucent upper pbs" style="margin-top: 60px;">{{one}}</h1>
+							<h1 class="lucent upper" style="margin-bottom: 30px;">{{two}}</h1>
+						</div>
 					{{/twoLineText}}
 					{{#iframe}}
-						<div style="display:none">
+						<div class="trailer" style="display:none">
 							{{{iframe}}}
 						</div>
 					{{/iframe}}

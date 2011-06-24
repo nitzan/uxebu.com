@@ -6,7 +6,7 @@ TO ANY APP STORE IN THE WORLD.
 
 * * *
 
-<iframe src="http://mario.qfox.nl/">
+<iframe src="" scrolling="no" width="100%" height="100px">
 	Your Browser does not support iframes.
 	Please update to Internet Explorer 4!
 </iframe>
@@ -76,39 +76,39 @@ uxebu team
 
 * [Tobias von Klipstein](team/klipstein.html)
   Cofounder
-  ![Tobias von Klipstein](static/img/team/klipstein.png)
+  ![Tobias von Klipstein](media/img/team/klipstein.png)
 
 * [Wolfram Kriesing](team/kriesing.html)
   Cofounder
-  ![Alttext](static/img/team/kriesing.png)
+  ![Alttext](media/img/team/kriesing.png)
 
 * [Nikolai Onken](team/onken.html)
   Cofounder
-  ![Alt text](static/img/team/onken.png)
+  ![Alt text](media/img/team/onken.png)
 
 * [David Aurelio](team/aurelio.html)
   JS Ninja
-  ![Alt text](static/img/team/aurelio.png)
+  ![Alt text](media/img/team/aurelio.png)
 
 * [Jens Arps](team/arps.html)
   JS King
-  ![Alt text](static/img/team/arps.png)
+  ![Alt text](media/img/team/arps.png)
 
 * [Tobias Schneider](team/schneider.html)
   JS President
-  ![Alt text](static/img/team/schneider.png)
+  ![Alt text](media/img/team/schneider.png)
 
 * [Stephan Seidt](team/seidt.html)
   JS Prophet
-  ![Alt text](static/img/team/seidt.png)
+  ![Alt text](media/img/team/seidt.png)
 
 * [Peter van der Zee](team/zee.html)
   JS Scientist
-  ![Alt text](static/img/team/zee.png)
+  ![Alt text](media/img/team/zee.png)
 
 * [John-David Dalton](team/dalton.html)
   JS Lawyer
-  ![Alt text](static/img/team/dalton.png)
+  ![Alt text](media/img/team/dalton.png)
 
 
 Address & Phone
