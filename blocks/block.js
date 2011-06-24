@@ -8,9 +8,42 @@ function _prepareBlock(block){
 }
 
 exports.trailerBox = function(block){
+	// Summary:
+	// 		This is a special box, that we use as the trailer at the top of the site
+	// 		it can contain multiple things, separated by an <hr>, which is a * * * in markdown.
+	// 		The content can be:
+	// 		* two lined text, whcih will be shown as a big header
+	// 		* any markup, like '<iframe...>', it has to start with "<" then it
+	// 		  is injected as pure HTML, that is best used for including iframes, script tags, etc
+	//
+	// Markdown:
+	// 		Sample markup:
+	//
+	// 		Trailer										| Required but ignored
+	// 		=======										|
+	//													|
+	// 		WE BRING YOUR WEB APPS						| Optional, this has to be a two line text
+	//		TO ANY APP STORE IN THE WORLD.				| 
+	// 													|
+	// 		* * *										| A required separator if you have multiple blocks as shown here
+	//													|
+	// 		<iframe src="http://mario.qfox.nl/">		| raw markup to embed
+	// 			Your Browser does not support iframes.	| 
+	//			Please update to Internet Explorer 4!	|
+	// 		</iframe>									|
+	// 													|
+	// 		* * *										| A required separator if you have multiple blocks as shown here
+	//													|
+	// 		WE BRING YOUR WEB APPS						| Optional, this has to be a two line text
+	//		TO ANY APP STORE IN THE WORLD.				| 
+	//
+	// Returns:
+	// 		title:
+	// 		content:
+	//		link:
 	var view = {};
 	// [ 'h1', 'TEXT' ]
-    view.title = block.shift()[1]; // Remove the first element which is the title.
+	view.title = block.shift()[1]; // Remove the first element which is the title.
 	var items = view.items = [];
 	do{
 		var el = block.shift();
@@ -29,22 +62,23 @@ exports.trailerBox = function(block){
 exports.simpleBox = function(block){
 	// Summary:
 	// 		This is a simple textbox which renders a title, text
-    // 		and an optional link at the bottom.
-    //
-    // Markdown:
-    // 		Sample markup:
-    //
+	// 		and an optional link at the bottom.
+	//
+	// Markdown:
+	// 		Sample markup:
+	//
 	// 		Title						| Required
 	// 		=====						|
-	//								    	|
+	//									|
 	// 		Some text.					| Required [+1, at least one]
-	//                                  	|
+	//									|
 	// 		[Link](http://uxebu.com)	| Optional, if available as last item.
 	//
 	// Returns:
 	// 		title:
 	// 		content:
 	//		link:
+	//		linkContent:
 
     var view = {};
 	// [ 'h1', 'TEXT' ]
