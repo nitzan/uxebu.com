@@ -78,7 +78,7 @@ function renderView(name){
 						// 4.
 						// Looking uo mustache comment which specifies the box renderer
 						// we want to use.
-                        var func = text.match(/[\s\S]*{{!(\w+)}}/)[1] || "simpleBox";
+						var func = text.match(/[\s\S]*{{!(\w+)}}/)[1] || "simpleBox";
 						return mustache.to_html(text, blocks[func](block));
 					}
 				}
@@ -91,15 +91,15 @@ function renderView(name){
 			// Converting <br></br> to <br />
   			var voidTags = /area|base|br|col|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr/i;
   			out = out.replace(/<(\w+)([^<>]*)><\/\1>/g, function(_, tagName, attribs){
-			    var markup = "<" + tagName + attribs;
-			    markup += voidTags.test(tagName) ? " />" : "></" + tagName + ">";
-			    return markup;
+				var markup = "<" + tagName + attribs;
+				markup += voidTags.test(tagName) ? " />" : "></" + tagName + ">";
+				return markup;
   			});
 
 			// 6.
 			// If debug is true we compress the HTML and write it to the filesystem
 			console.log('Writing \t\t\trelease/' + name + '.html');
-            fs.writeFile('release/' + name + '.html', debug ? out : kompressor(out, true), encoding='utf8');
+			fs.writeFile('release/' + name + '.html', debug ? out : kompressor(out, true), encoding='utf8');
 		});
 	});
 }
@@ -126,18 +126,18 @@ function parseMarkdown(tree){
 	//				[ [ 'h1', 'Title' ],[ 'p', 'More content' ] ]
 	//			]
 
-    var tree = md.toHTMLTree(tree);
-    var blocks = [];
-    var block = [];
-    tree = tree.splice(1);
-    while(tree.length){
-        if (block.length && tree[0][0] == 'h1'){
-        	blocks.push(block);
-        	block = [];
-        } else {
-        	block.push(tree.shift());
-        }
-    };
-    blocks.push(block);
+	var tree = md.toHTMLTree(tree);
+	var blocks = [];
+	var block = [];
+	tree = tree.splice(1);
+	while(tree.length){
+		if (block.length && tree[0][0] == 'h1'){
+			blocks.push(block);
+			block = [];
+		} else {
+			block.push(tree.shift());
+		}
+	};
+	blocks.push(block);
 	return blocks;
 }
