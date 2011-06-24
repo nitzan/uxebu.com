@@ -152,7 +152,7 @@ for (var func in exports){
     var docString = [];
     var line = lines.shift().match(/^\s*\/\/(.*)/);
     while (line){
-        docString.push(line[1]);
+        docString.push("   "+line[1]);
         line = lines.shift().match(/^\s*\/\/(.*)/);
     }
     exports[func].__docs__ = docString.join("\n");
