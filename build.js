@@ -52,20 +52,27 @@ function renderView(item){
 				c['block' + index] = function(){
 					return function(text, parse){
                         var func = text.match(/[\s\S]*{{!(\w+)}}/)[1] || "simpleBox";
-						return mustache.to_html(text, blocks[func](block));
+						try {
+							var parsedBlock = blocks[func]([].concat(block)); // Make a copy of the block, since the method modifies it inside.
+							return mustache.to_html(text, parsedBlock);
+						}catch(e){
+							console.log('ERROR:\n\tSyntax error in "' + item + '.md", stopped parsing in block "' + block[0][1] +
+										'".\n' + blocks[func].__docs__ + '\n');
+						}
+						return "";
 					}
 				}
 			});
-
+			
 			var out = mustache.to_html(template, c);
-  			var voidTags = /area|base|br|col|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr/i;
-  			out = out.replace(/<(\w+)([^<>]*)><\/\1>/g, function(_, tagName, attribs){
-			    var markup = "<" + tagName + attribs;
-			    markup += voidTags.test(tagName) ? " />" : "></" + tagName + ">";
-			    return markup;
-  			});
+			var voidTags = /area|base|br|col|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr/i;
+			out = out.replace(/<(\w+)([^<>]*)><\/\1>/g, function(_, tagName, attribs){
+				var markup = "<" + tagName + attribs;
+				markup += voidTags.test(tagName) ? " />" : "></" + tagName + ">";
+				return markup;
+			});
 			console.log('Writing \t\t\trelease/' + item + '.html');
-            fs.writeFile('release/' + item + '.html', debug ? out : kompressor(out, true), encoding='utf8');
+			fs.writeFile('release/' + item + '.html', debug ? out : kompressor(out, true), encoding='utf8');
 		});
 	});
 }
