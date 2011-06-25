@@ -123,6 +123,15 @@ function renderView(name){
             });
 
             // 5.
+            if (errorMessages.length){
+console.log('errorMessages = ', JSON.stringify(errorMessages));
+                var titles = [];
+                var texts = [];
+                errorMessages.forEach(function(m){ titles.push(m.title); texts.push(m.text); });
+console.log('texts = ', texts);
+console.log('titles = ', titles);
+                tplContent.errorMessage = titles.join("\n") + "\n\n" + texts.join("\n************************\n");
+            }
             var out = mustache.to_html(template, tplContent);
 
             // The markdown parser returns elements which don't require a closing tag with a closing tag
