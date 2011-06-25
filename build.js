@@ -13,7 +13,7 @@ var appConfig   = require('./appConfig');
 // are text strings that should be maintainable and not spread all over the code.
 var templates = {
     ERROR_MARKDOWN_SYNTAX:{
-        TITLE: 'ERROR: Syntax error in "{{markdownFileName}}.md", stopped parsing in block "{{blockTitle}}".',
+        TITLE: 'ERROR: Syntax error in "{{markdownFileName}}.md", stopped parsing block "{{blockTitle}}".',
         HINT: 'In the following find explaination about the syntax of this markdown block.'
     },
     WARNING_USING_DEFAULT_RENDERER:{
@@ -36,10 +36,10 @@ function mixin(target, obj){
 fs.readdir(appConfig.srcDir, function(err, data){
     clean();
 
-    console.log('Reading HTML files from\t\t' + appConfig.srcDir);
+    appUtil.statusLog('Reading HTML files from\t' + appConfig.srcDir);
     data.forEach(function(item){
         if (item.indexOf('.html') > -1){
-            if (appConfig.isVerbose) console.log("\t\t\t\t    " + item);
+            if (appConfig.isVerbose) appUtil.statusLog("\t...." + item);
             renderView(item.split('.html')[0]);
         }
     });
@@ -49,10 +49,10 @@ function clean(){
     // Summary:
     //      1. Cleaning up release dir
     //      2. Copying media and static files to release dir
-    console.log('Deleting\t\t\t' + appConfig.releaseDir + '/*');
+    appUtil.statusLog('Deleting\t' + appConfig.releaseDir + '/*');
     exec('rm -rf ' + appConfig.releaseDir + '/*', function(err, stdout, stderr){
-        console.log('Copying\t\t\t\t' + appConfig.srcDir + '/static to' + appConfig.releaseDir + '/');
-        console.log('Copying\t\t\t\t' + appConfig.contentDir + '/media to ' + appConfig.releaseDir + '/');
+        appUtil.statusLog('Copying\t' + appConfig.srcDir + '/static to' + appConfig.releaseDir + '/');
+        appUtil.statusLog('Copying\t' + appConfig.contentDir + '/media to ' + appConfig.releaseDir + '/');
         exec('cp -r ' + appConfig.srcDir + '/static ' + appConfig.contentDir + '/media  ' + appConfig.releaseDir + '/',
             function (err, stdout, stderr) {
                 if (err !== null) {
@@ -77,7 +77,7 @@ function renderView(name){
     // 1.
     fs.readFile(appConfig.srcDir + '/' + name + '.html', 'utf-8', function(err, template){
         // 2.
-        console.log('Reading and parsing \t\t' + appConfig.srcDir + '/' + name + '.md');
+        appUtil.statusLog('Reading and parsing \t' + appConfig.srcDir + '/' + name + '.md');
         fs.readFile('content/' + name + '.md', 'utf-8', function(arr, markdown){
             // 3.
             var tree = appUtil.parseMarkdown(markdown);
@@ -99,7 +99,7 @@ function renderView(name){
                             func = "simpleBox";
                             appUtil.consoleLog([
                                 {tpl: templates.WARNING_USING_DEFAULT_RENDERER.TITLE, vars:{markdownFileName: name, blockTitle:block[0][1]}},
-                                {tpl:templates.WARNING_USING_DEFAULT_RENDERER.HINT, verbose:true}
+                                {tpl: templates.WARNING_USING_DEFAULT_RENDERER.HINT, verbose:true}
                             ]);
                         }
                         try {
@@ -112,9 +112,9 @@ function renderView(name){
                             };
                             errorMessages.push(errorMsg);
                             appUtil.consoleLog([
-                                {msg: (appConfig.isVerbose ? "\n\n" : "") + errorMsg.title},
+                                {msg: errorMsg.title},
                                 {msg: '\n' + mustache.to_html(templates.ERROR_MARKDOWN_SYNTAX.HINT, {}), verbose:true},
-                                {msg: '\n\n' + errorMsg.text + "\n\n", verbose:true}
+                                {msg: '\n' + errorMsg.text, verbose:true}
                             ]);
                             return "";
                         }
@@ -136,7 +136,7 @@ function renderView(name){
 
             // 6.
             // If debug is true we compress the HTML and write it to the filesystem
-            console.log('Writing \t\t\t' + appConfig.releaseDir + '/' + name + '.html');
+            appUtil.statusLog('Writing\t' + appConfig.releaseDir + '/' + name + '.html');
             fs.writeFile(appConfig.releaseDir + '/' + name + '.html', appConfig.isDebug ? out : kompressor(out, true), encoding='utf8');
         });
     });
