@@ -26,6 +26,11 @@ exports.consoleLog = function(messages){
     }
 }
 
+exports.statusLog = function(msg){
+    var rightColMargin = 40; // The number of spaces where the right column starts.
+    msg = msg.replace('\t', Array(rightColMargin - msg.indexOf('\t')).join("."));
+    console.log(msg);
+}
 
 exports.parseMarkdown = function(tree){
     // Summary:
