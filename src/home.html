@@ -10,6 +10,9 @@
 	<script src="static/js/ie_detection.js"></script>
 </head>
 <body id="top">
+	{{#errorMessage}}
+	<div class="errormessage">{{errorMessage}}</div>
+	{{/errorMessage}}
 	<div class="container">
 		<div class="row">
 			<div class="mod mod-skin3 no-top-radius">
@@ -81,8 +84,8 @@
 		</div>
         
 		<div class="row">
-            {{#block3}}
-            {{!listBox}}
+			{{#block3}}
+			{{!listBox}}
 			<div class="col-6">
 				<div class="mod mod-skin1 business-flag">
 					<div class="hd"><h2>{{title}}</h2></div>
@@ -102,6 +105,7 @@
             
             {{#block4}}
             {{!listBox}}
+			
 			<div class="col-6 last">
 				<div class="mod mod-skin1 geek-flag">
 					<div class="hd"><h2>Open Source Projects</h2></div>
