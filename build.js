@@ -17,7 +17,7 @@ var templates = {
         HINT: 'In the following find explaination about the syntax of this markdown block.'
     },
     WARNING_USING_DEFAULT_RENDERER:{
-        TITLE: 'WARNING: No render method given for block "{{blockTitle}}" in "{{markdownFileName}}.md" using the default method "simpleBox".',
+        TITLE: 'WARNING: No render method given for block "{{blockTitle}}" in "{{tplFileName}}.html" using the default method "simpleBox".',
         HINT: 'If you want to set a render method use mustache comments for it, like so: { {!simpleBox} } or { {!listBox} }.'
     }
 };
@@ -98,7 +98,7 @@ function renderView(name){
                         } else {
                             func = "simpleBox";
                             appUtil.consoleLog([
-                                {tpl: templates.WARNING_USING_DEFAULT_RENDERER.TITLE, vars:{markdownFileName: name, blockTitle:block[0][1]}},
+                                {tpl: templates.WARNING_USING_DEFAULT_RENDERER.TITLE, vars:{tplFileName:name, blockTitle:block[0][1]}},
                                 {tpl: templates.WARNING_USING_DEFAULT_RENDERER.HINT, verbose:true}
                             ]);
                         }
