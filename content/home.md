@@ -45,9 +45,9 @@ Client Projects
 * Woodwing reader
   Universal tablet pub.
 * Civiguard
-  Mobile App for disaster/crisi management.
+  Mobile App for disaster/crisis management.
 * Vodafone
-  Mobile cross-platform approach through widgets.
+  Mobile cross-platform support.
 * Chip App
   A hand-selected iPhone AppStore catalog.
 * BMW
