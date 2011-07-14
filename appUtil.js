@@ -1,3 +1,5 @@
+/* ex: set tabstop=4 expandtab: */
+
 // global imports
 var mustache = require('mustache');
 var md = require('markdown').markdown;
