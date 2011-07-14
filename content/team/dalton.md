@@ -1,25 +1,30 @@
-Nikolai Onken
-=============
+John-David Dalton
+=================
 
-Co-Founder
-----------
+JS Lawyer
+---------
 
-[Nikolai Onken](/media/img/team/onken.png)
+[John David Dalton](/media/img/team/dalton.png)
 
-Nikolai has been developing web applications since 1997 and since then continuously been involved with open source projects such as the Dojo Toolkit. Since 2008, mobile cross platform development has been the primary focus of Nikolais work and he is pushing the browser as platform forward through projects like HumanAPI. Being a co-founder of Europe based JavaScript company uxebu, Nikolai now is developing tools (apparat.io) for developers to make mobile HTML5 development easier.
+Lorem ipsum
 
 Special Moves
 -------------
 
-* HumanAPI
-* Dojo
+* One
+* Two
 
 Contact
 =======
 
-[Email](onken@uxebu.com)
-[GitHub](http://github.com/nonken)
-[LinkedIn](http://www.linkedin.com/in/onken)
+* [email](mailto:dalton@uxebu.com)
+  dalton@uxebu.com
 
-Twitter: @nonken
-================
+* [github](http://github.com/...)
+  GitHub
+
+* [linkedin](http://www.linkedin.com/in/...)
+  LinkedIn
+
+Twitter: @jdalton
+=================

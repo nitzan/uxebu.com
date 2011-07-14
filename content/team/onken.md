@@ -17,9 +17,14 @@ Special Moves
 Contact
 =======
 
-[Email](onken@uxebu.com)
-[GitHub](http://github.com/nonken)
-[LinkedIn](http://www.linkedin.com/in/onken)
+* [email](mailto:onken@uxebu.com)
+  onken@uxebu.com
+
+* [github](http://github.com/nonken)
+  GitHub
+
+* [linkedin](http://www.linkedin.com/in/onken)
+  LinkedIn
 
 Twitter: @nonken
 ================

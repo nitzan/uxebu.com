@@ -11,15 +11,20 @@ Lorem
 Special Moves
 -------------
 
-* HumanAPI
-* Dojo
+* One
+* Two
 
 Contact
 =======
 
-[Email](klipstein@uxebu.com)
-[GitHub](http://github.com/tobiasklipstein)
-[LinkedIn](http://www.linkedin.com/in/tklipstein)
+* [email](mailto:klipstein@uxebu.com)
+  klipstein@uxebu.com
+
+* [github](http://github.com/...)
+  GitHub
+
+* [linkedin](http://www.linkedin.com/in/...)
+  LinkedIn
 
 Twitter: @tklipstein
 ====================

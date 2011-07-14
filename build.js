@@ -15,7 +15,7 @@ var appConfig   = require('./appConfig');
 // are text strings that should be maintainable and not spread all over the code.
 var templates = {
     ERROR_MARKDOWN_SYNTAX:{
-        TITLE: 'ERROR: Syntax error in "{{markdownFileName}}.md", stopped parsing block "{{blockTitle}}".',
+        TITLE: 'ERROR: Syntax error in "{{markdownFileName}}", stopped parsing block "{{blockTitle}}".',
         HINT: 'In the following find explaination about the syntax of this markdown block.'
     },
     WARNING_USING_DEFAULT_RENDERER:{
