@@ -165,7 +165,6 @@ function renderView(name){
             var map = appConfig.mapping[name];
             if (Object.prototype.toString.apply(map) === '[object Array]'){
                 map.forEach(function(item){
-                    var chunks = item.split('.md');
                     if (item.indexOf('.md') > -1){
                         var fileName = item.split('.md')[0];
                         readMarkdown(template, appConfig.contentDir + '/' + fileName + '.md', appConfig.releaseDir + '/' + fileName + '.html', name);
@@ -174,7 +173,6 @@ function renderView(name){
                     }
                 });
             }else if (Object.prototype.toString.apply(map) === '[object String]'){
-                var chunks = map.split('.md');
                 if (map.indexOf('.md') > -1){
                     var fileName = item.split('.md')[0];
                     readMarkdown(template, appConfig.contentDir + '/' + fileName + '.md', appConfig.releaseDir + '/' + fileName + '.html', name);

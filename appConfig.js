@@ -8,7 +8,7 @@ var srcDir = exports.srcDir = './src'; // Template sources
 var releaseDir = exports.releaseDir = './release'; // Website release
 var contentDir = exports.contentDir = './content'; // Markdown content
 var mapping = exports.mapping = {
-    'team': ['/team', 'team.md']
+    'team': '/team'
 };
 
 function hasConsoleArgs(args){
