@@ -1,4 +1,4 @@
-
+/* ex: set tabstop=4 expandtab: */
 
 var consoleArgs = process.argv.slice(2);
 var isDebug = exports.isDebug = hasConsoleArgs(['debug', '-d']);
@@ -7,7 +7,9 @@ var isVerbose = exports.isVerbose = hasConsoleArgs(['verbose', '-v']);
 var srcDir = exports.srcDir = './src'; // Template sources
 var releaseDir = exports.releaseDir = './release'; // Website release
 var contentDir = exports.contentDir = './content'; // Markdown content
-
+var mapping = exports.mapping = {
+    'team': ['/team', 'about.md']
+};
 
 function hasConsoleArgs(args){
     for (var i=0, l=args.length; i<l; i++){
