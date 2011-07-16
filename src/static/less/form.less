@@ -3,11 +3,27 @@
 .uni-form fieldset legend{display:inline-block;font-size:100%;margin-bottom:5px;padding:4px 0;text-indent:10px;width:100%;}
 .uni-form fieldset legend{*margin-left:-17px;}
 
-.uni-form .button-holder, .uni-form .ctrl-holder{margin:@large-margin;.clear-safe;}
+.uni-form .button-holder, .uni-form .ctrl-holder{ .mhx; .mbm;.clear-safe;}
 
 .uni-form, .uni-form .inline-label{.clear-safe;}
-.uni-form label,.uni-form .label{display:block;margin:0;margin-top:0.5em;}
+.uni-form label,.uni-form .label{display:block;margin:0;margin-top:0.5em;opacity:.5;}
 .uni-form .text-input, .uni-form .file-upload, .uni-form .select-input, .uni-form select, .uni-form textarea{width:60%;margin:0;}
+
+.uni-form .text-input {
+	.background-gradient(
+		#181818,
+		#232323
+	);
+
+	color: #fff;
+	border: 1px solid #3b3b3b;
+	.border-radius(4px);
+}
+
+.uni-form .text-input:active {
+	border: 1px solid #737373;
+}
+
 .uni-form .form-hint{width:80%;margin:0;clear:none;}
 
 /* Position the elements inside combo boxes (multiple inputs/selects/checkboxes/radio buttons per unit) */

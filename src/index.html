@@ -152,13 +152,44 @@
                 <div class="bd">
                     <div class="col-6">
                         <h2 class="line business">Contact</h2>
-                        <p>Form</p>
+                        <form class="uni-form mbl" action="https://service.capsulecrm.com/service/newlead" method="post">
+                            <input type="hidden" name="FORM_ID" value="bbe497f7-1a5e-434e-876e-20dddcc754f7">
+                            <input type="hidden" name="COMPLETE_URL" value="http://uxebu.com/contact/thanks">
+                            <input type="hidden" name="TAG" value="www">
+
+                            <div class="ctrl-holder">
+                                <label for="name">Your name</label>
+                                <div class="col-6">
+                                    <div class="mrl">
+                                        <input id="id_FIRST_NAME" required="required" type="text" name="FIRST_NAME" maxlength="50" class="text-input large" placeholder="First">
+                                    </div>
+                                </div>
+                                <div class="col-6 last">
+                                    <input id="id_LAST_NAME" required="required" type="text" name="LAST_NAME" maxlength="50" class="text-input large" placeholder="Last">
+                                </div>
+                            </div>
+                            <div class="ctrl-holder">
+                                <label for="name">Email address</label>
+                                <input required="required" type="text" name="EMAIL" id="id_EMAIL" class="text-input large" placeholder="your@email.com">
+                            </div>
+                            <div class="ctrl-holder">
+                                <label for="name">Phone number</label>
+                                <input type="text" name="PHONE" id="id_PHONE" class="text-input large" placeholder="+1 123 456 789">
+                            </div>
+                            <div class="ctrl-holder">
+                                <label>How can we help?</label>
+                                <textarea id="id_NOTE" rows="6" name="NOTE" class="text-input large"></textarea>
+                            </div>
+                            <div class="ctrl-holder" style="text-align: right;">
+                                <button class="primary-action button" type="submit">Submit</button>
+                            </div>
+                        </form>
                     </div>
 
                     {{#block6}}
                     {{!simpleBox}}
                     <div class="col-6 last">
-                        <h2 class="line business">{{title}}</h2>
+                        <h2 class="line business mbx">{{title}}</h2>
                         <p>{{{content}}}</p>
                         <div class="ft">
                             <p><a href="{{link}}" class="alternative">{{{linkContent}}}</a></p>

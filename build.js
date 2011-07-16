@@ -192,7 +192,7 @@ function writeView(output, template, tplContent){
 
     // The markdown parser returns elements which don't require a closing tag with a closing tag
     // Converting <br></br> to <br />
-    var voidTags = /area|base|br|col|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr/i;
+    var voidTags = /^area|base|br|col|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr$/i;
     out = out.replace(/<(\w+)([^<>]*)><\/\1>/g, function(_, tagName, attribs){
         var markup = "<" + tagName + attribs;
         markup += voidTags.test(tagName) ? " />" : "></" + tagName + ">";
