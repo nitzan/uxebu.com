@@ -24,7 +24,8 @@ Contact
 * [GitHub](http://github.com/qfox)
 
 * [LinkedIn](http://www.linkedin.com/in/kuvos)
-  
 
-Twitter: @kuvos
-===============
+* Website: [qfox.nl](http://qfox.nl)
+
+* Twitter: [@kuvos](http://twitter.com/kuvos)
+=======
