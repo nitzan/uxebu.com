@@ -13,7 +13,7 @@ On the way he listens to the wise men of the Cognitive Artificial Intelligence c
 Special Moves
 -------------
 
-* Speaks fluient Jee'es, without the use of assistance
+* Speaks fluient Jee'es by just using the power of mind
 * Can pass on the knowledge of Jee'es to those who wish to embrace it's way of life
 
 Contact
