@@ -23,7 +23,7 @@ Contact
 
 * [GitHub](http://github.com/qfox)
 
-* [LinkedIn](http://www.linkedin.com/in/kuvos)
+* [LinkedIn](http://www.linkedin.com/in/pvdzee)
 
 * Website: [qfox.nl](http://qfox.nl)
 
