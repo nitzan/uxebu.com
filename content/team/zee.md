@@ -19,9 +19,9 @@ Special Moves
 Contact
 =======
 
-* email [zee@uxebu.com](mailto:zee@uxebu.com)
+* Email: [zee@uxebu.com](mailto:zee@uxebu.com)
 
-* GitHub [github](http://github.com/qfox)
+* [GitHub](http://github.com/qfox)
 
 * [LinkedIn](http://www.linkedin.com/in/kuvos)
   
