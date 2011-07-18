@@ -19,14 +19,12 @@ Special Moves
 Contact
 =======
 
-* [email](mailto:zee@uxebu.com)
-  zee@uxebu.com
+* email [zee@uxebu.com](mailto:zee@uxebu.com)
 
-* [github](http://github.com/qfox)
-  GitHub
+* GitHub [github](http://github.com/qfox)
 
-* [linkedin](http://www.linkedin.com/in/kuvos)
-  LinkedIn
+* [LinkedIn](http://www.linkedin.com/in/kuvos)
+  
 
 Twitter: @kuvos
 ===============
