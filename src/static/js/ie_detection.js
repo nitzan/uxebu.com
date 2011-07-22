@@ -1,4 +1,4 @@
-(function(){
+!function(){
 	var v = 3,
 		div = document.createElement('div'),
 		all = div.getElementsByTagName('i');
@@ -7,4 +7,4 @@
 		all[0]
 	);
 	document.documentElement.className += v > 4 ? " ie" + v : ""; // modernized: thx to john-naked dalton :)
-}());
+}();

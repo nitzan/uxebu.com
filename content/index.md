@@ -76,39 +76,39 @@ uxebu team
 
 * [Tobias von Klipstein](team/klipstein.html)
   Cofounder
-  ![Tobias von Klipstein](media/img/team/klipstein.png)
+  ![Tobias von Klipstein](media/img/team/klipstein-bw.jpg)
 
 * [Wolfram Kriesing](team/kriesing.html)
   Cofounder
-  ![Alttext](media/img/team/kriesing.png)
+  ![Alttext](media/img/team/kriesing-bw.jpg)
 
 * [Nikolai Onken](team/onken.html)
   Cofounder
-  ![Alt text](media/img/team/onken.png)
+  ![Alt text](media/img/team/onken-bw.jpg)
 
 * [David Aurelio](team/aurelio.html)
   JS Ninja
-  ![Alt text](media/img/team/aurelio.png)
+  ![Alt text](media/img/team/aurelio-bw.jpg)
 
 * [Jens Arps](team/arps.html)
   JS King
-  ![Alt text](media/img/team/arps.png)
+  ![Alt text](media/img/team/arps-bw.jpg)
 
 * [Tobias Schneider](team/schneider.html)
   JS President
-  ![Alt text](media/img/team/schneider.png)
+  ![Alt text](media/img/team/schneider-bw.jpg)
 
 * [Stephan Seidt](team/seidt.html)
   JS Prophet
-  ![Alt text](media/img/team/seidt.png)
+  ![Alt text](media/img/team/seidt-bw.jpg)
 
 * [Peter van der Zee](team/zee.html)
   JS Scientist
-  ![Alt text](media/img/team/zee.png)
+  ![Alt text](media/img/team/zee-bw.jpg)
 
 * [John-David Dalton](team/dalton.html)
   JS Lawyer
-  ![Alt text](media/img/team/dalton.png)
+  ![Alt text](media/img/team/dalton-bw.jpg)
 
 Address & Phone
 ===============

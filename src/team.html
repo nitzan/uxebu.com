@@ -9,8 +9,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js"></script>
     <script src="/static/js/less-1.1.3.min.js"></script>
     <script src="/static/js/ie_detection.js"></script>
+    <script src="/static/js/main.js"></script>
 </head>
-<body id="top">
+<body id="team">
     <div class="container">
         <div class="row">
             <div class="mod mod-skin3 no-top-radius">
@@ -147,10 +148,8 @@
                     {{#block2}}
                     {{!twitterBox}}
                     <div class="hd"><h2 class="h5 twitter"><a href="#">@{{username}}:</a></h2></div>
-                    <div class="bd">
-                        {{#tweets}}
-                        <p>{{{text}}}<br />{{{created_at}}}</p>
-                        {{/tweets}}
+                    <div class="bd tweets" data-username="{{username}}">
+                        <p class="loading">Loading tweets...</p>
                     </div>
                     {{/block2}}
                 </div>
