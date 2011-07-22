@@ -61,7 +61,7 @@ exports.trailerBox = function(block, callb){
         }
     } while(block.length);
 
-    callb && callb(view);
+    return view;
 };
 
 exports.simpleBox = function(block, callb){
@@ -96,7 +96,7 @@ exports.simpleBox = function(block, callb){
     }
     view.content = block.map(function(i){return md.renderJsonML(["html", i]);}).join(" ");
 
-    callb && callb(view);
+    return view;
 };
 
 exports.listBox = function(block, callb){
@@ -126,7 +126,7 @@ exports.listBox = function(block, callb){
         return {header:split[0], text:split[1]};
     });
 
-    callb && callb(view);
+    return view;
 };
 
 exports.imageBox = function(block, callb){
@@ -172,7 +172,7 @@ exports.imageBox = function(block, callb){
             profileUrl: item[0][1].href
         }
     });
-    callb && callb(view);
+    return view;
 };
 
 exports.profileBox = function(block, callb){
@@ -207,14 +207,12 @@ exports.profileBox = function(block, callb){
     //          text:
     //      }
 
-    var view = {
+    return {
         title: block.shift()[1],
         subTitle: block.shift()[1],
         imgSrc: block.shift()[1][1].href,
         text: md.toHTML(['html'].concat(block))
     };
-
-    callb && callb(view);
 };
 
 exports.twitterBox = function(block, callb){
@@ -238,27 +236,10 @@ exports.twitterBox = function(block, callb){
     // 1. Getting twitter username from h1
     var username = block.shift()[1].split(':')[1] || 'uxebu';
     username = username.replace('@', '').trim();
-    var options = {
-        host: 'api.twitter.com',
-        port: 80,
-        path: '/1/statuses/user_timeline.json?include_rts=true&screen_name='+username+'&count=10',
-        method: 'GET'
-    };
 
-    var returnData = '';
-    var req = http.request(options, function(res) {
-        res.setEncoding('utf8');
-        res.on('data', function(chunk){
-            returnData += chunk;
-        });
-        res.on('end', function(){
-            callb && callb({
-                username: username,
-                tweets: JSON.parse(returnData)
-            })
-        });
-    });
-    req.end();
+    return {
+        username: username
+    };
 }
 
 exports.contactBox = function(block, callb){
@@ -299,9 +280,9 @@ exports.contactBox = function(block, callb){
         });
     });
 
-    callb && callb({
+    return {
         contact: contact
-    });
+    };
 }
 
 for (var func in exports){

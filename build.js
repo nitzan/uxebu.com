@@ -24,6 +24,8 @@ var templates = {
     }
 };
 
+var errorMessages = []; // Store all the error messages and concat them later.
+
 // Simple mixin, note: it does not check for hasOwnProperty!
 function mixin(target, obj){
     for (var prop in obj){
@@ -32,6 +34,9 @@ function mixin(target, obj){
 }
 
 function readDir(dir){
+    // Summary:
+    //      Reads dir and passes found HTML files to renderView
+
     fs.readdir(dir, function(err, data){
         appUtil.statusLog('Reading HTML files from\t' + dir);
         data && data.forEach(function(item){
@@ -47,6 +52,7 @@ function clean(callb){
     // Summary:
     //      1. Cleaning up release dir
     //      2. Copying media and static files to release dir
+
     appUtil.statusLog('Deleting\t' + appConfig.releaseDir + '/*');
     exec('rm -rf ' + appConfig.releaseDir + '/*', function(err, stdout, stderr){
         appUtil.statusLog('Copying\t' + appConfig.srcDir + '/static to' + appConfig.releaseDir + '/');
@@ -66,103 +72,19 @@ function clean(callb){
     })
 }
 
+// Summary:
+//      1. Reads HTML file
+//      2. Reads Markdown file
+//      3. Deconstructs Markdown tree into blocks
+//          3.1 Determines proper function which returns Mustache view
+//      4. Renders HTML
+//          4.1 Writes output to filesystem
+
 function renderView(name){
     // Summary:
-    //      1. Reads HTML file
-    //      2. Reads Markdown file
-    //      3. Deconstructs Markdown tree into blocks
-    //      4. Determines proper function which returns Mustache view
-    //      5. Renders HTML
-    //      6. Writes output to filesystem
-    //
-    //      NOTE: The template block renderers are asynchronous so they can fetch
-    //      information from remote resources. We therefor first render a dummy template to determine the
-    //      blocks used, activate the blocks and parse the result to the provided callback. Once
-    //      the callback count is equal to the block count we know we can write out the final HTML rendered
-    //      file.
+    //      1.
 
-    function readMarkdown(template, input, output, name){
-        appUtil.statusLog('Reading and parsing \t' + appConfig.srcDir + '/' + name + '.md');
-        fs.readFile(input, 'utf-8', function(arr, markdown){
-            // 3.
-            var tree = appUtil.parseMarkdown(markdown);
-            var tplContent = {
-                errorMessage:""
-            };
-            tplContent[name] = true;
-
-            var tplC = {}; // Temporary obj holding all blocks from the markdown file
-
-            var cnt = 0;
-            var errorMessages = []; // Store all the error messages and concat them later.
-            tree.forEach(function(block, index){
-                // Based on the tree array we create mustache blocks with custom callbacks
-                // handling the mapping of Markdown elements to Mustache tags.
-
-                // This is the callback which gets passed into the different block renderers.
-                function callb(view, index){
-                    cnt++;
-                    tplContent['block' + index] = view;
-                    if (cnt == tree.length){
-                        writeView(output, template, tplContent);
-                    }
-                }
-
-                tplC['block' + index] = function(){
-                    return function(text, parse){
-                        // 4.
-                        // Looking for mustache comment '{{!boxName}}' which specifies the box's render method
-                        // we want to use, if none found we default to "simpleBox".
-                        var boxMatch = text.match(/[\s\S]*{{!(\w+)}}/);
-                        var func;
-                        if (boxMatch){
-                            func = boxMatch[1];
-                        } else {
-                            func = "simpleBox";
-                        }
-                        try {
-                            var parsedBlock = blocks[func]([].concat(block), (function(index){
-                                return function(view){
-                                    callb(view, index);
-                                }
-                            })(index)); // Make a copy of the block, since the method modifies it inside.
-                        }catch(e){
-                            var errorMsg = {
-                                title: mustache.to_html(templates.ERROR_MARKDOWN_SYNTAX.TITLE, {markdownFileName:input, blockTitle:block[0][1]}),
-                                text: blocks[func].__docs__
-                            };
-                            errorMessages.push(errorMsg);
-                            appUtil.consoleLog([
-                                {msg: errorMsg.title},
-                                {msg: '\n' + mustache.to_html(templates.ERROR_MARKDOWN_SYNTAX.HINT, {}), verbose:true},
-                                {msg: '\n' + errorMsg.text, verbose:true}
-                            ]);
-                            return "";
-                        }
-                    }
-                }
-            });
-            mustache.to_html(template, tplC);
-        });
-    }
-
-    function readContentDir(name, template){
-        exec('mkdir ' + appConfig.releaseDir + name, function(){
-            fs.readdir(appConfig.contentDir + name, function(err, data){
-                data && data.forEach(function(item){
-                    if (item.indexOf('.md') > -1){
-                        var fileName = item.split('.md')[0];
-                        readMarkdown(template, appConfig.contentDir + name + '/' + fileName+ '.md', appConfig.releaseDir + name + '/' + fileName + '.html', fileName);
-                    }
-                });
-            });
-        });
-    }
-
-    // 1.
-    //
     fs.readFile(appConfig.srcDir + '/' + name + '.html', 'utf-8', function(err, template){
-        // 2.
         if (appConfig.mapping[name]){
             var map = appConfig.mapping[name];
             if (Object.prototype.toString.apply(map) === '[object Array]'){
@@ -189,7 +111,83 @@ function renderView(name){
     });
 }
 
+function readContentDir(name, template){
+    // Summary:
+    //      2.
+
+    exec('mkdir ' + appConfig.releaseDir + name, function(){
+        fs.readdir(appConfig.contentDir + name, function(err, data){
+            data && data.forEach(function(item){
+                if (item.indexOf('.md') > -1){
+                    var fileName = item.split('.md')[0];
+                    readMarkdown(template, appConfig.contentDir + name + '/' + fileName+ '.md', appConfig.releaseDir + name + '/' + fileName + '.html', fileName);
+                }
+            });
+        });
+    });
+}
+
+function readMarkdown(template, input, output, name){
+    // Summary:
+    //      3.
+
+    appUtil.statusLog('Reading and parsing \t' + appConfig.srcDir + '/' + name + '.md');
+    fs.readFile(input, 'utf-8', function(arr, markdown){
+        var tree = appUtil.parseMarkdown(markdown);
+        var tplContent = { errorMessage:"" };
+        tree.forEach(function(block, index){
+            // Based on the tree array we create mustache blocks with custom callbacks
+            // handling the mapping of Markdown elements to Mustache tags.
+            tplContent['block' + index] = function(){
+                return function(text, parse){
+                    // 3.1
+                    // Looking for mustache comment '{{!boxName}}' which specifies the box's render method
+                    // we want to use, if none found we default to "simpleBox".
+                    var boxMatch = text.match(/[\s\S]*{{!(\w+)}}/);
+                    var func;
+                    if (boxMatch){
+                        func = boxMatch[1];
+                    } else {
+                        func = "simpleBox";
+                        appUtil.consoleLog([
+                            {tpl: templates.WARNING_USING_DEFAULT_RENDERER.TITLE, vars:{tplFileName:input, blockTitle:block[0][1]}},
+                            {tpl: templates.WARNING_USING_DEFAULT_RENDERER.HINT, verbose:true}
+                        ]);
+                    }
+                    try {
+                        var parsedBlock = blocks[func]([].concat(block)); // Make a copy of the block, since the method modifies it inside.
+                        return mustache.to_html(text, parsedBlock);
+                    }catch(e){
+                        var errorMsg = {
+                            title: mustache.to_html(templates.ERROR_MARKDOWN_SYNTAX.TITLE, {markdownFileName:input, blockTitle:block[0][1]}),
+                            text: blocks[func].__docs__
+                        };
+                        errorMessages.push(errorMsg);
+                        appUtil.consoleLog([
+                            {msg: errorMsg.title},
+                            {msg: '\n' + mustache.to_html(templates.ERROR_MARKDOWN_SYNTAX.HINT, {}), verbose:true},
+                            {msg: '\n' + errorMsg.text, verbose:true}
+                        ]);
+                        return "";
+                    }
+                }
+            }
+        });
+        writeView(output, template, tplContent);
+    });
+}
+
 function writeView(output, template, tplContent){
+    // Summary:
+    //      4.
+
+    if (errorMessages.length){
+        var titles = [];
+        var texts = [];
+        errorMessages.forEach(function(m){ titles.push(m.title); texts.push(m.text); });
+        tplContent.errorMessage = titles.join("\n") + "\n\n" + texts.join("\n************************\n");
+    }
+
     var out = mustache.to_html(template, tplContent);
 
     // The markdown parser returns elements which don't require a closing tag with a closing tag
@@ -201,7 +199,7 @@ function writeView(output, template, tplContent){
         return markup;
     });
 
-    // 6.
+    // 4.1
     // If debug is true we compress the HTML and write it to the filesystem
     appUtil.statusLog('Writing\t' + output);
     fs.writeFile(output, appConfig.isDebug ? out : kompressor(out, true), encoding='utf8');
@@ -229,4 +227,3 @@ clean(function(){
     // Reading src directory and passing found HTML file names to renderView()
     readDir(appConfig.srcDir);
 });
-
