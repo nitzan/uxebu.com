@@ -1,10 +1,12 @@
-/* ex: set tabstop=4 expandtab: */
+
 
 !function(){
     dojo.require('dojo.NodeList-traverse');
     dojo.require('dojo.io.script');
     dojo.require("dojo.date");
     dojo.require("dojo.date.locale");
+    dojo.require("dojox.widget.AutoRotator");
+    dojo.require("dojox.widget.rotator.Fade");
 
     /* Helper */
     function formatDate(date){
@@ -87,13 +89,32 @@
 
     function initPage(){
         var pages = {
-            team: initTeam
+            team: initTeam,
+            index: initIndex
         };
 
         var id = dojo.attr(dojo.body(), 'id');
         if (pages[id] && typeof pages[id] !== 'undefined'){
             pages[id]();
         }
+    }
+
+    function initIndex(){
+        var p = dojo.query('.pane');
+        var panes = p.map(function(pane){
+            return {
+                innerHTML: pane.outerHTML
+            }
+        });
+        console.log(panes);
+        var r = new dojox.widget.AutoRotator({
+            duration: 5000,
+            //panes: panes,
+            transition: "dojox.widget.rotator.crossFade",
+            suspendOnHover: true,
+            pauseOnManualChange: true
+        }, dojo.query('.trailer')[0]);
+
     }
 
     function initTeam(){
@@ -116,3 +137,4 @@
         initPage();
     });
 }();
+

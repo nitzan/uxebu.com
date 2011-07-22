@@ -6,10 +6,13 @@ TO ANY APP STORE IN THE WORLD.
 
 * * *
 
-<iframe src="" scrolling="no" width="100%" height="100px">
-	Your Browser does not support iframes.
-	Please update to Internet Explorer 4!
-</iframe>
+New Workshop in Amsterdam
+Join us for the future of JavaScript
+
+* * *
+
+meet the uxebu crew at
+JsConf, DojoConf and FullFrontal
 
 We are uxebu
 ============
@@ -21,7 +24,7 @@ We are pioneers. We do stuff that others just can’t do, because it has never b
 
 Please get in touch so we can discuss your web development project!
 
-[Contact](http://uxebu.com/test.html)
+[Contact](http://uxebu.com/#contact)
 
 
 We are geeks
@@ -36,7 +39,7 @@ We actively contribute to open source  projects and push new technologies to the
 
 We also openly share our knowledge and thoughts, live on events and on our blog.
 
-[Blog & Events](http://uxebu.com)
+[Blog & Events](http://uxebu.com/blog)
 
 
 Client Projects
@@ -124,4 +127,4 @@ Germany
 Fax: +49 89 122 219 626 - 8  
 E-Mail: contact@uxebu.com
 
-[Impressum / Legal](http://uxebu.com/legal)
+[Impressum / Legal](/legal.html)
