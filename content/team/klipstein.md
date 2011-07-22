@@ -4,7 +4,7 @@ Tobias Klipstein
 Co-Founder
 ----------
 
-[Tobias Klipstein](/media/img/team/klipstein.png)
+[Tobias Klipstein](/media/img/team/klipstein.jpg)
 
 Lorem
 

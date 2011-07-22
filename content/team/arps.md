@@ -4,7 +4,7 @@ Jens Arps
 JS King
 -------
 
-[Jens Arps](/media/img/team/arps.png)
+[Jens Arps](/media/img/team/arps.jpg)
 
 Lorem ipsum
 

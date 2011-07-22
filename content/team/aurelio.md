@@ -4,7 +4,7 @@ David Aurelio
 JS Ninja
 --------
 
-[David Aurelio](/media/img/team/aurelio.png)
+[David Aurelio](/media/img/team/aurelio.jpg)
 
 Lorem ipsum
 

@@ -149,7 +149,9 @@
                     {{!twitterBox}}
                     <div class="hd"><h2 class="h5 twitter"><a href="#">@{{username}}:</a></h2></div>
                     <div class="bd tweets" data-username="{{username}}">
-                        <p class="loading">Loading tweets...</p>
+                        {{#tweets}}
+                        <p>{{{text}}}<br />{{{created_at}}}</p>
+                        {{/tweets}}
                     </div>
                     {{/block2}}
                 </div>
@@ -158,7 +160,7 @@
     </div>
     <div class="container">
         <div class="row footer">
-            <p>&copy; uxebu Consulting Ltd. &amp; Co. KG | <a class="alternative" href="#">Contact</a> | <a  class="alternative" href="#">Legal</a></p>
+            <p>&copy; uxebu Consulting Ltd. &amp; Co. KG | <a class="alternative" href="/index.html#contact">Contact</a> | <a  class="alternative" href="/legal.html">Legal</a></p>
             <p><span class="html-logo" title="HTML5"></span></p>
         </div>
     </div>

@@ -4,7 +4,7 @@ John-David Dalton
 JS Lawyer
 ---------
 
-[John David Dalton](/media/img/team/dalton.png)
+[John David Dalton](/media/img/team/dalton.jpg)
 
 Lorem ipsum
 

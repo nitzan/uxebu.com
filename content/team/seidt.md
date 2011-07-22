@@ -4,7 +4,7 @@ Stephan Seidt
 JS Prophet
 ----------
 
-[Stephan Seidt](/media/img/team/seidt.png)
+[Stephan Seidt](/media/img/team/seidt.jpg)
 
 Lorem ipsum
 

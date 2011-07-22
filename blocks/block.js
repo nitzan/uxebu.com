@@ -253,8 +253,8 @@ exports.contactBox = function(block, callb){
     //      Contact                                            | Required
     //      =======                                            |
     //                                                         |
-    //      * [email](mailto:contact@uxebu.com)
-    //        contact@uxebu.com
+    //      * [email](mailto:contact@uxebu.com)                | email: CSS class, mailto:...: link
+    //        contact@uxebu.com                                | contact@uxebu.com: displayed text
     //
     //      * [github](http://github.com/uxebu)
     //        GitHub
@@ -268,7 +268,6 @@ exports.contactBox = function(block, callb){
     //          content:
     //          href:
     //      }]
-
     block.shift();
     block = block[0].slice(1);
     var contact = [];

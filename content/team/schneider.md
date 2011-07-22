@@ -4,7 +4,7 @@ Tobias Schneider
 JS President
 ------------
 
-[Tobias Schneider](/media/img/team/schneider.png)
+[Tobias Schneider](/media/img/team/schneider.jpg)
 
 Lorem ipsum
 

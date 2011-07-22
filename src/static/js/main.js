@@ -76,7 +76,6 @@
         navMenu.connect('click', function(e){
             e.stopPropagation();
             pinned = !pinned;
-            console.log(pinned);
             !pinned && deactivate();
         });
 
@@ -93,7 +92,6 @@
 
         var id = dojo.attr(dojo.body(), 'id');
         if (pages[id] && typeof pages[id] !== 'undefined'){
-            console.log(pages[id], id);
             pages[id]();
         }
     }
@@ -107,7 +105,6 @@
             load: function(data){
                 dojo.query('.loading', container).orphan();
                 dojo.forEach(data, function(tweet){
-                    console.log(tweet);
                     dojo.place('<p>' + tweet.text.replace(/((ftp|http|https):\/\/(\S+))/, '<a href="$1" target="_blank">$1</a>') + '<br /><span class="font-small">' + formatDate(new Date(tweet.created_at)) + '</span>', container, 'last');
                 });
             }

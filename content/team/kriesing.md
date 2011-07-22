@@ -4,7 +4,7 @@ Wolfram Kriesing
 Co-Founder
 ----------
 
-[Wolfram Kriesing](/media/img/team/kriesing.png)
+[Wolfram Kriesing](/media/img/team/kriesing.jpg)
 
 Lorem ipsum
 
