@@ -17,7 +17,7 @@
 
 <body>
     <div class="container">
-        <div class="row">
+        <div class="row" style="overflow: visible; position: relative;">
             <div class="mod mod-skin3 no-top-radius">
                 <div class="bd">
                     <div class="col-4">
