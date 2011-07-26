@@ -3,25 +3,25 @@
 // Widget Settings
 
 if ( function_exists('register_sidebar') )
-	register_sidebar(array(
-		'name' => 'Sidebar1',
-		'before_widget' => '<li id="%1$s" class="widget %2$s">', 
-	'after_widget' => '</li>', 
-	'before_title' => '<h3 class="widgettitle style-head">', 
-	'after_title' => '</h3><hr class="widget-hr"/>', 
-	));
+    register_sidebar(array(
+        'name' => 'Sidebar1',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget' => '</li>',
+        'before_title' => '<h3 class="widgettitle style-head">',
+        'after_title' => '</h3><hr class="widget-hr"/>',
+    ));
 
 if ( function_exists('register_sidebar') )
-	register_sidebar(array(
-		'name' => 'Sidebar2',
-		'before_widget' => '<li id="%1$s" class="widget %2$s">', 
-		'after_widget' => '</li>', 
-		'before_title' => '', 
-		'after_title' => '',
-	));
+    register_sidebar(array(
+        'name' => 'Sidebar2',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget' => '</li>',
+        'before_title' => '',
+        'after_title' => '',
+    ));
 
 
-// Custom Menus 
+// Custom Menus
 add_theme_support( 'nav-menus' );
 
 
@@ -43,7 +43,7 @@ array(
 
 // Tags
 add_filter('the_tags', 'tags_add_link_class');
- 
+
 function tags_add_link_class($output) {
   $var1 = '<a';
   $var2 = '<a class="tag"';
@@ -54,31 +54,31 @@ return $output;
 // Kommentar-Darstellung
 
 function uxebu_comment($comment, $args, $depth) {
-   $GLOBALS['comment'] = $comment; 
-	static $comment_number = 0; ?>
-	 <div <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-		<div class="bd">
-			<?php comment_text() ?>
-				<?php if ($comment->comment_approved == '0') : ?>
-	         		<em><?php _e('Your comment is awaiting moderation.') ?></em>
-	      		<?php endif; ?>
-			</div>
-  		<div class="ft">
-			<div class="col-2">
-				<span class="comm-nbr"><?php $comment_number++; echo $comment_number; ?></span>
-			</div>
-      		<div class="col-10 last">
-				<div class="media mbs">
-         			<div class="img-ext media-xs">
-						<?php echo get_avatar($comment,$size='48',$default='<path_to_url>' ); ?>
-					</div>
-         			<div class="bd comm-meta">
-					<p class="mrm">	<?php printf(__('%1$s &mdash; %2$s'), get_comment_date(),  get_comment_time('h:i a')) ?><br />
-						<strong><?php printf(__('%s'), get_comment_author_link()) ?></strong></p>
-					<div><!-- bd comm-meta -->			
-      			</div><!-- media -->
-      		</div><!-- col-10 -->
-		</div><!-- ft -->
+   $GLOBALS['comment'] = $comment;
+    static $comment_number = 0; ?>
+     <div <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+        <div class="bd">
+            <?php comment_text() ?>
+                <?php if ($comment->comment_approved == '0') : ?>
+                    <em><?php _e('Your comment is awaiting moderation.') ?></em>
+                <?php endif; ?>
+            </div>
+        <div class="ft">
+            <div class="col-2">
+                <span class="comm-nbr"><?php $comment_number++; echo $comment_number; ?></span>
+            </div>
+            <div class="col-10 last">
+                <div class="media mbs">
+                    <div class="img-ext media-xs">
+                        <?php echo get_avatar($comment,$size='48',$default='<path_to_url>' ); ?>
+                    </div>
+                    <div class="bd comm-meta">
+                    <p class="mrm"> <?php printf(__('%1$s &mdash; %2$s'), get_comment_date(),  get_comment_time('h:i a')) ?><br />
+                        <strong><?php printf(__('%s'), get_comment_author_link()) ?></strong></p>
+                    <div><!-- bd comm-meta -->
+                </div><!-- media -->
+            </div><!-- col-10 -->
+        </div><!-- ft -->
      </div><!-- id comm -->
 </div>
 <?php
