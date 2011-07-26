@@ -1,0 +1,172 @@
+/* Variables */
+@blog-base-color:#000000;
+@input-dark-color-1:#2d2d2d;
+@input-dark-color-2:#1e1e1e;
+
+/* text und links */
+
+.wplnk
+{
+	text-decoration:underline;
+	color:@blog-base-color;
+}
+
+.wplnk-bold, .more-link
+{
+	.wplnk;
+	.highlightLink;
+}
+
+.tar
+{
+	text-align:right;
+}
+
+.tac
+{
+	text-align:center;
+}
+
+.highlightLink
+{
+	font-weight:bold;
+}
+
+
+
+/* special hr für einzelartikelansicht unter überschrift */
+.wphr
+{
+	border-color: @blog-base-color;
+	border-width:2px;
+	.mtm;
+	.mbm; 
+	.mrx; 
+	.mlx;
+}
+
+/* Kommentare-Styles */
+.comment
+{
+	.mod-skin2;
+	.ptm;
+	.pbm;
+	.pln;
+	.prn;
+	.mbn;
+	.mtm;
+}
+
+.commentlist
+{
+	.man;
+}
+
+.comm-meta
+{
+	.tar;
+	.font-small;
+	float:right;
+}
+
+.comm-nbr
+{
+	font-size:245%;
+	font-weight:400;
+	.mlx;
+}
+
+.comment-submit
+{
+	float:right;
+}
+
+.url
+{
+	text-decoration:underline;
+}
+
+
+
+/* Sidebar */
+.article-sidebar-link
+{
+	font-weight:bold;
+}
+
+.widgettitle
+{
+
+}
+
+.widget-hr
+{
+	.mlx;
+	.mrx;
+	.mtn;
+	.mbn;
+}
+
+.viewall
+{
+	display: block;
+	margin-top: 30px;
+	color:@text-base-color;
+	text-decoration:underline;
+	.font-small;
+}
+
+.cat-item 
+{
+	color:@link-color;
+}
+
+.widget_categories li.cat-item a
+{
+	.highlightLink;
+}
+
+.widget-autorenwidget a
+{
+	.highlightLink;
+}
+
+
+li.dropdown-li a /* a lässt sich leider nicht direkt ansprechen */
+{
+	.dropdown-arrow;
+}
+
+/* Sonstiges */
+.uxebu-wpfooter
+{
+	float:right;
+}
+
+.footerlink
+{
+	color:@text-base-color;
+	text-decoration:underline;
+}
+
+
+/* Calender */
+.widget-event-wrapper
+{
+	.mod-skin1;
+}
+
+.gce-list
+{
+	.man;
+}
+
+.widget-event-start, .widget-event-descr
+{
+	font-weight:bold;
+}
+
+.page-event-wrapper
+{
+	.mod-skin2;
+}
