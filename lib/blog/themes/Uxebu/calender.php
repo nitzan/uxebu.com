@@ -6,13 +6,12 @@ get_header();
 ?>
 <div class="col-8 wpmain"><!-- main col -->
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	<h2 class="h3"><?php the_title(); ?></h2>
 		<?php endwhile; endif ?>
 
 			<div class="container mal">
 				<div class="bd">
 				<?php echo do_shortcode('[google-calendar-events id="2" type="list"]'); ?>
-					</div>			
+					</div>
 				</div><!-- end bd -->
 
 

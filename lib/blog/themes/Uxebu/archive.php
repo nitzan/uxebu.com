@@ -9,46 +9,63 @@ get_header();
 
 <!--archive.php-->
 <div class="col-8 wpmain"><!-- main col -->
-	<div class="mod-skin2">
+	<div class="mod-skin2 pal mtl">
 		<?php if (have_posts()) : ?>
 
 			 <?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 		<?php if (is_category()) { ?>				
-			<h3>Category-Archive for <?php single_cat_title(); ?></h3>
+			<div class="hd">
+				<h3 class="line default mhl">Archive for <?php single_cat_title(); ?></h3>
+			</div>
 
 	 	  <?php } elseif (is_day()) { ?>
-			<h3>Tagesarchiv f&uuml;r den <?php the_time('j. F Y'); ?></h3>
+			<div class="hd">
+				<h3 class="line default mhl">Archive for <?php the_time('j. F Y'); ?></h3>
+			</div>
 
 		 <?php } elseif (is_month()) { ?>
-			<h3>Monatsarchiv f&uuml;r <?php the_time('F Y'); ?></h3>
+			<div class="hd">
+				<h3 class="line default mhl">Archive for <?php the_time('F Y'); ?></h3>
+			</div>
 
 			<?php } elseif (is_year()) { ?>
-			<h3>Jahresarchiv f&uuml;r <?php the_time('Y'); ?></h3>
+			<div class="hd">
+				<h3 class="line default mhl">Archive for <?php the_time('Y'); ?></h3>
+			</div>
 
 		  <?php } elseif (is_author()) { ?>
-			<h3>Autoren Archiv</h3>
-
+			<div class="hd">
+				<h3 class="line default mhl">Authors archive</h3>
+			</div>
 			<?php } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-				<h3>Blog Archiv</h3>
+			<div class="hd">
+				<h3 class="line default mhl">Blog archive</h3>
+			</div>
 
 			<?php } ?>
-
 
 			<?php while (have_posts()) : the_post(); ?>
 
 			<div class="container mal">
 				<div class="bd">
 					<div class="col-3">
-						<p class="mlm mrm"><?php the_time('F jS, Y') ?></p>
+						<pspan class="font-small"><?php the_time('M jS, Y') ?></p>
 					</div>
-						<div class="col-9 last">
-						<p>	<a id="post-<?php the_ID(); ?>" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="wplnk"><?php the_title(); ?></a></p>
+					<div class="col-9 last">
+						<div class="media man">
+							<div class="img mrs">
+								<?php echo get_avatar(get_the_author_id(), 20 ); ?>
+							</div>
+							<div class="bd">
+								<a id="post-<?php the_ID(); ?>" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="wplnk"><?php the_title(); ?></a>
+							</div>
 						</div>
-
 					</div>
+
+				</div>
 
 				
-				</div><!-- end bd -->
+			</div><!-- end container -->
 
 
 		<?php endwhile; ?>

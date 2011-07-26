@@ -21,7 +21,7 @@ get_header();
 					<div class="col-4 last">
 						<div class="media">
 							<div class="img-ext">
-								<img src="http://a3.twimg.com/profile_images/696769359/me_uxebu_cropped-uxebu-overlayed.jpg" alt="Wolfram Kriesing" class="media-xs" />
+								<?php echo get_avatar(get_the_author_id(), 38 ); ?>
 							</div>
 							<div class="bd font-small tar">
 								<?php the_time('F jS, Y') ?><br />
@@ -39,17 +39,13 @@ get_header();
 			</div><!-- container -->
 			</div><!-- end mod post -->
 
-	
-	
-	
-
 	<?php endwhile; else: ?>
 
 		leider es gibt keine Beitr&auml;ge
 		<?php get_search_form(); ?>
 <?php endif; ?>
 </div><!-- container post -->
-<div class="container">			
+<div class="container">
 		<?php comments_template(); ?>
 </div><!-- container comment -->
 

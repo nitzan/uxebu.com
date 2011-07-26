@@ -5,7 +5,10 @@ Template Name: Archiv
 get_header();
 ?>
 <div class="col-8 wpmain"><!-- main col -->
-	<div class="mod-skin2 pal">
+	<div class="mod-skin2 pal mtl">
+				<div class="hd">
+					<h3 class="line default mhl">Archive</h3> 
+				</div>
 <?php	$wp_query = $tmp_query;
 	                query_posts('posts_per_page=-1'); 
 	                if (have_posts()) :
@@ -14,10 +17,17 @@ get_header();
 			<div class="container mal">
 				<div class="bd">
 					<div class="col-3">
-						<?php the_time('F jS, Y') ?><br />
+						<span class="font-small"><?php the_time('M jS, Y') ?></span>
 					</div>
 						<div class="col-9 last">
-							<a id="post-<?php the_ID(); ?>" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+							<div class="media man">
+								<div class="img mrs">
+									<?php echo get_avatar(get_the_author_id(), 20 ); ?>
+								</div>
+								<div class="bd">
+									<a id="post-<?php the_ID(); ?>" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+								</div>
+							</div>
 						</div>
 
 					</div>

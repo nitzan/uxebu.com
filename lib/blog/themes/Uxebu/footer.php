@@ -7,17 +7,7 @@
 </div> <!-- end container -->	
 
 <div class="container">
-	<div class="row">
-	<div class="col-8 font-small">
-		<div class="tac uxebu-wpfooter">	
-			<p>&copy; uxebu Consulting Ltd. &amp; Co. KG | <a href="##">Contact</a> | <a href="##">Legal</a></p>
-			<div class="html-logo">
-			</div>
-		</div>
-	</div>
-	<div class="col-4 last">
-	</div>
-</div><!-- row -->
+<div class="row footer"> <p>© uxebu Consulting Ltd. &amp; Co. KG | <a class="alternative" href="#">Contact</a> | <a class="alternative" href="#">Legal</a></p> <p><span class="html-logo" title="HTML5"></span></p> </div>
 </div> <!-- end container -->	
 
 </body>

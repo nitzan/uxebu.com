@@ -6,7 +6,7 @@
 
 get_header();
 ?>
-<div class="col-8 wpmain"><!-- main col -->
+<div class="col-8 wpmain ptl"><!-- main col -->
 <?php	$wp_query = $tmp_query;
 $args = array(
 'post_type' => array( 'post', 'externalpost'),
@@ -44,7 +44,7 @@ query_posts($args);
 											<div class="col-4 last">
 												<div class="media">
 													<div class="img-ext">
-														<img src="http://a3.twimg.com/profile_images/696769359/me_uxebu_cropped-uxebu-overlayed.jpg" alt="Wolfram Kriesing" class="media-xs" />
+														<?php echo get_avatar(get_the_author_id(), 38 ); ?>
 													</div>
 													<div class="bd font-small tar">
 														<?php the_time('F jS, Y') ?><br />
@@ -63,45 +63,39 @@ query_posts($args);
 										</div>
 										</div><!-- bd -->
 									</div><!-- end mod -->
-																											
-
 									<?php
-								}	
-								else 
+								}
+								else
 								{
 									?>
 									<div class="mod mod-skin2"><!-- ein post -->
-										<div class="hd">		
-											<div class="col-8">
-													<h2 class="h3"><a id="post-<?php the_ID(); ?>" href="<?php the_permalink(); ?>"rel="bookmark" title="<?php the_title_attribute(); ?>" class="wplnk"><?php the_title(); ?></a></h2>
+										<div class="hd line default mhx">
+											<div class="col-7">
+													<h2 class="h3 mhn"><a id="post-<?php the_ID(); ?>" href="<?php the_permalink(); ?>"rel="bookmark" title="<?php the_title_attribute(); ?>" class="wplnk"><?php the_title(); ?></a></h2>
 											</div>
-											<div class="col-4 last">
-												<div class="media">
-													<div class="img-ext">
-														<img src="http://a3.twimg.com/profile_images/696769359/me_uxebu_cropped-uxebu-overlayed.jpg" alt="Wolfram Kriesing" class="media-xs" />
+											<div class="col-5 last">
+												<div class="media mhn mtl ptm">
+													<div class="img-ext mlm">
+														<?php echo get_avatar(get_the_author_id(), 38 ); ?>
 													</div>
-													<div class="bd font-small tar">
+													<div class="bd font-small tar" style="display: block;">
 														<?php the_time('F jS, Y') ?><br />
 														<?php printf('<a class="wplnk-bold" href="'. get_author_posts_url(get_the_author_ID()) .'" title="'. sprintf(__("Posts by %s","uxebu"), attribute_escape(get_the_author())).' ">'. get_the_author() .'</a>'); ?>
 													</div>
 												</div><!-- end media -->
 											</div><!-- end col -->
-									</div><!-- end hd -->
-									<div class="bd">
+										</div><!-- end hd -->
+										<div class="bd">
 										<?php the_content('read more...'); ?>
 										<!--<?php trackback_rdf(); ?>-->
 
-									</div><!-- end bd -->
+										</div><!-- end bd -->
 									</div><!-- end mod -->
-									
 									<?php
-									
 								}
-								?>	
-				
-
+								?>
 		<?php endwhile; ?>
-		<div class="tar">	
+		<div class="tar mal">
 			<a class="font-small footerlink" href="<?php echo get_option('home'); ?>/archive/">View all posts...</a>
 		</div>
 
@@ -117,7 +111,9 @@ query_posts($args);
 			<ul class="man">
 				<?php if ( function_exists ( dynamic_sidebar('Sidebar2') ) ) : dynamic_sidebar ('Sidebar2'); endif; ?>
 			</ul>
-			<a href="##" class="viewall tar">View past events...</a>
+			<div class="mal">
+				<a href="##" class="viewall tar">View past events...</a>
+			</div>
 		</div>
 </div><!-- end col-4 sidebar -->
 
