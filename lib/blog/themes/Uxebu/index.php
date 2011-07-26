@@ -112,7 +112,7 @@ query_posts($args);
 				<?php if ( function_exists ( dynamic_sidebar('Sidebar2') ) ) : dynamic_sidebar ('Sidebar2'); endif; ?>
 			</ul>
 			<div class="mal">
-				<a href="##" class="viewall tar">View past events...</a>
+				<a href="/past-evets" class="viewall tar">View past events...</a>
 			</div>
 		</div>
 </div><!-- end col-4 sidebar -->
