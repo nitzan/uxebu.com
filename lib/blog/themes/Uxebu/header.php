@@ -17,11 +17,11 @@
 
 <body>
     <div class="container">
-        <div class="row" style="overflow: visible; position: relative;">
+        <div class="row header">
             <div class="mod mod-skin3 no-top-radius">
                 <div class="bd">
                     <div class="col-4">
-                        <h1 style="font-size:1em;margin:5px 10px;">
+                        <h1 style="font-size:1em;margin:5px 25px;">
                             <a href="/">
                                 <img alt="uxebu" style="display:inline;vertical-align:text-bottom;" src="/static/img/logo_glow_small.png">
                             </a>
@@ -33,10 +33,10 @@
                                 <a href="/">About</a>
                             </li>
                             <li class="list-el list-el-hz active">
-                                <a href="/">Blog / Events</a>
+                                <a href="/blog">Blog / Events</a>
                             </li>
                             <li class="list-el list-el-hz">
-                                <a class="dropdown-arrow" href="#table">Open Source</a>
+                                <a class="dropdown-arrow" href="#">Open Source</a>
                             </li>
                             <div class="dropdown">
                                 <ul class="mod mod-skin4">
