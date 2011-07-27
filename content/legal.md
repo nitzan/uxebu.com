@@ -16,7 +16,13 @@ Registrar of Companies: München
 Registrar number: HRA 93461  
 USt-IdNr. DE264429812
 
+
+
 **USA:**
+
+uxebu Inc.  
+Palo Alto, California  
+USA  
 
 Legal
 =====
