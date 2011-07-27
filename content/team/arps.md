@@ -1,8 +1,6 @@
 Jens Arps
 =========
 
-JS King
--------
 
 [Jens Arps](/media/img/team/arps.jpg)
 
