@@ -26,7 +26,7 @@ exports.trailerBox = function(block, callb){
     //      Trailer                                     | Required but ignored
     //      =======                                     |
     //                                                  |
-    //      WE BRING YOUR WEB APPS                      | Optional, this has to be a two line text
+    //      WE BRING YOUR WEB APPS                      | Optional, this has to be a two line text and can include links
     //      TO ANY APP STORE IN THE WORLD.              |
     //                                                  |
     //      * * *                                       | A required separator if you have multiple blocks as shown here
@@ -49,18 +49,48 @@ exports.trailerBox = function(block, callb){
     // [ 'h1', 'TEXT' ]
     view.title = block.shift()[1]; // Remove the first element which is the title.
     var items = view.items = [];
+    var ops = Object.prototype.toString;
     do{
         var el = block.shift();
         if (el[0]=='hr') continue;
-        if (el[1].substr(0,1)=="<"){
-            items.push({iframe:el[1]});
+
+        // This transform is a bit tricky, lets walk through all steps:
+        // 1. A trailer box can consist of two lines of text or an iframe
+        // 2. Lines are determined by the existance of a \n
+        // 3. Each line can consist of text or other markdown enriched text (e.g. links)
+        el.shift();
+        if (ops.call(el[0]) == '[object String]' && el[0].substr(0,1)=="<"){ // iframe, no newlines allowed here
+            items.push({iframe:el[0]});
         } else {
-            // todo check
-            var lines = el[1].split("\n");
-            items.push({twoLineText:true, one:lines[0], two:lines[1]});
+            var l = { 0: '', 1: ''}, cnt = 0;
+            el.forEach(function(item){
+                if (ops.call(item) == '[object String]'){
+                    var lines = item.split('\n');
+                    l[cnt] += lines[0];
+                    // Line can be empty in case that \n is at the end
+                    // so we do the typeof check.
+                    if (typeof lines[1] !== 'undefined'){
+                        cnt = 1;
+                        l[cnt] += lines[1];
+                    }
+                }else{
+                    // We only support links atm.!
+                    if (item[0] == 'a'){
+                        l[cnt] += md.toHTML(['html', item]);
+                        // Links can have a \n at their contents end which means that the next element
+                        // has to be on line 2. We increment cnt to one to set correct object property accessor
+                        var lines = item[2].split('\n');
+                        if (lines[1]){
+                            cnt = 1;
+                        }
+                    }else{
+                        console.log("Error: Content for trailerBox is invalid! Please only use text and/or links");
+                    }
+                }
+            });
+            items.push({twoLineText:true, one:l[0], two:l[1]});
         }
     } while(block.length);
-
     return view;
 };
 
@@ -113,17 +143,45 @@ exports.listBox = function(block, callb){
     //      * Woodwing reader                                       | The list of items, where the
     //        Universal tablet pub.                                 | first line gets rendered into "list.header"
     //      * Civiguard                                             | and the second line into "list.text"
-    //        Mobile App for disaster/crisi management.             |
+    //        Mobile App for disaster/crisi management.             | the second line can contain a link
     //      * Vodafone                                              |
     //        Mobile cross-platform approach through widgets.       |
 
-    var view = {};
-    view.title = block.shift()[1]; // Remove the first element which is the title.
+    var view = {
+        title: block.shift()[1] // Remove the first element which is the title.
+    };
+    var ops = Object.prototype.toString;
     // Now we expect a "ul"
     // We take all the "li"s and pass them separately into the list-array that we iterate over in the tpl.
     view.list = block[0].slice(1).map(function(i){
-        var split = i[1].split("\n");
-        return {header:split[0], text:split[1]};
+        i.shift(); // Remove first element which is 'li'
+        var l = { 0: '', 1: ''}, cnt = 0;
+        i.forEach(function(item){
+            if (ops.call(item) == '[object String]'){
+                var lines = item.split('\n');
+                l[cnt] += lines[0];
+                // Line can be empty in case that \n is at the end
+                // so we do the typeof check.
+                if (typeof lines[1] !== 'undefined'){
+                    cnt = 1;
+                    l[cnt] += lines[1];
+                }
+            }else{
+                // We only support links atm.!
+                if (item[0] == 'a'){
+                    l[cnt] += md.toHTML(['html', item]);
+                    // Links can have a \n at their contents end which means that the next element
+                    // has to be on line 2. We increment cnt to one to set correct object property accessor
+                    var lines = item[2].split('\n');
+                    if (lines[1]){
+                        cnt = 1;
+                    }
+                }else{
+                    console.log("Error: Content for trailerBox is invalid! Please only use text and/or links");
+                }
+            }
+        });
+        return {header:l[0], text:l[1]};
     });
 
     return view;
