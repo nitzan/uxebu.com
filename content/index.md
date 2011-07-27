@@ -6,8 +6,8 @@ TO ANY APP STORE IN THE WORLD.
 
 * * *
 
-New Workshop in Amsterdam
-Join us for the future of JavaScript
+Hello JavaScript geeks
+Want to ravel the [JavaScript universe](http://uxebu.com/blog/2011/02/10/travel-with-uxebu-we-are-hiring/)?
 
 * * *
 
@@ -24,7 +24,7 @@ We are pioneers. We do stuff that others just can’t do, because it has never b
 
 Please get in touch so we can discuss your web development project!
 
-[Contact](http://uxebu.com/#contact)
+[Contact](#contact-form)
 
 
 We are geeks
@@ -45,72 +45,72 @@ We also openly share our knowledge and thoughts, live on events and on our blog.
 Client Projects
 ===============
 
-* Woodwing reader
-  Universal tablet pub.
-* Civiguard
-  Mobile App for disaster/crisis management.
-* Vodafone
-  Mobile cross-platform support.
-* Chip App
-  A hand-selected iPhone AppStore catalog.
-* BMW
-  Web application for innovation management.
-* Deutsche Telekom
-  Media center web application.
+* [Woodwing reader](http://woodwing.com)
+  [Universal tablet pub.](http://woodwing.com)
+* [Civiguard](http://civiguard.com)
+  [Mobile App for disaster/crisis management](http://civiguard.com).
+* [Vodafone](http://developer.vodafone.com)
+  [Mobile cross-platform support.](http://developer.vodafone.com)
+* [Chip App](http://chip.de)
+  [A hand-selected iPhone AppStore catalog.](http://chip.de)
+* [BMW](http://bmw.com)
+  [Web application for innovation management.](http://bmw.com)
+* [Deutsche Telekom](http://telekom.de)
+  [Media center web application.](http://telekom.de)
 
 Open Source Projects
 ====================
 
-* apparat.io
-  Package your HTML5 app for all app stores
-* embedJS
-  Ship no useless byte
-* Gordon
-  Flash(TM) runtime in JavaScript
-* HumanAPI
-  Interface hardware with web technologies
-* StorageJS
-  Micro warpper....
-* TouchScroll
-  A scrolling layer to fix position:fixed on iOS
+* [apparat.io](http://apparat.io)
+  [Package your HTML5 app for all app stores](http://apparat.io)
+* [embedJS](http://embedjs.org)
+  [Ship no useless byte](http://embedjs.org)
+* [Gordon](https://github.com/tobeytailor/gordon)
+  [Flash(TM) runtime in JavaScript](https://github.com/tobeytailor/gordon)
+* [HumanAPI](http://humanapi.org)
+  [Interface hardware with web technologies](http://humanapi.org)
+* [StorageJS](https://github.com/jensarps/StorageJS)
+  [Micro warpper for browser storage](https://github.com/jensarps/StorageJS)
+* [TouchScroll](http://uxebu.com/blog/2010/04/27/touchscroll-a-scrolling-layer-for-webkit-mobile)
+  [A scrolling layer to fix position:fixed on iOS](http://uxebu.com/blog/2010/04/27/touchscroll-a-scrolling-layer-for-webkit-mobile)
 
 uxebu team
 ==========
 
 * [Tobias von Klipstein](team/klipstein.html)
-  Cofounder
+  Co-Founder
   ![Tobias von Klipstein](media/img/team/klipstein-bw.jpg)
 
 * [Wolfram Kriesing](team/kriesing.html)
-  Cofounder
+  Co-Founder
   ![Alttext](media/img/team/kriesing-bw.jpg)
 
 * [Nikolai Onken](team/onken.html)
-  Cofounder
+  Co-Founder
   ![Alt text](media/img/team/onken-bw.jpg)
 
 * [David Aurelio](team/aurelio.html)
-  JS Ninja
+  JS Engineer
   ![Alt text](media/img/team/aurelio-bw.jpg)
 
 * [Jens Arps](team/arps.html)
-  JS King
+  JS Engineer
   ![Alt text](media/img/team/arps-bw.jpg)
 
 * [Tobias Schneider](team/schneider.html)
-  JS President
+  JS Engineer
   ![Alt text](media/img/team/schneider-bw.jpg)
 
 * [Stephan Seidt](team/seidt.html)
-  JS Prophet
+  JS Engineer
   ![Alt text](media/img/team/seidt-bw.jpg)
 
 * [Peter van der Zee](team/zee.html)
-  JS Scientist
+  JS Engineer
   ![Alt text](media/img/team/zee-bw.jpg)
 
 * [John-David Dalton](team/dalton.html)
-  JS Lawyer
+  JS Engineer
   ![Alt text](media/img/team/dalton-bw.jpg)
 
 Address & Phone

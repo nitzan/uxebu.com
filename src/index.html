@@ -16,18 +16,18 @@
     <div class="errormessage">{{errorMessage}}</div>
     {{/errorMessage}}
     <div class="container">
-        <div class="row" style="overflow: visible; position: relative;">
+        <div class="row header">
             <div class="mod mod-skin3 no-top-radius">
                 <div class="bd">
                     <div class="col-4">
-                        <h1 style="font-size:1em;margin:5px 10px;"><a href="/"><img alt="uxebu" style="display:inline;vertical-align:text-bottom;" src="/static/img/logo_glow_small.png"></a></h1>
+                        <h1 style="font-size:1em;margin:5px 25px;"><a href="/"><img alt="uxebu" style="display:inline;vertical-align:text-bottom;" src="/static/img/logo_glow_small.png"></a></h1>
                     </div>
                     <div class="col-8 last">
                         <ul class="nav">
                             <li class="active list-el list-el-hz"><a href="/">About</a></li>
-                            <li class="list-el list-el-hz"><a href="#">Blog / Events</a></li>
+                            <li class="list-el list-el-hz"><a href="/blog">Blog / Events</a></li>
                             <li class="list-el list-el-hz">
-                                <a href="#table" class="dropdown-arrow">Open Source</a>
+                                <a href="#" class="dropdown-arrow">Open Source</a>
                             </li>
                             <div class="dropdown">
                                 <ul class="mod mod-skin4">
@@ -64,8 +64,8 @@
                 {{#items}}
                     {{#twoLineText}}
                         <div class="pane" style="display: none;">
-                            <h1 id="basic" class="lucent upper pbs" style="margin-top: 60px;">{{one}}</h1>
-                            <h1 class="lucent upper" style="margin-bottom: 30px;">{{two}}</h1>
+                            <h1 id="basic" class="lucent upper pbs" style="margin-top: 60px;">{{{one}}}</h1>
+                            <h1 class="lucent upper" style="margin-bottom: 30px;">{{{two}}}</h1>
                         </div>
                     {{/twoLineText}}
                     {{#iframe}}
@@ -119,8 +119,8 @@
                         <ul class="mtn">
                             {{#list}}
                             <li class="star-business bullet">
-                                <h4>{{header}}</h4>
-                                <p>{{text}}<p>
+                                <h4>{{{header}}}</h4>
+                                <p>{{{text}}}<p>
                             </li>
                             {{/list}}
                         </ul>
@@ -139,8 +139,8 @@
                         <ul class="mtn">
                             {{#list}}
                             <li class="box-geek bullet">
-                                <h4>{{header}}</h4>
-                                <p>{{text}}<p>
+                                <h4>{{{header}}}</h4>
+                                <p>{{{text}}}<p>
                             </li>
                             {{/list}}
                         </ul>
@@ -160,9 +160,9 @@
                     <ul class="photos">
                         {{#list}}
                         <li class="list-el list-el-hz">
-                            <a href="{{profileUrl}}">
+                            <a href="{{profileUrl}}" class="alternative2">
                                 <img src="{{imgSrc}}"><br>
-                                {{title}}<br>
+                                <strong>{{title}}</strong><br>
                                 {{subtitle}}
                             </a>
                         </li>
@@ -172,7 +172,7 @@
             </div>
             {{/block5}}
         </div>
-        <div class="row" name="contact">
+        <div class="row" id="contact-form">
             <div class="mod mod-skin1">
                 <div class="bd">
                     <div class="col-6">
@@ -228,7 +228,7 @@
     </div>
     <div class="container">
         <div class="row footer">
-            <p>&copy; uxebu Consulting Ltd. &amp; Co. KG | <a class="alternative" href="#contact">Contact</a> | <a  class="alternative" href="legal.html">Legal</a></p>
+            <p>&copy; uxebu Consulting Ltd. &amp; Co. KG | <a class="alternative" href="#contact-form">Contact</a> | <a  class="alternative" href="legal.html">Legal</a></p>
             <p><span class="html-logo" title="HTML5"></span></p>
         </div>
     </div>
