@@ -1,12 +1,8 @@
-
-
 !function(){
     dojo.require('dojo.NodeList-traverse');
     dojo.require('dojo.io.script');
     dojo.require("dojo.date");
     dojo.require("dojo.date.locale");
-    dojo.require("dojox.widget.AutoRotator");
-    dojo.require("dojox.widget.rotator.Fade");
 
     /* Helper */
     function formatDate(date){
@@ -106,15 +102,28 @@
                 innerHTML: pane.outerHTML
             }
         });
-        console.log(panes);
-        var r = new dojox.widget.AutoRotator({
-            duration: 5000,
-            //panes: panes,
-            transition: "dojox.widget.rotator.crossFade",
-            suspendOnHover: true,
-            pauseOnManualChange: true
-        }, dojo.query('.trailer')[0]);
 
+        // Math.max.apply( Math, [1, 4, 3, 23] ); would be nice :)
+        var h = 0, o;
+        p.forEach(function(node){
+            dojo.style(node, {
+                position: 'absolute',
+                left: '0px',
+                top: '0px',
+                display: 'block',
+            });
+            o = node.offsetHeight;
+            h = o > h ? o : h;
+        });
+        p.parent().style('height', h + 34 +'px');
+
+        var index = 0;
+        dojo.addClass(p[index], 'visible');
+        setInterval(function(){
+            dojo.removeClass(p[index], 'visible');
+            var node = p[++index] ? p[index] : p[(index = 0)];
+            dojo.addClass(p[index], 'visible');
+        }, 5000);
     }
 
     function initTeam(){
@@ -137,4 +146,5 @@
         initPage();
     });
 }();
+
 
