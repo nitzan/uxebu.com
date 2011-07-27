@@ -135,6 +135,7 @@ function readMarkdown(template, input, output, name){
     fs.readFile(input, 'utf-8', function(arr, markdown){
         var tree = appUtil.parseMarkdown(markdown);
         var tplContent = { errorMessage:"" };
+        tplContent[name] = true;
         tree.forEach(function(block, index){
             // Based on the tree array we create mustache blocks with custom callbacks
             // handling the mapping of Markdown elements to Mustache tags.
