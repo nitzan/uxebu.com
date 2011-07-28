@@ -104,7 +104,10 @@
         });
 
         // Math.max.apply( Math, [1, 4, 3, 23] ); would be nice :)
-        var h = 0, o;
+        var h = 0; // maxHeight
+        var o; // offsetHeight
+        var trailerStatus = dojo.query('.trailer-status');
+        var statusNode = document.createElement('div');
         p.forEach(function(node){
             dojo.style(node, {
                 position: 'absolute',
@@ -114,16 +117,35 @@
             });
             o = node.offsetHeight;
             h = o > h ? o : h;
-        });
-        p.parent().style('height', h + 34 +'px');
 
-        var index = 0;
-        dojo.addClass(p[index], 'visible');
-        setInterval(function(){
-            dojo.removeClass(p[index], 'visible');
-            var node = p[++index] ? p[index] : p[(index = 0)];
-            dojo.addClass(node, 'visible');
+            // Append indicator to trailer-status
+            trailerStatus[0].appendChild(statusNode.cloneNode(false));
+        });
+        p.parent().style('height', h +'px');
+
+        trailerStatus.connect('onclick', function(e){
+            if (e.target.parentNode == trailerStatus[0]){
+                showTrailerNode(dojo.indexOf(trailerStatus[0].childNodes, e.target));
+                clearInterval(intv);
+            }
+        });
+
+        var index = currentIndex = 0;
+        var statusNodes = trailerStatus.children();
+        showTrailerNode(index);
+        var intv = setInterval(function(){
+            index = p[++index] ? index : 0;
+            showTrailerNode(index);
         }, 5000);
+
+        function showTrailerNode(index){
+            dojo.removeClass(statusNodes[currentIndex], 'active');
+            dojo.removeClass(p[currentIndex], 'visible');
+            dojo.addClass(statusNodes[index], 'active');
+            dojo.addClass(p[index], 'visible');
+            currentIndex = index;
+        }
+
     }
 
     function initTeam(){

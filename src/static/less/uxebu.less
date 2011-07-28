@@ -462,10 +462,6 @@ a.tag:hover, a.tag:focus, a.tag:visited,
         opacity: .8;
     }
 
-    h1 {
-        display: block;
-    }
-
     .pane {
         -webkit-transition-property: visibility, opacity;
         -webkit-transition-duration: 1000ms;
@@ -479,6 +475,23 @@ a.tag:hover, a.tag:focus, a.tag:visited,
     .visible {
         visibility: visible;
         opacity: 1;
+    }
+}
+
+.trailer-status {
+    text-align: center;
+    height: 36px;
+
+    div {
+        width: 8px; height: 8px; .border-radius(4px); background: #000; opacity: .6; display: inline-block; margin: 0 5px; cursor: pointer;
+        -webkit-transition-property: background, opacity;
+        -webkit-transition-duration: 500ms;
+        -moz-transition-property: background, opacity;
+        -moz-transition-duration: 500ms;
+    }
+
+    .active {
+        background: #fff; opacity: .7;
     }
 }
 
