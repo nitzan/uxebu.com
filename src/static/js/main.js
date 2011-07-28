@@ -25,17 +25,17 @@
                 diffObj = {
                     diff: "about " + diff,
                     unit: diff > 1 ? "hours" : "hour"
-                }
+                };
             }else if (diff > 0){
                 diffObj = {
                     diff: diff,
                     unit: diff > 1 ? "minutes" : "minute"
-                }
+                };
             }else{
                 diffObj = {
                     diff: "",
                     unit: "just a moment"
-                }
+                };
             }
             str = diffObj.diff + " " + diffObj.unit + " ago";
         }
@@ -100,7 +100,7 @@
         var panes = p.map(function(pane){
             return {
                 innerHTML: pane.outerHTML
-            }
+            };
         });
 
         // Math.max.apply( Math, [1, 4, 3, 23] ); would be nice :)
@@ -110,7 +110,7 @@
                 position: 'absolute',
                 left: '0px',
                 top: '0px',
-                display: 'block',
+                display: 'block'
             });
             o = node.offsetHeight;
             h = o > h ? o : h;
@@ -122,7 +122,7 @@
         setInterval(function(){
             dojo.removeClass(p[index], 'visible');
             var node = p[++index] ? p[index] : p[(index = 0)];
-            dojo.addClass(p[index], 'visible');
+            dojo.addClass(node, 'visible');
         }, 5000);
     }
 
