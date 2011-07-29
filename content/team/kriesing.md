@@ -19,8 +19,8 @@ Special Moves
 Contact
 =======
 
-* [email](mailto:kriesing@uxebu.com)
-  kriesing@uxebu.com
+* [email](/#contact-form)
+  Contact Wolfram
 
 * [github](http://github.com/wolframkriesing)
   GitHub
