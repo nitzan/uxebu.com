@@ -1,8 +1,8 @@
 Tobias Schneider
 ================
 
-JS President
-------------
+JavaScript developer
+--------------------
 
 [Tobias Schneider](/media/img/team/schneider.jpg)
 
@@ -19,14 +19,11 @@ Special Moves
 Contact
 =======
 
-* [email](mailto:schneider@uxebu.com)
-  schneider@uxebu.com
+* [email](/#contact-form)
+  Contact Tobias
 
 * [github](http://github.com/tobeytailor)
   GitHub
-
-* [linkedin](http://www.linkedin.com/in/...)
-  LinkedIn
 
 Twitter: @tobeytailor
 =====================
