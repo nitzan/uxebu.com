@@ -20,25 +20,17 @@
         <div class="row header">
             <div class="mod mod-skin3 no-top-radius">
                 <div class="bd">
-                    <div class="col-4">
-                        <h1 style="font-size:1em;margin:5px 25px;">
-                            <a href="/">
-                                <img alt="uxebu" style="display:inline;vertical-align:text-bottom;" src="/static/img/logo_glow_small.png">
-                            </a>
-                        </h1>
+                    <div class="col-3">
+                        <h1 style="font-size:1em;margin:5px 25px;"><a href="/"><img alt="uxebu" style="display:inline;vertical-align:text-bottom;" src="/static/img/logo_glow_small.png"></a></h1>
                     </div>
-                    <div class="col-8 last">
+                    <div class="col-9 last tar">
                         <ul class="nav">
+                            <li class="active list-el list-el-hz"><a href="/">About</a></li>
+                            <li class="list-el list-el-hz"><a href="/blog">Blog / Events</a></li>
                             <li class="list-el list-el-hz">
-                                <a href="/">About</a>
+                                <a href="#" class="dropdown-arrow">Open Source</a>
                             </li>
-                            <li class="list-el list-el-hz active">
-                                <a href="/blog">Blog / Events</a>
-                            </li>
-                            <li class="list-el list-el-hz">
-                                <a class="dropdown-arrow" href="#">Open Source</a>
-                            </li>
-                            <div class="dropdown">
+                            <div class="dropdown tal">
                                 <ul class="mod mod-skin4">
                                     <li class="bullet">
                                         <h4><a href="http://apparat.io">Apparat.io</a></h4><p><a href="http://apparat.io">Package your HTML5 apps</a></p>
@@ -61,6 +53,11 @@
                                 </ul>
                             </div>
                         </ul>
+                        <form class="uni-form mtl search" action="http://www.google.com/search">
+                            <input type="hidden" name="sitesearch" value="uxebu.com">
+                            <input type="hidden" name="domains" value="uxebu.com">
+                            <input type="text" class="search-input mts" name="q" placeholder="Search...">
+                        </form>
                     </div>
                 </div>
             </div>

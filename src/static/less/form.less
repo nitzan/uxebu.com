@@ -7,21 +7,36 @@
 
 .uni-form, .uni-form .inline-label{.clear-safe;}
 .uni-form label,.uni-form .label{display:block;margin:0;margin-top:0.5em;opacity:.5;}
-.uni-form .text-input, .uni-form .file-upload, .uni-form .select-input, .uni-form select, .uni-form textarea{width:60%;margin:0;}
+.uni-form .text-input, .uni-form .search-input, .uni-form .file-upload, .uni-form .select-input, .uni-form select, .uni-form textarea{width:60%;margin:0;}
 
 .uni-form .text-input {
-	.background-gradient(
-		#181818,
-		#232323
-	);
+    .background-gradient(
+        #181818,
+        #232323
+    );
 
-	color: #fff;
-	border: 1px solid #3b3b3b;
-	.border-radius(4px);
+    color: #fff;
+    border: 1px solid #3b3b3b;
+    .border-radius(4px);
+}
+
+.uni-form .search-input {
+    background: #181818;
+    background-image: url(../img/icons_sprite.png), -moz-linear-gradient(center top, #181818 0%, #232323 100%);
+    background-image: url(../img/icons_sprite.png), -webkit-gradient(linear, 0% 0%, 0% 100%, from(#181818), to(#232323));
+    background-image: url(../img/icons_sprite.png), -o-linear-gradient(#181818, #232323);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 -914px, left top;
+
+    padding-left: 22px;
+    .prs;
+    color: #fff;
+    border: 1px solid #3b3b3b;
+    .border-radius(4px);
 }
 
 .uni-form .text-input:active {
-	border: 1px solid #737373;
+    border: 1px solid #737373;
 }
 
 .uni-form .form-hint{width:80%;margin:0;clear:none;}
@@ -39,37 +54,37 @@
 .uni-form .large {width:100%;}
 
 .uni-form .error-container {
-	.font-small;
-	color: #AE2C96;
+    .font-small;
+    color: #AE2C96;
 }
 
 .uni-form .error ul {
-	width: auto;
-	float: none;
-	list-style: none;
-	border: 1px solid #AE2C96;
-	color: #AE2C96;
-	background: #f2e3ef;
-	.pam;
-	.mal;
+    width: auto;
+    float: none;
+    list-style: none;
+    border: 1px solid #AE2C96;
+    color: #AE2C96;
+    background: #f2e3ef;
+    .pam;
+    .mal;
 }
 
 .uni-form .error li {
-	.man;
+    .man;
 }
 
 .uni-form .error-container p {
-	.man;
+    .man;
 }
 
 .uni-form .full-width .textinput,
 .uni-form .full-width .passwordinput {
-	width: 100%;
+    width: 100%;
 }
 
 /* inline-labels */
 .uni-form .inline-labels2 label {
-	display: inline;
+    display: inline;
 }
 .uni-form .inline-labels label,.uni-form .inline-labels .label{float:left;margin:.3em 2% 0 0;padding:0;line-height:1;position:relative;width:32%;}
 .uni-form .inline-labels .text-input,.uni-form .inline-labels .file-upload,.uni-form .inline-labels .select-input,.uni-form .inline-labels select,.uni-form .inline-labels textarea{float:left;width:61%;}
@@ -84,19 +99,19 @@
 /* Mobile */
 @media handheld, only screen and (max-width: 767px) {
 
-	.uni-form .form-hint, .uni-form .text-input, .uni-form .file-upload, .uni-form .select-input, .uni-form select, .uni-form textarea, .uni-form ul,
-	.uni-form .inline-labels .text-input, .uni-form .inline-labels .file-upload, .uni-form .inline-labels .select-input, .uni-form .inline-labels select, .uni-form .inline-labels textarea,
-	.uni-form .inline-labels ul li label .text-input, .uni-form .inline-labels ul li label textarea, .uni-form .inline-labels ul li label select, .uni-form .inline-labels label, .uni-form .inline-labels .label, .uni-form .inline-labels .form-hint, .uni-form .inline-labels ul, .uni-form .inline-labels .no-label ul {
-		display:block;
-		float:none;
-		width:100%;
+    .uni-form .form-hint, .uni-form .text-input, .uni-form .file-upload, .uni-form .select-input, .uni-form select, .uni-form textarea, .uni-form ul,
+    .uni-form .inline-labels .text-input, .uni-form .inline-labels .file-upload, .uni-form .inline-labels .select-input, .uni-form .inline-labels select, .uni-form .inline-labels textarea,
+    .uni-form .inline-labels ul li label .text-input, .uni-form .inline-labels ul li label textarea, .uni-form .inline-labels ul li label select, .uni-form .inline-labels label, .uni-form .inline-labels .label, .uni-form .inline-labels .form-hint, .uni-form .inline-labels ul, .uni-form .inline-labels .no-label ul {
+        display:block;
+        float:none;
+        width:100%;
         .phn;
-		.mhn;
-		position:relative;
-	}
+        .mhn;
+        position:relative;
+    }
 
-	.uni-form ul .text-input, .uni-form ul .select-input, .uni-form ul select, .uni-form ul.alternate .text-input, .uni-form ul.alternate .select-input, .uni-form ul.alternate select,
-	.uni-form .inline-labels ul li label .text-input, .uni-form .inline-labels ul li label textarea, .uni-form .inline-labels ul li label select {
-		width:100%;
-	}
+    .uni-form ul .text-input, .uni-form ul .select-input, .uni-form ul select, .uni-form ul.alternate .text-input, .uni-form ul.alternate .select-input, .uni-form ul.alternate select,
+    .uni-form .inline-labels ul li label .text-input, .uni-form .inline-labels ul li label textarea, .uni-form .inline-labels ul li label select {
+        width:100%;
+    }
 }
