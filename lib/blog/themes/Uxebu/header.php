@@ -23,7 +23,7 @@
                     <div class="col-3">
                         <h1 style="font-size:1em;margin:5px 25px;"><a href="/"><img alt="uxebu" style="display:inline;vertical-align:text-bottom;" src="/static/img/logo_glow_small.png"></a></h1>
                     </div>
-                    <div class="col-9 last tar">
+                    <div class="col-9 last menu">
                         <ul class="nav">
                             <li class="active list-el list-el-hz"><a href="/">About</a></li>
                             <li class="list-el list-el-hz"><a href="/blog">Blog / Events</a></li>
