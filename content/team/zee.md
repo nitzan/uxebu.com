@@ -1,10 +1,12 @@
 Peter van der Zee
 =================
 
-JS Scientist
-------------
+JavaScript developer
+--------------------
 
 [Peter van der Zee](/media/img/team/zee.jpg)
+
+*(Editors note: not sure what he means)*
 
 Born at the peak of the mountains of zoom, this warrior pretty much devoted his life to the science that is ones and zeroes. Off to a rocky start, he quickly clears a road to philosophical bliss and learns a few more languages while doing so, next to Dutch and English of course. From high to low, he eventually ends up in the volatile area of I'net, speaking the language of Jee'es.
 
@@ -19,8 +21,8 @@ Special Moves
 Contact
 =======
 
-* [email](mailto:zee@uxebu.com)
-  zee@uxebu.com
+* [email](/#contact-form)
+  Contact Peter
 
 * [github](http://github.com/qfox)
   GitHub
