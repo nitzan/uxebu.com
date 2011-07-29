@@ -1,18 +1,21 @@
 Trailer
 =======
 
-WE BRING YOUR WEB APPS
-TO ANY APP STORE IN THE WORLD.
+We bring your web apps
+to any app store in the world.
 
 * * *
+
+Stay on top of web tech?
+[Subscribe](http://eepurl.com/CZC7) to our newsletter
 
 Hello JavaScript geeks
-Want to ravel the [JavaScript universe](http://uxebu.com/blog/2011/02/10/travel-with-uxebu-we-are-hiring/)?
+Want to travel the [JavaScript universe](http://uxebu.com/blog/2011/02/10/travel-with-uxebu-we-are-hiring/)?
 
 * * *
 
-meet the uxebu crew at
-JsConf, DojoConf and FullFrontal
+Meet the uxebu crew at
+[JsConf](http://jeconf.eu), [DojoConf](http://dojoconf.com) and [FullFrontal](http://2011.full-frontal.org)
 
 We are uxebu
 ============
@@ -90,27 +93,27 @@ uxebu team
   ![Alt text](media/img/team/onken-bw.jpg)
 
 * [David Aurelio](team/aurelio.html)
-  JS Engineer
+  JavaScript Developer
   ![Alt text](media/img/team/aurelio-bw.jpg)
 
 * [Jens Arps](team/arps.html)
-  JS Engineer
+  JavaScript Developer
   ![Alt text](media/img/team/arps-bw.jpg)
 
 * [Tobias Schneider](team/schneider.html)
-  JS Engineer
+  JavaScript Developer
   ![Alt text](media/img/team/schneider-bw.jpg)
 
 * [Stephan Seidt](team/seidt.html)
-  JS Engineer
+  JavaScript Developer
   ![Alt text](media/img/team/seidt-bw.jpg)
 
 * [Peter van der Zee](team/zee.html)
-  JS Engineer
+  JavaScript Developer
   ![Alt text](media/img/team/zee-bw.jpg)
 
 * [John-David Dalton](team/dalton.html)
-  JS Engineer
+  JavaScript Developer
   ![Alt text](media/img/team/dalton-bw.jpg)
 
 Address & Phone
