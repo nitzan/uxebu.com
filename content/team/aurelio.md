@@ -6,9 +6,9 @@ JavaScript Developer
 
 [David Aurelio](/media/img/team/aurelio.jpg)
 
-David Aurelio fell in love with the web ten years ago. Starting as an allround developer, he has focused on frontend development during the last years and discovered his love for interface creation and UX. 
+I fell in love with the web ten years ago. Starting as an allround developer, I was focusing on frontend development during the last years and discovered my love for interface creation and UX. 
 
-After joining uxebu in 2009, David switched to the mobile sphere and has been working with mobile devices since then. David is the guy behind [TouchScroll](http://uxebu.com/blog/2010/04/27/touchscroll-a-scrolling-layer-for-webkit-mobile/), a scrolling layer with momentum for WebKit Mobile based devices, which caught quite some attention these days
+After joining uxebu in 2009, I switched to the mobile sphere and have been working with mobile devices since then. I am the one behind [TouchScroll](http://uxebu.com/blog/2010/04/27/touchscroll-a-scrolling-layer-for-webkit-mobile/), a scrolling layer with momentum for WebKit Mobile based devices, which caught quite some attention these days.
 
 Special Moves
 -------------
