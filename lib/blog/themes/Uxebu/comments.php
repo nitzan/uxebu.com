@@ -15,7 +15,7 @@
 
 <?php if ( have_comments() ) : ?>
 
-<div class="mod mod-skin1">
+<div class="mod mod-skin1 mbl">
     <h3>Comments</h3>
 </div>
 
