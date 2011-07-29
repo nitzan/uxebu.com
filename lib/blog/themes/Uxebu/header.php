@@ -25,8 +25,8 @@
                     </div>
                     <div class="col-9 last menu">
                         <ul class="nav">
-                            <li class="active list-el list-el-hz"><a href="/">About</a></li>
-                            <li class="list-el list-el-hz"><a href="/blog">Blog / Events</a></li>
+                            <li class="list-el list-el-hz"><a href="/">About</a></li>
+                            <li class="active list-el list-el-hz"><a href="/blog">Blog / Events</a></li>
                             <li class="list-el list-el-hz">
                                 <a href="#" class="dropdown-arrow">Open Source</a>
                             </li>
