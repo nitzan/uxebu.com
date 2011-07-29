@@ -8,13 +8,13 @@ JS President
 
 Rocket scientiest and JavaScript fanboy since 2003, a loving dad and demanding husband. Before JavaScript became my day job as part of the uxebu team, I was freelancing as a PHP and Ruby on Rails developer.
 
-I'm the creator of the open source Flash runtime Gordon and responsible for a bunch of other JavaScript abuses like def.js.
+I'm the creator of the open source Flash runtime [Gordon](https://github.com/tobeytailor/gordon) and responsible for a bunch of other JavaScript abuses like [def.js](https://github.com/tobeytailor/def.js).
 
 Special Moves
 -------------
 
-* Gordon
-* def.js
+* [Gordon](https://github.com/tobeytailor/gordon)
+* [def.js](https://github.com/tobeytailor/def.js)
 
 Contact
 =======
