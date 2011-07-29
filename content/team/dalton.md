@@ -2,7 +2,7 @@ John-David Dalton
 =================
 
 JavaScript Developer
----------
+--------------------
 
 [John David Dalton](/media/img/team/dalton.jpg)
 
@@ -23,8 +23,8 @@ Contact
 * [blog](http://allyoucanleet.com/)
   Blog
 
-* [email](mailto:dalton@uxebu.com/)
-  dalton@uxebu.com
+* [email](/#contact-form)
+  Contact John-David
 
 * [github](http://github.com/jdalton)
   GitHub
