@@ -8,7 +8,7 @@ Co-Founder
 
 I have been cruising the web universe since 2000 when I joined a startup I helped to burst in the bubble :). After working and freelancing for several other companies such as MySQL and BMW, founding and failing my first startup, time was right to focus fully on the open web.  
 
-Co-founding uxebu, a JavaScript! company, felt a bit scary back in 2008, but together with Tobias and Nikolai we have been taking the logical next steps into JavaScript on mobiles. We always wanted to focus on bleeding edge and so we do now.
+Co-founding uxebu, a JavaScript! company, felt a bit scary back in 2008, but together with [Tobias](/team/klipstein.html) and [Nikolai](/team/onken.html) we have been taking the logical next steps into JavaScript on mobiles. We always wanted to focus on bleeding edge and so we do now.
 
 Special Moves
 -------------
