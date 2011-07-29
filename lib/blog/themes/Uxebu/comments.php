@@ -6,7 +6,7 @@
 
 // Diese Zeilen nicht loeschen
     if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
-        die ('Diese Seite nicht direkt laden.Danke!');
+        die ('What are you trying to do partner?');
 
 
 ?>
@@ -14,6 +14,13 @@
 
 
 <?php if ( have_comments() ) : ?>
+
+<div class="mod mod-skin1">
+    <h3 class="line business">Comments</h3>
+</div>
+
+
+
     <?php wp_list_comments('style=div&type=comment&callback=uxebu_comment'); ?>
 <?php else : ?>
 

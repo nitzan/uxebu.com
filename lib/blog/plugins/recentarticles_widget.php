@@ -15,7 +15,7 @@ function recentarticles_widget_sidebar() {
 	echo '<li class="widget widget-recentarticlesuxebustyle"><div class="hd"><div class="col-6"><h3 class="widgettitle">Recent</h3></div><div class="col-6 last"><a class="viewall" href="/archive" title="View all posts">View all posts...</a></div></div><hr class="widget-hr" /><div class="bd"><ul>';
 	 $recent_posts = wp_get_recent_posts('numberposts=3');
 		foreach( $recent_posts as $post ){
-			echo '<li class="uxebu-recent-articles mbl"><a class="article-sidebar-link" href="' . get_permalink($post["ID"]) . '" title="Look '.$post["post_title"].'" >' .   $post["post_title"].'</a><br />'. get_the_author() . ' | ' . get_the_time('F jS') . '</li> ';
+			echo '<li class="uxebu-recent-articles mbl"><a class="article-sidebar-link" href="' . get_permalink($post["ID"]) . '" title="Look '.$post["post_title"].'" >' .   $post["post_title"].'</a><br />'. get_the_author_meta('display_name',$post["post_author"]) . ' | ' . get_the_time('F jS',$post["ID"]) . '</li> ';
 		}
 	echo '</ul></div></li>';
 // eiger Code Ende
