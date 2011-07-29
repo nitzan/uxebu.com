@@ -29,6 +29,7 @@
                             <li class="list-el list-el-hz">
                                 <a href="#" class="dropdown-arrow">Open Source</a>
                             </li>
+                        </ul>
                             <div class="dropdown tal">
                                 <ul class="mod mod-skin4">
                                     <li class="bullet">
@@ -51,7 +52,6 @@
                                     </li>
                                 </ul>
                             </div>
-                        </ul>
                         <form class="uni-form mtl search" action="http://www.google.com/search">
                             <input type="hidden" name="sitesearch" value="uxebu.com">
                             <input type="hidden" name="domains" value="uxebu.com">
@@ -69,7 +69,7 @@
                 {{#items}}
                     {{#twoLineText}}
                         <div class="pane" style="display: none;">
-                            <h1 id="basic" class="lucent upper pbs" style="margin-top: 60px;">{{{one}}}</h1>
+                            <h1 class="lucent upper pbs" style="margin-top: 60px;">{{{one}}}</h1>
                             <h1 class="lucent upper" style="margin-bottom: 30px;">{{{two}}}</h1>
                         </div>
                     {{/twoLineText}}
@@ -90,7 +90,7 @@
                 <div class="mod mod-skin1 big-arrow-down">
                     <div class="hd"><h2 class="h3 line business">{{title}}</h2></div>
                     <div class="bd" style="min-height: 300px;">
-                        <p>{{{content}}}</p>
+                        {{{content}}}
                     </div>
                     <div class="ft">
                         <p><a href="{{link}}" class="arrow-business alternative">{{{linkContent}}}</a></p>
@@ -105,7 +105,7 @@
                 <div class="mod mod-skin1 big-arrow-down">
                     <div class="hd"><h2 class="h3 line geek">{{title}}</h2></div>
                     <div class="bd" style="min-height: 300px;">
-                        <p>{{{content}}}</p>
+                        {{{content}}}
                     </div>
                     <div class="ft">
                         <p><a href="{{link}}" class="arrow-geek">{{{linkContent}}}</a></p>
@@ -167,7 +167,7 @@
                         {{#list}}
                         <li class="list-el list-el-hz">
                             <a href="{{profileUrl}}" class="alternative2">
-                                <img src="{{imgSrc}}"><br>
+                                <img src="{{imgSrc}}" alt="{{title}}"><br>
                                 <strong>{{title}}</strong><br>
                                 {{subtitle}}
                             </a>
@@ -189,7 +189,7 @@
                             <input type="hidden" name="TAG" value="www">
 
                             <div class="ctrl-holder name">
-                                <label for="name">Your name</label>
+                                <label for="id_FIRST_NAME">Your name</label>
                                 <div class="col-6">
                                     <div class="mrl">
                                         <input id="id_FIRST_NAME" required="required" type="text" name="FIRST_NAME" maxlength="50" class="text-input large" placeholder="First">
@@ -200,15 +200,15 @@
                                 </div>
                             </div>
                             <div class="ctrl-holder">
-                                <label for="name">Email address</label>
+                                <label for="id_EMAIL">Email address</label>
                                 <input required="required" type="text" name="EMAIL" id="id_EMAIL" class="text-input large" placeholder="your@email.com">
                             </div>
                             <div class="ctrl-holder">
-                                <label for="name">Phone number</label>
+                                <label for="id_PHONE">Phone number</label>
                                 <input type="text" name="PHONE" id="id_PHONE" class="text-input large" placeholder="+1 123 456 789">
                             </div>
                             <div class="ctrl-holder">
-                                <label>How can we help?</label>
+                                <label for="id_NOTE">How can we help?</label>
                                 <textarea id="id_NOTE" rows="6" name="NOTE" class="text-input large"></textarea>
                             </div>
                             <div class="ctrl-holder" style="text-align: right;">
@@ -221,7 +221,7 @@
                     {{!simpleBox}}
                     <div class="col-6 last">
                         <h2 class="h3 line business mbx">{{title}}</h2>
-                        <p>{{{content}}}</p>
+                        {{{content}}}
                         <div class="ft">
                             <p><a href="{{link}}" class="alternative">{{{linkContent}}}</a></p>
                         </div>
