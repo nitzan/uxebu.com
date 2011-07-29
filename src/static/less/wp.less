@@ -7,39 +7,39 @@
 
 .wplnk
 {
-	text-decoration:underline;
-	color:@blog-base-color;
+    text-decoration:underline;
+    color:@blog-base-color;
 }
 
 .wplnk-bold, .more-link
 {
-	.wplnk;
-	.mtm;
+    .wplnk;
+    .mtm;
 }
 
 .more-link {
-	display: inline-block;
-	font-weight: 500;
-	.mbl;
+    display: inline-block;
+    font-weight: 500;
+    .mbl;
 }
 
 .tar
 {
-	text-align:right;
+    text-align:right;
 }
 
 .tac
 {
-	text-align:center;
+    text-align:center;
 }
 
 .highlightLink
 {
-	font-weight:bold;
+    font-weight:bold;
 }
 
 .avatar-16 {
-	display: inline;
+    display: inline;
 }
 
 
@@ -47,56 +47,56 @@
 /* special hr für einzelartikelansicht unter überschrift */
 .wphr
 {
-	border-color: @blog-base-color;
-	border-width:2px;
-	.mtm;
-	.mbm;
-	.mrx;
-	.mlx;
+    border-color: @blog-base-color;
+    border-width:2px;
+    .mtm;
+    .mbm;
+    .mrx;
+    .mlx;
 }
 
 /* Kommentare-Styles */
 .comment
 {
-	.mod-skin2;
-	.ptm;
-	.pbm;
-	.pln;
-	.prn;
-	.mbn;
-	.mtm;
-	font-size: 100%;
-	font-weight: normal;
+    .mod-skin2;
+    .ptm;
+    .pbm;
+    .pln;
+    .prn;
+    .mbn;
+    .mtm;
+    font-size: 100%;
+    font-weight: normal;
 
 }
 
 .commentlist
 {
-	.man;
+    .man;
 }
 
 .comm-meta
 {
-	.tar;
-	.font-small;
-	float:right;
+    .tar;
+    .font-small;
+    float:right;
 }
 
 .comm-nbr
 {
-	font-size:245%;
-	font-weight:400;
-	.mlx;
+    font-size:245%;
+    font-weight:400;
+    .mlx;
 }
 
 .comment-submit
 {
-	float:right;
+    float:right;
 }
 
 .url
 {
-	text-decoration:underline;
+    text-decoration:underline;
 }
 
 
@@ -104,7 +104,7 @@
 /* Sidebar */
 .article-sidebar-link
 {
-	font-weight:bold;
+    font-weight:bold;
 }
 
 .widgettitle
@@ -114,101 +114,114 @@
 
 .widget-hr
 {
-	.mlx;
-	.mrx;
-	.mtn;
-	.mbn;
+    .mlx;
+    .mrx;
+    .mtn;
+    .mbn;
 }
 
 .viewall
 {
-	display: block;
-	margin-top: 30px;
-	color:@text-base-color;
-	text-decoration:underline;
-	.font-small;
+    display: block;
+    margin-top: 30px;
+    color:@text-base-color;
+    text-decoration:underline;
+    .font-small;
 }
 
 .cat-item
 {
-	color:@link-color;
+    color:@link-color;
 }
 
 .widget_categories li.cat-item a
 {
-	.highlightLink;
+    .highlightLink;
 }
 
 .widget-autorenwidget a
 {
-	.highlightLink;
+    .highlightLink;
 }
 
 
 li.dropdown-li a /* a lässt sich leider nicht direkt ansprechen */
 {
-	.dropdown-arrow;
+    .dropdown-arrow;
 }
 
 /* Sonstiges */
 .uxebu-wpfooter
 {
-	float:right;
+    float:right;
 }
 
 .footerlink
 {
-	color:@text-base-color;
-	text-decoration:underline;
+    color:@text-base-color;
+    text-decoration:underline;
 }
 
 
 /* Calender */
 .widget-event-wrapper
 {
-	.mod-skin1;
+    .mod-skin1;
 
-	.marker {
-		padding-left: 18px;
-	}
+    .marker {
+        padding-left: 18px;
+    }
 }
 
 .gce-list
 {
-	.man;
+    .man;
 }
 
 .widget-event-start, .widget-event-descr
 {
-	font-weight:bold;
+    font-weight:bold;
 }
 
 .page-event-wrapper
 {
-	.mod-skin2;
-	.mhn;
-	font-size: 100%;
+    .mod-skin2;
+    .mhn;
+    font-size: 100%;
 
-	.marker {
-		padding-left: 18px;
-	}
+    .marker {
+        padding-left: 18px;
+    }
 }
 
 /* Article text */
 .mod-skin2 {
-	.bd h1,
-	.bd h2,
-	.bd h3 {
-		.h3;
-		color: #000;
-	}
+    .bd h1,
+    .bd h2,
+    .bd h3 {
+        .h3;
+        color: #000;
+    }
 
 
-	pre {
-		color: #fff;
-	}
+    pre {
+        color: #fff;
+    }
 
-	a {
-		text-decoration: underline;
-	}
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* Code highlighting */
+.codecolorer {
+    .box-shadow(0px 0px 0px rgba(0, 0, 0, 0.5), 0, #000000);
+}
+
+.codecolorer-container {
+    .max;
+
+    table {
+        margin: 0;
+    }
 }
