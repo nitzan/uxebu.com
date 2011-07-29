@@ -1,10 +1,15 @@
 Jens Arps
 =========
 
+JavaScript developer
+--------------------
 
 [Jens Arps](/media/img/team/arps.jpg)
 
-Jens is a Dojo-Enthusiast and Front-End-Developer, and prefers Lavazza coffee over Segafredo. Before joining uxebu, he was focused on web apps and user interfaces as a freelancer. Nowadays, developing cross-platform applications for embedded devices is his main occupation. His OpenSource contributions can be found in large projects like the Dojo Toolkit as well as small ones like StorageJS, though most of his time now goes into EmbedJS.
+I am a Dojo-Enthusiast and Front-End-Developer, and prefer Lavazza coffee over Segafredo. Before joining uxebu, I was focusing on web apps and user interfaces as a freelancer.
+
+Nowadays, developing cross-platform applications for embedded devices is my main occupation.
+My OpenSource contributions can be found in large projects like the [Dojo Toolkit](http://dojotoolkit.org) as well as small ones like [StorageJS](https://github.com/jensarps/StorageJS), though most of my time now goes into [EmbedJS](http://embedjs.org).
 
 
 
@@ -17,9 +22,6 @@ Special Moves
 
 Contact
 =======
-
-* [email](mailto:arps@uxebu.com)
-  arps@uxebu.com
 
 * [github](https://github.com/jensarps)
   GitHub
