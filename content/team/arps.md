@@ -23,6 +23,9 @@ Special Moves
 Contact
 =======
 
+* [email](/#contact-form)
+  Contact Jens
+
 * [github](https://github.com/jensarps)
   GitHub
 
