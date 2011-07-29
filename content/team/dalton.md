@@ -1,18 +1,13 @@
 John-David Dalton
 =================
 
-JS Lawyer
+JavaScript Developer
 ---------
 
 [John David Dalton](/media/img/team/dalton.jpg)
 
-Lorem ipsum
-
-Special Moves
--------------
-
-* One
-* Two
+I'm a JavaScript tinkerer, bug fixer & benchmark runner.
+I have a bachelor's degree in Multimedia Instructional Design, an awesome wife & a puppy.
 
 Contact
 =======
@@ -20,11 +15,8 @@ Contact
 * [email](mailto:dalton@uxebu.com)
   dalton@uxebu.com
 
-* [github](http://github.com/...)
+* [github](http://github.com/jdalton)
   GitHub
-
-* [linkedin](http://www.linkedin.com/in/...)
-  LinkedIn
 
 Twitter: @jdalton
 =================
