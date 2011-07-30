@@ -190,9 +190,37 @@ input, textarea {
     color: #fff;
 }
 
+.uni-form label,.uni-form .label{color:#888;}
+.uni-form 
 .uni-form fieldset legend{margin-bottom:10px;color:#AAA;font-weight:400;}
 .uni-form .form-hint{font-size:80%;color:#AAA;}
 .uni-form label{font-weight:400;}
+.uni-form .search-input{width:60%;margin:0;}
+.uni-form input, .uni-form textarea {
+    .background-gradient(
+        #181818,
+        #232323
+    );
+    color: #fff;
+    border: 1px solid #3b3b3b;
+    .border-radius(4px);
+}
+.uni-form .search-input {
+    background: #181818;
+    background-image: url(../img/icons_sprite.png), -moz-linear-gradient(center top, #181818 0%, #232323 100%);
+    background-image: url(../img/icons_sprite.png), -webkit-gradient(linear, 0% 0%, 0% 100%, from(#181818), to(#232323));
+    background-image: url(../img/icons_sprite.png), -o-linear-gradient(#181818, #232323);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 -914px, left top;
+    padding-left: 22px;
+    .prs;
+    color: #fff;
+    border: 1px solid #3b3b3b;
+    .border-radius(4px);
+}
+.uni-form .text-input:active {
+    border: 1px solid #737373;
+}
 
 .geek {
     border-color:@link-color;
