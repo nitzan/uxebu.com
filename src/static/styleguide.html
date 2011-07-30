@@ -54,7 +54,7 @@
 	</div>
 	<div class="container container-alt">
 		<div class="row">	
-			<h2 id="basic" class="lucent upper">Basic styles</h2>
+			<h2 id="basic" class="lucent upper" style="display:block;">Basic styles</h2>
 			<div class="col-6">
 				<h3 class="style-head">Headings</h3>
 				<h1>&lt;h1&gt;Heading 1 / class="h1"&lt;/h1&gt;</h1>
@@ -113,7 +113,7 @@
 	return bar;
 }</code></pre>
 				<pre><code>.long-style-rule{padding:0;margin:0;font-size:12px;text-align:left;border:1px solid black;}</code></pre>
-				<h3 class="style-head">&lt;pre&gt;&lt;/pre&gt; (highlighted through django-pygments)</h3>
+				<h3 class="style-head">&lt;pre&gt;&lt;/pre&gt;</h3>
 				<pre lang="javascript">
 function fucking(param1, param2) {
 	alert(param1, "is rocking");
@@ -191,7 +191,7 @@ function fucking(param1, param2) {
 	</div>
 	<div class="container">
 		<div class="row">
-			<h2 id="form" class="lucent upper">Form styles</h2>
+			<h2 id="form" class="lucent upper" style="display:block;">Form styles</h2>
 			<h3 class="style-head">Form elements (<a href="http://sprawsm.com/uni-form/">Uniform-like &mdash; uses "-" instead of camelcase</a>)</h3>
 			<div class="col-6">
 				<form class="uni-form" action="#">
@@ -249,7 +249,10 @@ function fucking(param1, param2) {
 
 						<div class="ctrl-holder">
 							<label>File upload</label>
-							<span class="file-input"><button class="button">Select a file to upload</button><input type="file" class="file-input-real"></span>
+							<span class="button file-button">
+								<input onchange="showFileName(this);" type="file">
+								Select a file to upload
+							</span>
 							<p class="form-hint">This is a form hint.</p>
 						</div>
 
@@ -360,7 +363,10 @@ function fucking(param1, param2) {
 
 						<div class="ctrl-holder">
 							<label>File upload</label>
-							<span class="file-input"><button class="button">Select a file to upload</button><input type="file" class="file-input-real"></span>
+							<span class="button file-button">
+								<input onchange="showFileName(this);" type="file">
+								Select a file to upload
+							</span>
 							<p class="form-hint">This is a form hint.</p>
 						</div>
 
@@ -471,15 +477,15 @@ function fucking(param1, param2) {
 					<a href="#" class="button disabled"><span>class="button"</span></a>
 				</div>
 
-				<h3 class="style-head">&lt;span class="file-input"&gt;&lt;button ...&gt;...&lt;/button&gt;&lt;input type="file" class="file-input-real"/&gt;&lt;/span&gt;</h3>
+				<h3 class="style-head">&lt;span class="button file-button"&gt;&lt;input type="file"&gt;&lt;/span&gt;</h3>
 				<div class="mam">
-					<span class="file-input">
-						<button class="button"><span>Select file</span></button>
-						<input onchange="showFileName(this);" type="file" class="file-input-real">
+					<span class="button file-button">
+						<input onchange="showFileName(this);" type="file">
+						Select file
 					</span>
-					<span class="file-input">
-						<button class="button"><span>Next to another file input</span></button>
-						<input onchange="showFileName(this);" type="file" class="file-input-real">
+					<span class="button file-button">
+						<input onchange="showFileName(this);" type="file">
+						Next to another file input
 					</span>
 				</div>
 			</div>
@@ -487,7 +493,7 @@ function fucking(param1, param2) {
 	</div>
 	<div class="container container-alt">
 		<div class="row data">
-			<h2 id="table" class="lucent upper">Table style</h2>
+			<h2 id="table" class="lucent upper" style="display:block;">Table style</h2>
 			<h3 class="style-head">
 				&lt;div class="data"&gt;&lt;table&gt;<br/>
 				&nbsp;&nbsp;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;<br/>
@@ -535,7 +541,7 @@ function fucking(param1, param2) {
 	</div>
 	<div class="container">
 		<div class="row">
-			<h2 id="module" class="lucent upper">Module styles</h2>
+			<h2 id="module" class="lucent upper" style="display:block;">Module styles</h2>
 			<div class="col-4">
 				<div class="mod mod-skin1 business-flag big-arrow-down">
 					<div class="hd">
@@ -610,7 +616,7 @@ function fucking(param1, param2) {
 				</h3>
 				<div class="media">
 					<div class="img">
-						<img width="300" height="200" src="img/test_image.jpg" alt="testimage">
+						<img width="250" height="200" src="img/test_image.jpg" alt="testimage">
 					</div>
 					<div class="bd">
 						<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
