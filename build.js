@@ -2,10 +2,13 @@
 
 // global imports
 var fs = require('fs');
+var path = require('path');
+var sys = require('sys');
 var md = require('markdown').markdown;
 var mustache = require('mustache');
 var exec  = require('child_process').exec;
 var kompressor = require('htmlKompressor');
+var less = require('less');
 // app imports
 var blocks = require('./blocks/block');
 var appUtil   = require('./appUtil');
@@ -206,6 +209,40 @@ function writeView(output, template, tplContent){
     fs.writeFile(output, appConfig.isDebug ? out : kompressor(out, true), encoding='utf8');
 }
 
+var css;
+function processLess(input, output){
+    fs.readFile(input, 'utf-8', function (e, data) {
+        if (e) {
+            sys.puts("less: " + e.message);
+            process.exit(1);
+        }
+
+        new(less.Parser)({
+            paths: [path.dirname(input)],
+            optimization: 1,
+            filename: input
+        }).parse(data, function (err, tree) {
+            if (err) {
+                less.writeError(err, options);
+                process.exit(1);
+            } else {
+                try {
+                    css = tree.toCSS({ compress: true });
+                    if (output) {
+                        fd = fs.openSync(output, "w");
+                        fs.writeSync(fd, css, 0, "utf8");
+                    } else {
+                        sys.print(css);
+                    }
+                } catch (e) {
+                    less.writeError(e, options);
+                    process.exit(2);
+                }
+            }
+        });
+    });
+}
+
 // Description:
 //      This build tool renders HTML pages based on markdown pages and HTML templates
 //      The default build required to have for instance a home.html template and a home.md
@@ -227,4 +264,5 @@ appConfig.printValues();
 clean(function(){
     // Reading src directory and passing found HTML file names to renderView()
     readDir(appConfig.srcDir);
+    processLess("./release/static/less/style.less", "./release/static/style.css");
 });
