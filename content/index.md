@@ -126,8 +126,8 @@ Richard-Strauss-Str. 21
 81677 München  
 Germany  
 
-**Phone: +49 89 122 219 626**  
+**Phone: [+49 89 122 219 626](tel:+4989122219626)**  
 Fax: +49 89 122 219 626 - 8  
-E-Mail: contact@uxebu.com
+E-Mail: [contact@uxebu.com](contact@uxebu.com)
 
 [Impressum / Legal](/legal.html)

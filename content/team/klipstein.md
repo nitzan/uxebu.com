@@ -1,10 +1,10 @@
-Tobias Klipstein
+Tobias von Klipstein
 ================
 
 Co-Founder
 ----------
 
-[Tobias Klipstein](../media/img/team/klipstein.jpg)
+[Tobias von Klipstein](../media/img/team/klipstein.jpg)
 
 Before founding uxebu with [Wolfram](/team/kriesing.html) and [Nikolai](/team/onken.html) I was developing web applications, designing and managing web architectures and doing server administration as a freelancer for more than 10 years.
 
