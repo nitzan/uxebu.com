@@ -128,6 +128,6 @@ Germany
 
 **Phone: [+49 89 122 219 626](tel:+4989122219626)**  
 Fax: +49 89 122 219 626 - 8  
-E-Mail: [contact@uxebu.com](contact@uxebu.com)
+E-Mail: [contact @ uxebu.com](mailto:%63%6F%6E%74%61%63%74%40%75%78%65%62%75%2E%63%6F%6D)
 
 [Impressum / Legal](/legal.html)
