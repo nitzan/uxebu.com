@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Team</title>
-    <link href="/static/less/style.less" rel="stylesheet" type="text/less"/>
+    {{#useLess}}
+    <link href="../static/less/style.less" rel="stylesheet" type="text/less">
+    <script src="../static/js/less-1.1.3.min.js"></script>
+    {{/useLess}}
+    {{^useLess}}
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css">
+    {{/useLess}}
     <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js"></script>
-    <script src="/static/js/less-1.1.3.min.js"></script>
-    <script src="/static/js/ie_detection.js"></script>
-    <script src="/static/js/main.js"></script>
+    <script src="../static/js/ie_detection.js"></script>
+    <script src="../static/js/main.js"></script>
 </head>
 <body id="team">
     <div class="container">
@@ -17,7 +22,7 @@
             <div class="mod mod-skin3 no-top-radius">
                 <div class="bd">
                     <div class="col-3">
-                        <h1 style="font-size:1em;margin:5px 25px;"><a href="/"><img alt="uxebu" style="display:inline;vertical-align:text-bottom;" src="/static/img/logo_glow_small.png"></a></h1>
+                        <h1 style="font-size:1em;margin:5px 25px;"><a href="/"><img alt="uxebu" style="display:inline;vertical-align:text-bottom;" src="../static/img/logo_glow_small.png"></a></h1>
                     </div>
                     <div class="col-9 last menu">
                         <ul class="nav">
@@ -67,7 +72,7 @@
                     <div class="bd">
                         <ul class="list-selection">
                             <li class="{{#klipstein}}active{{/klipstein}}">
-                                <a href="/team/klipstein.html">
+                                <a href="klipstein.html">
                                     <span class="media">
                                         <span class="img"><img src="http://www.gravatar.com/avatar/0579d693026eef15630b712913404764?s=40"/></span>
                                         <span class="bd">Tobias von Klipstein</span>
@@ -75,7 +80,7 @@
                                 </a>
                             </li>
                             <li class="{{#kriesing}}active{{/kriesing}}">
-                                <a href="/team/kriesing.html">
+                                <a href="kriesing.html">
                                     <span class="media">
                                         <span class="img"><img src="http://www.gravatar.com/avatar/cf18077018b58b1d3ef3a24a4e0f260c?s=40"/></span>
                                         <span class="bd">Wolfram Kriesing</span>
@@ -83,7 +88,7 @@
                                 </a>
                             </li>
                             <li class="{{#onken}}active{{/onken}}">
-                                <a href="/team/onken.html">
+                                <a href="onken.html">
                                     <span class="media">
                                         <span class="img"><img src="http://www.gravatar.com/avatar/9d3282ecc5c72a6e3fbe2e59df6b0084?s=40"/></span>
                                         <span class="bd">Nikolai Onken</span>
@@ -91,7 +96,7 @@
                                 </a>
                             </li>
                             <li class="{{#aurelio}}active{{/aurelio}}">
-                                <a href="/team/aurelio.html">
+                                <a href="aurelio.html">
                                     <span class="media">
                                         <span class="img"><img src="http://www.gravatar.com/avatar/9514700cd8c9fb91b63ebf643f44d1f8?s=40"/></span>
                                         <span class="bd">David Aurelio</span>
@@ -99,7 +104,7 @@
                                 </a>
                             </li>
                             <li class="{{#arps}}active{{/arps}}">
-                                <a href="/team/arps.html">
+                                <a href="arps.html">
                                     <span class="media">
                                         <span class="img"><img src="http://www.gravatar.com/avatar/fa2c907fa42bc48274536fa0e9441413?s=40"/></span>
                                         <span class="bd">Jens Arps</span>
@@ -107,7 +112,7 @@
                                 </a>
                             </li>
                             <li class="{{#schneider}}active{{/schneider}}">
-                                <a href="/team/schneider.html">
+                                <a href="schneider.html">
                                     <span class="media">
                                         <span class="img"><img src="http://www.gravatar.com/avatar/4c070ea4b5d033a7f5c98b08fb836a54?s=40"/></span>
                                         <span class="bd">Tobias Schneider</span>
@@ -115,7 +120,7 @@
                                 </a>
                             </li>
                             <li class="{{#seidt}}active{{/seidt}}">
-                                <a href="/team/seidt.html">
+                                <a href="seidt.html">
                                     <span class="media">
                                         <span class="img"><img src="http://www.gravatar.com/avatar/7900cf63f35bbde5b63274dc56a1224e?s=40"/></span>
                                         <span class="bd">Stephan Seidt</span>
@@ -123,7 +128,7 @@
                                 </a>
                             </li>
                             <li class="{{#zee}}active{{/zee}}">
-                                <a href="/team/zee.html">
+                                <a href="zee.html">
                                     <span class="media">
                                         <span class="img"><img width="40" height="40" src="http://a2.twimg.com/profile_images/1345105399/headshot_smaller_mini.png"/></span>
                                         <span class="bd">Peter van der Zee</span>
@@ -131,7 +136,7 @@
                                 </a>
                             </li>
                             <li class="{{#dalton}}active{{/dalton}}">
-                                <a href="/team/dalton.html">
+                                <a href="dalton.html">
                                     <span class="media">
                                         <span class="img"><img src="http://www.gravatar.com/avatar/299a3d891ff1920b69c364d061007043?s=40"/></span>
                                         <span class="bd">John-David Dalton</span>

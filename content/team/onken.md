@@ -4,7 +4,7 @@ Nikolai Onken
 Co-Founder
 ----------
 
-[Nikolai Onken](/media/img/team/onken.jpg)
+[Nikolai Onken](../media/img/team/onken.jpg)
 
 I have been developing web applications since 1997 and since then continuously been involved with open source projects such as the [Dojo Toolkit](http://dojotoolkit.org). 
 

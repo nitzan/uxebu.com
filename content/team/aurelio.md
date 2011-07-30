@@ -4,7 +4,7 @@ David Aurelio
 JavaScript Developer
 --------------------
 
-[David Aurelio](/media/img/team/aurelio.jpg)
+[David Aurelio](../media/img/team/aurelio.jpg)
 
 I fell in love with the web ten years ago. Starting as an allround developer, I was focusing on frontend development during the last years and discovered my love for interface creation and UX. 
 

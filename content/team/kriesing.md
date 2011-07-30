@@ -4,7 +4,7 @@ Wolfram Kriesing
 Co-Founder
 ----------
 
-[Wolfram Kriesing](/media/img/team/kriesing.jpg)
+[Wolfram Kriesing](../media/img/team/kriesing.jpg)
 
 I have been cruising the web universe since 2000 when I joined a startup I helped to burst in the bubble :). After working and freelancing for several other companies such as MySQL and BMW, founding and failing my first startup, time was right to focus fully on the open web.  
 

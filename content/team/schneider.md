@@ -4,7 +4,7 @@ Tobias Schneider
 JavaScript developer
 --------------------
 
-[Tobias Schneider](/media/img/team/schneider.jpg)
+[Tobias Schneider](../media/img/team/schneider.jpg)
 
 Rocket scientist and JavaScript fanboy since 2003, a loving dad and demanding husband. Before JavaScript became my day job as part of the uxebu team, I was freelancing as a PHP and Ruby on Rails developer.
 

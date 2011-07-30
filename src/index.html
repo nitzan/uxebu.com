@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Home</title>
-    <link href="static/less/style.less" rel="stylesheet" type="text/less"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js"></script>
+    {{#useLess}}
+    <link href="static/less/style.less" rel="stylesheet" type="text/less">
     <script src="static/js/less-1.1.3.min.js"></script>
+    {{/useLess}}
+    {{^useLess}}
+    <link href="static/css/style.css" rel="stylesheet" type="text/css">
+    {{/useLess}}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js"></script>
     <script src="static/js/ie_detection.js"></script>
     <script src="static/js/main.js"></script>
 </head>
@@ -20,7 +26,7 @@
             <div class="mod mod-skin3 no-top-radius">
                 <div class="bd">
                     <div class="col-3">
-                        <h1 style="font-size:1em;margin:5px 25px;"><a href="/"><img alt="uxebu" style="display:inline;vertical-align:text-bottom;" src="/static/img/logo_glow_small.png"></a></h1>
+                        <h1 style="font-size:1em;margin:5px 25px;"><a href="/"><img alt="uxebu" style="display:inline;vertical-align:text-bottom;" src="static/img/logo_glow_small.png"></a></h1>
                     </div>
                     <div class="col-9 last menu">
                         <ul class="nav">

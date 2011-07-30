@@ -4,7 +4,7 @@ John-David Dalton
 JavaScript Developer
 --------------------
 
-[John David Dalton](/media/img/team/dalton.jpg)
+[John David Dalton](../media/img/team/dalton.jpg)
 
 I'm a JavaScript tinkerer, bug fixer & benchmark runner.
 I have a bachelor's degree in Multimedia Instructional Design, an awesome wife & a puppy.

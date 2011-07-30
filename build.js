@@ -58,7 +58,7 @@ function clean(callb){
 
     appUtil.statusLog('Deleting\t' + appConfig.releaseDir + '/*');
     exec('rm -rf ' + appConfig.releaseDir + '/*', function(err, stdout, stderr){
-        appUtil.statusLog('Copying\t' + appConfig.srcDir + '/static to' + appConfig.releaseDir + '/');
+        appUtil.statusLog('Copying\t' + appConfig.srcDir + '/static to ' + appConfig.releaseDir + '/');
         appUtil.statusLog('Copying\t' + appConfig.contentDir + '/media to ' + appConfig.releaseDir + '/');
         var cmd = 'cp -r ' + appConfig.srcDir + '/static ' + appConfig.releaseDir + '/;';
         cmd += 'cp -r ' + appConfig.contentDir + '/media  ' + appConfig.releaseDir + '/';
@@ -192,6 +192,10 @@ function writeView(output, template, tplContent){
         tplContent.errorMessage = titles.join("\n") + "\n\n" + texts.join("\n************************\n");
     }
 
+    if (appConfig.isDebug){
+        tplContent.useLess = true;
+    }
+
     var out = mustache.to_html(template, tplContent);
 
     // The markdown parser returns elements which don't require a closing tag with a closing tag
@@ -230,6 +234,9 @@ function processLess(input, output){
                     css = tree.toCSS({ compress: true });
                     if (output) {
                         fd = fs.openSync(output, "w");
+                        appUtil.statusLog('Compiling less');
+                        appUtil.statusLog('Less input \t' + input);
+                        appUtil.statusLog('Less output \t' + output);
                         fs.writeSync(fd, css, 0, "utf8");
                     } else {
                         sys.print(css);
@@ -258,11 +265,13 @@ function processLess(input, output){
 //      2. Read the contents of the source directory
 //      3. Read the Markdown content (optionally iterative if mapping is present)
 //      4. Write out result
+//      5. Compiling less to one CSS-file
 
 console.log('Welcome to the epic');
 appConfig.printValues();
 clean(function(){
     // Reading src directory and passing found HTML file names to renderView()
     readDir(appConfig.srcDir);
-    processLess("./release/static/less/style.less", "./release/static/style.css");
+    fs.mkdirSync(path.join(appConfig.releaseDir, "static", "css"), 0755);
+    processLess(path.join(appConfig.releaseDir, "static/less/style.less"), path.join(appConfig.releaseDir, "static/css/style.css"));
 });

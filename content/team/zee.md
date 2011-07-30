@@ -4,7 +4,7 @@ Peter van der Zee
 JavaScript developer
 --------------------
 
-[Peter van der Zee](/media/img/team/zee.jpg)
+[Peter van der Zee](../media/img/team/zee.jpg)
 
 *(Editors note: not sure what he means)*
 

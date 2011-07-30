@@ -4,7 +4,7 @@ Jens Arps
 JavaScript developer
 --------------------
 
-[Jens Arps](/media/img/team/arps.jpg)
+[Jens Arps](../media/img/team/arps.jpg)
 
 I am a Dojo-Enthusiast and Front-End-Developer, and prefer Lavazza coffee over Segafredo. Before joining uxebu, I was focusing on web apps and user interfaces as a freelancer.
 
