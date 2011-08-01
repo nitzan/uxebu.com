@@ -1,43 +1,43 @@
 /* ====== CSS Grid (adapted from http://cssgrid.net/) ====== */
 .container {
-	_width: 1140px;
-	_text-align: left;
+    _width: 1140px;
+    _text-align: left;
 }
 
 body {
-	_text-align: center;
+    _text-align: center;
 }
 
 .row {
-	width: 100%;
-	max-width: 1140px;
-	min-width: 755px;
-	margin: 0 auto;
-	.clear-safe;
+    width: 100%;
+    max-width: 1140px;
+    min-width: 755px;
+    margin: 0 auto;
+    .clear-safe;
 }
 
 .col (@num) {
-	width: @num * (3.483% + 4.85%);
-	_overflow:hidden;
+    width: @num * (3.483% + 4.85%);
+    _overflow:hidden;
 }
 
 .col-center-normal {
-	width: 500px;
-	margin-left: auto;
-	margin-right: auto;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .col-center-large {
-	width: 800px;
-	margin: auto;
+    width: 800px;
+    margin: auto;
 }
 
 img, object, embed {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 img {
-	height: auto;
+    height: auto;
 }
 
 .col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11{float: left;}
@@ -58,48 +58,48 @@ img {
 /* Smaller screens */
 @media only screen and (max-width: 1023px) {
 
-	body {
-		font-size: 0.8em;
-		line-height: 1.5em;
-	}
+    body {
+        font-size: 0.8em;
+        line-height: 1.5em;
+    }
 }
 
 /* Mobile */
 @media handheld, only screen and (max-width: 900px) {
 
-	.row, .body, .container {
-		width: 100%;
-		min-width: 0;
-		margin-left: 0px;
-		margin-right: 0px;
-		padding-left: 0px;
-		padding-right: 0px;
-	}
+    .row, .body, .container {
+        width: 100%;
+        min-width: 0;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 
-	.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12{
-		width: auto;
-		float: none;
-		margin-left: 0px;
-		margin-right: 0px;
-	}
-	.col-1:after,.col-2:after,.col-3:after,.col-4:after,.col-5:after,.col-6:after,.col-7:after,.col-8:after,.col-9:after,.col-10:after,.col-11:after,.col-12:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
+    .col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12{
+        width: auto;
+        float: none;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .col-1:after,.col-2:after,.col-3:after,.col-4:after,.col-5:after,.col-6:after,.col-7:after,.col-8:after,.col-9:after,.col-10:after,.col-11:after,.col-12:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
 
-	/* Type presets */
+    /* Type presets */
 
-	body {
-		font-size: 16px;
-		-webkit-text-size-adjust: none;
-	}
+    body {
+        font-size: 16px;
+        -webkit-text-size-adjust: none;
+    }
 
-	.col-center-normal {
-		width: 90%;
-		margin: auto;
-	}
+    .col-center-normal {
+        width: 90%;
+        margin: auto;
+    }
 
-   	.nav .active a:after {
-		background: none;
-		display: none !important;
-	}
+    .nav .active a:after {
+        background: none;
+        display: none !important;
+    }
 
 
 }
