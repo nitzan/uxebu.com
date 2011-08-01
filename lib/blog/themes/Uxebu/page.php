@@ -12,7 +12,7 @@ get_header();
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <div class="container">
         <div class="mod mod-skin2"><!-- ein post -->
-            <div class="container"><!-- h2 & content -->
+            <div class="container text"><!-- h2 & content -->
             <div class="hd">
                     <div class="col-8">
                         <h2 class="h3"><?php the_title(); ?></h2>
