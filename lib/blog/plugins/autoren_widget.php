@@ -13,7 +13,7 @@ return;
 function widget_sidebar() {
 // eiger Code Start
 	echo '<li class="widget widget-autorenwidget"><h3 class="widgettitle style-head">Contributing People</h3><hr class="widget-hr" /><ul>';
-	wp_list_authors('exclude_admin=0');
+	wp_list_authors('exclude_admin=0&show_fullname=true');
 	echo '</ul></li>';
 // eiger Code Ende
 }
