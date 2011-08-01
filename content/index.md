@@ -49,17 +49,17 @@ Client Projects
 ===============
 
 * [Woodwing reader](http://woodwing.com)
-  [Universal tablet pub.](http://woodwing.com)
+  [HTML5 reader for WebOS and Chrome](http://woodwing.com)
 * [Civiguard](http://civiguard.com)
   [Mobile App for disaster/crisis management](http://civiguard.com).
 * [Vodafone](http://developer.vodafone.com)
-  [Mobile cross-platform support.](http://developer.vodafone.com)
+  [Cross-platform development and testing strategy.](http://developer.vodafone.com)
 * [Chip App](http://chip.de)
   [A hand-selected iPhone AppStore catalog.](http://chip.de)
 * [BMW](http://bmw.com)
   [Web application for innovation management.](http://bmw.com)
 * [Deutsche Telekom](http://telekom.de)
-  [Media center web application.](http://telekom.de)
+  [Development of media center web application.](http://telekom.de)
 
 Open Source Projects
 ====================
