@@ -8,7 +8,7 @@ JavaScript developer
 
 I’ve been a JavaScript developer at uxebu since 2010.
 
-I believe in the web as a viable platform for a whole lot of things. It’s trivial to put something on a server and point people to its url. It’s trivial to package it and put it on a JavaScript-capable device. Also, with the rapid performance increase of JavaScript VMs and the growing number of APIs it is becoming more and more feasible to do things which were previously impossible in the web. JavaScript is currently the only language that stands a chance to become the lingua franca of machines, the assembly language for *everything*.
+I believe in the web as a viable platform for a whole lot of things. It’s trivial to put something on a server and point to its url. It’s trivial to package and put something on a JavaScript-capable device. Also, with the rapid performance increase of JavaScript VMs and the growing number of APIs it is becoming more and more feasible to do things which were previously impossible on the web. JavaScript is currently the only language that stands a chance to become the lingua franca of machines, the assembly language for *everything*.
 
 Apart from JS I’m also interested in other programming languages and related theory. I’ve had real-world experience with P**, Python, Ruby and some others while working for startups and as a private contractor. I guess Clojure is sitll my current favorite. I am secretly hoping that one day all of uxebu will be programming ClojureScript only, heh.
 
