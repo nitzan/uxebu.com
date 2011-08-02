@@ -165,11 +165,19 @@ code{font-family:Inconsolata;}
     }
 }
 
-.container {
-    .text .bd ul {
-        list-style: initial;
-        list-style-position: outside;
-        padding-left: 30px;
+.text ul {
+    list-style-type:square;
+    li {
+        list-style-type:inherit;
+        margin-left:20px;
+    }
+}
+
+.text ol {
+    list-style-type:decimal;
+    li {
+        list-style-type:inherit;
+        margin-left:20px;
     }
 }
 
