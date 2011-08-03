@@ -9,6 +9,8 @@ to any app store in the world.
 Stay on top of web tech?
 [Subscribe](http://eepurl.com/CZC7) to our newsletter
 
+* * *
+
 Hello JavaScript geeks
 Want to travel the [JavaScript universe](http://uxebu.com/blog/2011/02/10/travel-with-uxebu-we-are-hiring/)?
 
