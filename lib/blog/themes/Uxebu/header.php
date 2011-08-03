@@ -23,7 +23,7 @@
                     <div class="col-3">
                         <h1 style="font-size:1em;margin:5px 25px;"><a href="/"><img alt="uxebu" style="display:inline;vertical-align:text-bottom;" src="/static/img/logo_glow_small.png"></a></h1>
                     </div>
-                    <div class="col-9 last menu">
+                    <div class="col-7 menu">
                         <ul class="nav">
                             <li class="list-el list-el-hz"><a href="/">About</a></li>
                             <li class="active list-el list-el-hz"><a href="/blog">Blog / Events</a></li>
@@ -53,6 +53,8 @@
                                 </li>
                             </ul>
                         </div>
+                    </div>
+                    <div cass="col-2 last">
                         <form class="uni-form mtl search" action="http://www.google.com/search">
                             <input type="hidden" name="sitesearch" value="uxebu.com">
                             <input type="hidden" name="domains" value="uxebu.com">
