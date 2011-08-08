@@ -60,8 +60,10 @@ function clean(callb){
     exec('rm -rf ' + appConfig.releaseDir + '/*', function(err, stdout, stderr){
         appUtil.statusLog('Copying\t' + appConfig.srcDir + '/static to ' + appConfig.releaseDir + '/');
         appUtil.statusLog('Copying\t' + appConfig.contentDir + '/media to ' + appConfig.releaseDir + '/');
+        appUtil.statusLog('Copying\t' + appConfig.contentDir + '/favicon.ico to ' + appConfig.releaseDir + '/');
         var cmd = 'cp -r ' + appConfig.srcDir + '/static ' + appConfig.releaseDir + '/;';
-        cmd += 'cp -r ' + appConfig.contentDir + '/media  ' + appConfig.releaseDir + '/';
+        cmd += 'cp -r ' + appConfig.contentDir + '/media  ' + appConfig.releaseDir + '/;';
+        cmd += 'cp ' + appConfig.contentDir + '/favicon.ico  ' + appConfig.releaseDir + '/';
         exec(cmd,
             function (err, stdout, stderr) {
                 if (err !== null) {
