@@ -21,7 +21,9 @@ You’ll never know the impact of an idea if you don’t get it out.
 Special Moves
 -------------
 
-* Node
+* Architectures for client/server side JS apps
+* Former Server side JavaScript hipster (told ya it’d happen)
+* Server Fu (Automation, Databases, Virtualization)
 
 Contact
 =======
