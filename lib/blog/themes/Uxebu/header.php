@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 
 <title><?php bloginfo('name'); ?> <?php if ( is_single() ) { ?> &raquo; Blog Archiv <?php } ?> <?php wp_title(); ?></title>
-<link rel="stylesheet" href="static/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/static/css/style.css" type="text/css" media="all" />
 <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js"></script>
 <script src="/static/js/main.js"></script>
 <meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats -->
