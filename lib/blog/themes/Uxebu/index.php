@@ -96,7 +96,7 @@ query_posts($args);
                                 ?>
         <?php endwhile; ?>
         <div class="tar mal">
-            <a class="font-small footerlink" href="<?php echo get_option('home'); ?>/archive/">View all posts...</a>
+            <a class="font-small footerlink" href="<?php echo get_option('home'); ?>/archive/">>View all posts...</a>
         </div>
 
         <?php else : ?>
@@ -110,7 +110,7 @@ query_posts($args);
                 <?php if ( function_exists ( dynamic_sidebar('Sidebar2') ) ) : dynamic_sidebar ('Sidebar2'); endif; ?>
             </ul>
             <div class="mal">
-                <a href="/past-events" class="viewall tar">View past events...</a>
+                <a href="<?php echo get_option('home'); ?>/past-events/" class="viewall tar">View past events...</a>
             </div>
         </div>
 </div><!-- end col-4 sidebar -->
