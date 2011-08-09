@@ -174,7 +174,7 @@
                         {{#list}}
                         <li class="list-el list-el-hz">
                             <a href="{{profileUrl}}" class="alternative2">
-                                <img src="{{imgSrc}}" alt="{{title}}"><br>
+                                <img src="{{imgSrc}}" alt="{{title}}" height="240" width="160"><br>
                                 <strong>{{title}}</strong><br>
                                 {{subtitle}}
                             </a>
@@ -185,14 +185,15 @@
             </div>
             {{/block5}}
         </div>
-        <div class="row" id="contact-form">
+        <div class="row" id="contact-form" name="contact-form">
             <div class="mod mod-skin1">
                 <div class="bd">
                     <div class="col-6">
                         <h2 class="h3 line business">Contact</h2>
+                        <p id="thanks" name="thanks"><span style="display: none;">Thank you for contacting us! We will contact you within two business days.</span></p>
                         <form class="uni-form mbl" action="https://service.capsulecrm.com/service/newlead" method="post">
                             <input type="hidden" name="FORM_ID" value="bbe497f7-1a5e-434e-876e-20dddcc754f7">
-                            <input type="hidden" name="COMPLETE_URL" value="http://uxebu.com/contact/thanks">
+                            <input type="hidden" name="COMPLETE_URL" value="http://uxebu.com/#thanks">
                             <input type="hidden" name="TAG" value="www">
 
                             <div class="ctrl-holder name">

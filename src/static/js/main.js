@@ -146,6 +146,10 @@
             currentIndex = index;
         }
 
+        // Display thanks field if we get returned from form submission
+        if (window.location.hash.indexOf('thanks') > -1){
+            dojo.query('#thanks span').style('display', 'inline');
+        }
     }
 
     function initTeam(){
@@ -168,5 +172,3 @@
         initPage();
     });
 }();
-
-
