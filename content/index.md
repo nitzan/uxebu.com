@@ -17,12 +17,12 @@ Want to travel the [JavaScript universe](http://uxebu.com/blog/2011/02/10/travel
 * * *
 
 Meet the uxebu crew at
-[JsConf](http://jeconf.eu), [DojoConf](http://dojoconf.com) and [FullFrontal](http://2011.full-frontal.org)
+[JsConf](http://jsconf.eu), [DojoConf](http://dojoconf.com) and [FullFrontal](http://2011.full-frontal.org)
 
 We are uxebu
 ============
 
-We have proven that latest web technologies can run on any platform. We can help your (mobile) web app to go where no other web app has gone before:  
+We have proven that latest web technologies can run on any platform. We can help your (mobile) web app to go where no other web app has gone before:
 To any app store in the world!
 
 We are pioneers. We do stuff that others just can’t do, because it has never been done before. R&D is essential for our daily work.
@@ -84,52 +84,52 @@ uxebu team
 
 * [Tobias von Klipstein](team/klipstein.html)
   Co-Founder
-  ![Tobias von Klipstein](media/img/team/klipstein-bw.jpg)
+  ![Tobias von Klipstein](media/img/team/klipstein.jpg)
 
 * [Wolfram Kriesing](team/kriesing.html)
   Co-Founder
-  ![Alttext](media/img/team/kriesing-bw.jpg)
+  ![Alttext](media/img/team/kriesing.jpg)
 
 * [Nikolai Onken](team/onken.html)
   Co-Founder
-  ![Alt text](media/img/team/onken-bw.jpg)
+  ![Alt text](media/img/team/onken.jpg)
 
 * [David Aurelio](team/aurelio.html)
   JavaScript Developer
-  ![Alt text](media/img/team/aurelio-bw.jpg)
+  ![Alt text](media/img/team/aurelio.jpg)
 
 * [Jens Arps](team/arps.html)
   JavaScript Developer
-  ![Alt text](media/img/team/arps-bw.jpg)
+  ![Alt text](media/img/team/arps.jpg)
 
 * [Tobias Schneider](team/schneider.html)
   JavaScript Developer
-  ![Alt text](media/img/team/schneider-bw.jpg)
+  ![Alt text](media/img/team/schneider.jpg)
 
 * [Stephan Seidt](team/seidt.html)
   JavaScript Developer
-  ![Alt text](media/img/team/seidt-bw.jpg)
+  ![Alt text](media/img/team/seidt.jpg)
 
 * [Peter van der Zee](team/zee.html)
   JavaScript Developer
-  ![Alt text](media/img/team/zee-bw.jpg)
+  ![Alt text](media/img/team/zee.jpg)
 
 * [John-David Dalton](team/dalton.html)
   JavaScript Developer
-  ![Alt text](media/img/team/dalton-bw.jpg)
+  ![Alt text](media/img/team/dalton.jpg)
 
 Address & Phone
 ===============
 
 uxebu was founded in 2008 and based in Munich, Amsterdam and Palo Alto
 
-**uxebu Consulting Ltd. & Co. KG**  
-Richard-Strauss-Str. 21  
-81677 München  
-Germany  
+**uxebu Consulting Ltd. & Co. KG**
+Richard-Strauss-Str. 21
+81677 München
+Germany
 
-**Phone: [+49 89 122 219 626](tel:+4989122219626)**  
-Fax: +49 89 122 219 626 - 8  
+**Phone: [+49 89 122 219 626](tel:+4989122219626)**
+Fax: +49 89 122 219 626 - 8
 E-Mail: [contact @ uxebu.com](mailto:%63%6F%6E%74%61%63%74%40%75%78%65%62%75%2E%63%6F%6D)
 
 [Impressum / Legal](/legal.html)
