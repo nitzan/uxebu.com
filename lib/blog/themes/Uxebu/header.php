@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="/static/css/style.css" type="text/css" media="all" />
 <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js"></script>
 <script src="/static/js/main.js"></script>
+<script type="text/javascript" src="http://use.typekit.com/vlx3ppb.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats -->
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />

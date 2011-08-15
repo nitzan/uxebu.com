@@ -20,7 +20,7 @@ body {
 /* ====== Elements ====== */
 h1,h2,h3,h4,h5,h6 {
     font-family: ff-din-web-pro;
-    text-shadow: 0px 0px 2px white;
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, .8);
 }
 pre {
     margin:@large-margin;
@@ -321,9 +321,9 @@ a.tag:hover, a.tag:focus, a.tag:visited,
 .sprite-wedge{ background-position: 0 -1110px; width: 21px; height: 10px; }
 
 .icon-before{content:"";.sprite;position:absolute;left:0;}
-.arrow-business{padding-left:33px; position:relative;vertical-align:middle;}
+.arrow-business{padding-left:33px; position:relative;vertical-align:text-bottom;}
 .arrow-business:before{.icon-before;.sprite-arrow_blue;}
-.arrow-geek{padding-left:33px;position:relative;vertical-align:middle;}
+.arrow-geek{padding-left:33px;position:relative;vertical-align:text-bottom;}
 .arrow-geek:before{.icon-before;.sprite-arrow_yellow;}
 .email{padding-left:32px;position:relative;}
 .email:before{.icon-before;.sprite-email;}
@@ -452,7 +452,8 @@ a.tag:hover, a.tag:focus, a.tag:visited,
     }
 
     p {
-        .mhm;
+        .mlm;
+        .mrn;
         .mbm;
         .mtn;
     }
@@ -523,6 +524,11 @@ a.tag:hover, a.tag:focus, a.tag:visited,
         visibility: visible;
         opacity: 1;
     }
+
+    h1 {
+        line-height: 1.2;
+        height: 1em;
+    }
 }
 
 .menu {
@@ -551,6 +557,7 @@ a.tag:hover, a.tag:focus, a.tag:visited,
     display: inline-block;
     .search-input {
         width: 100px;
+        height: 1.3em;
         color: #8F8B88;
         vertical-align: baseline;
         margin-top: 0px;
