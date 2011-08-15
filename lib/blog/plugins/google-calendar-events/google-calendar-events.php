@@ -571,7 +571,7 @@ if ( ! class_exists( 'Google_Calendar_Events' ) ) {
 		function add_styles() {
 			//Don't add styles if on admin screens
 			if( ! is_admin() ) {
-				wp_enqueue_style( 'gce_styles', WP_PLUGIN_URL . '/' . GCE_PLUGIN_NAME . '/css/gce-style.css' );
+//				wp_enqueue_style( 'gce_styles', WP_PLUGIN_URL . '/' . GCE_PLUGIN_NAME . '/css/gce-style.css' );
 
 				$options = get_option( GCE_GENERAL_OPTIONS_NAME );
 
