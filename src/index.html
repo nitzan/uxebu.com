@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <title>uxebu &raquo; home</title>
     {{#useLess}}
-    <link href="static/less/style.less" rel="stylesheet" type="text/less">
+    <link href="static/less/style.less" rel="stylesheet" type="text/less" />
     <script src="static/js/less-1.1.3.min.js"></script>
     {{/useLess}}
     {{^useLess}}
-    <link href="static/css/style.css" rel="stylesheet" type="text/css">
+    <link href="static/css/style.css" rel="stylesheet" type="text/css" />
     {{/useLess}}
     <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js"></script>
     <script src="static/js/ie_detection.js"></script>
@@ -25,7 +25,7 @@
             <div class="mod mod-skin3 no-top-radius">
                 <div class="bd">
                     <div class="col-3">
-                        <h1 style="font-size:1em;margin:5px 25px;"><a href="/"><img alt="uxebu" style="display:inline;vertical-align:text-bottom;" src="static/img/logo_glow_small.png"></a></h1>
+                        <h1 style="font-size:1em;margin:5px 25px;"><a href="/"><img alt="uxebu" style="display:inline;vertical-align:text-bottom;" src="static/img/logo_glow_small.png" /></a></h1>
                     </div>
                     <div class="col-7 menu">
                         <ul class="nav">
@@ -60,9 +60,9 @@
                     </div>
                     <div class="col-2 last">
                         <form class="uni-form mtl search" action="http://www.google.com/search">
-                            <input type="hidden" name="sitesearch" value="uxebu.com">
-                            <input type="hidden" name="domains" value="uxebu.com">
-                            <input type="text" class="search-input mts" name="q" placeholder="Search...">
+                            <input type="hidden" name="sitesearch" value="uxebu.com" />
+                            <input type="hidden" name="domains" value="uxebu.com" />
+                            <input type="text" class="search-input mts" name="q" placeholder="Search..." />
                         </form>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                             {{#list}}
                             <li class="star-business bullet">
                                 <h4>{{{header}}}</h4>
-                                <p>{{{text}}}<p>
+                                <p>{{{text}}}</p>
                             </li>
                             {{/list}}
                         </ul>
@@ -153,7 +153,7 @@
                             {{#list}}
                             <li class="box-geek bullet">
                                 <h4>{{{header}}}</h4>
-                                <p>{{{text}}}<p>
+                                <p>{{{text}}}</p>
                             </li>
                             {{/list}}
                         </ul>
@@ -174,8 +174,8 @@
                         {{#list}}
                         <li class="list-el list-el-hz">
                             <a href="{{profileUrl}}" class="alternative2">
-                                <img src="{{imgSrc}}" alt="{{title}}" height="240" width="160"><br>
-                                <strong>{{title}}</strong><br>
+                                <img src="{{imgSrc}}" alt="{{title}}" height="240" width="160" /><br />
+                                <strong>{{title}}</strong><br />
                                 {{subtitle}}
                             </a>
                         </li>
@@ -192,28 +192,28 @@
                         <h2 class="h3 line business">Contact</h2>
                         <p id="thanks" name="thanks"><span style="display: none;">Thank you for contacting us! We will contact you within two business days.</span></p>
                         <form class="uni-form mbl" action="https://service.capsulecrm.com/service/newlead" method="post">
-                            <input type="hidden" name="FORM_ID" value="bbe497f7-1a5e-434e-876e-20dddcc754f7">
-                            <input type="hidden" name="COMPLETE_URL" value="http://uxebu.com/#thanks">
-                            <input type="hidden" name="TAG" value="www">
+                            <input type="hidden" name="FORM_ID" value="bbe497f7-1a5e-434e-876e-20dddcc754f7" />
+                            <input type="hidden" name="COMPLETE_URL" value="http://uxebu.com/#thanks" />
+                            <input type="hidden" name="TAG" value="www" />
 
                             <div class="ctrl-holder name">
                                 <label for="id_FIRST_NAME">Your name</label>
                                 <div class="col-6">
                                     <div class="mrl">
-                                        <input id="id_FIRST_NAME" required="required" type="text" name="FIRST_NAME" maxlength="50" class="text-input large" placeholder="First">
+                                        <input id="id_FIRST_NAME" required="required" type="text" name="FIRST_NAME" maxlength="50" class="text-input large" placeholder="First" />
                                     </div>
                                 </div>
                                 <div class="col-6 last">
-                                    <input id="id_LAST_NAME" required="required" type="text" name="LAST_NAME" maxlength="50" class="text-input large" placeholder="Last">
+                                    <input id="id_LAST_NAME" required="required" type="text" name="LAST_NAME" maxlength="50" class="text-input large" placeholder="Last" />
                                 </div>
                             </div>
                             <div class="ctrl-holder">
                                 <label for="id_EMAIL">Email address</label>
-                                <input required="required" type="text" name="EMAIL" id="id_EMAIL" class="text-input large" placeholder="your@email.com">
+                                <input required="required" type="text" name="EMAIL" id="id_EMAIL" class="text-input large" placeholder="your@email.com" />
                             </div>
                             <div class="ctrl-holder">
                                 <label for="id_PHONE">Phone number</label>
-                                <input type="text" name="PHONE" id="id_PHONE" class="text-input large" placeholder="+1 123 456 789">
+                                <input type="text" name="PHONE" id="id_PHONE" class="text-input large" placeholder="+1 123 456 789" />
                             </div>
                             <div class="ctrl-holder">
                                 <label for="id_NOTE">How can we help?</label>
