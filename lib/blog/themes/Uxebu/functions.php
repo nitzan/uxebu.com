@@ -60,7 +60,7 @@ function uxebu_comment($comment, $args, $depth) {
         <div class="bd">
             <?php comment_text() ?>
                 <?php if ($comment->comment_approved == '0') : ?>
-                    <em><?php _e('Your comment is awaiting moderation.') ?></em>
+                    <em class="mhx"><?php _e('Your comment is awaiting moderation.') ?></em>
                 <?php endif; ?>
             </div>
         <div class="ft">
