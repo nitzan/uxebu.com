@@ -37,13 +37,63 @@ All deployable content lies in ./release
 Content editing
 ---------------
 
-All content lies in the ./content directory.  
+All content lies in the ./content directory.
+Within your Markdown document, blocks which get passed to different content handlers have to be seperated by h1 headers:
+
+```markdown
+This is block one
+=================
+
+Some text of block one
+
+This is block two
+=================
+
+Some text of block two.
+```
+
 Make sure that you write the content as it is required by the containing box.
 
 Template editing
 ----------------
 
-Website templates are located in ./src
+Website templates are located in ./src and can use the Mustache template syntax.
+To achieve mapping of markdown blocks to template blocks you have to let the build tool know that a certain Mustache block should map to a Markdown block:
+
+```html
+{{#block0}}
+{{!simpleBox}}
+<div class="col-6 last">
+    <h2 class="h3 line business mbx">{{title}}</h2>
+    {{{content}}}
+    <div class="ft">
+        <p><a href="{{link}}" class="alternative">{{{linkContent}}}</a></p>
+    </div>
+</div>
+{{/block0}}
+```
+
+The block number maps directly to the position of the block in the Markdown definition (this might be confusing and prune to errors but so far we have not found a better solution)
+In the example above for instance we want to use the simpleBox renderer which returns an object with a title, content, link and linkContent properties.
+The corresponding Markdown content in this case looks like following:
+
+```markdown
+Address & Phone
+===============
+
+uxebu was founded in 2008 and based in Munich, Amsterdam and Palo Alto
+
+**uxebu Consulting Ltd. & Co. KG**  
+Richard-Strauss-Str. 21  
+81677 München  
+Germany
+
+**Phone: [+49 89 122 219 626](tel:+4989122219626)**  
+Fax: +49 89 122 219 626 - 8  
+E-Mail: [contact @ uxebu.com](mailto:%63%6F%6E%74%61%63%74%40%75%78%65%62%75%2E%63%6F%6D)
+
+[Impressum / Legal](/legal.html)
+```
 
 Mapping of Markdown and HTML templates
 --------------------------------------
