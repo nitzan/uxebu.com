@@ -9,7 +9,11 @@ Building HTML
 
 1. node build.js
   
-    1.1 If you want to kick of a post processor, use the -p arg with the path to the processor
+    1.1 Kick of the post processor:
+
+```javascript
+node build.js -p ./path/processor.js
+```
 
 2. Deployable content lies in ./release
 
