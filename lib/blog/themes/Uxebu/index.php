@@ -96,7 +96,7 @@ query_posts($args);
                                 ?>
         <?php endwhile; ?>
         <div class="tar mal">
-            <a class="font-small footerlink" href="<?php echo get_option('home'); ?>/archive/">>View all posts...</a>
+            <a class="font-small footerlink" href="<?php echo get_option('home'); ?>/archive/">View all posts...</a>
         </div>
 
         <?php else : ?>
