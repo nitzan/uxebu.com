@@ -8,8 +8,20 @@ Building HTML
 -------------
 
 1. node build.js
-  
-    1.1 Kick of the post processor:
+
+    - Enable verbose mode
+
+```javascript
+node build.js -v
+```
+
+    - Enable debugging
+
+```javascript
+node build.js -d
+```
+
+    - Kick of the post processor:
 
 ```javascript
 node build.js -p ./path/processor.js
