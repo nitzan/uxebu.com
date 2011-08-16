@@ -4,10 +4,14 @@ uxebu.com
 This is the node/markdown based HTML generator for uxebu.com  
 Content is maintained through Markdown files which map to HMTL templates.
 
-Building HTML
--------------
+How to build a new site
+-----------------------
 
-1. node build.js
+**building**
+
+```javascript
+node build.js
+```
 
 **verbose mode**
 
