@@ -46,6 +46,6 @@ exports.printValues = function(){
     console.log('');
     console.log('  Debug mode (-d)\t\t' + isDebug);
     console.log('  Verbose mode (-v)\t\t' + isVerbose);
-    console.log('  Post processor (-p) filename\t\t' + postProcessor);
+    console.log('  Post processor (-p filename) \t' + postProcessor);
     console.log('');
 }
