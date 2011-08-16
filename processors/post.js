@@ -7,7 +7,7 @@ var path = require('path');
 
 appUtil.statusLog('Post processor\t' + 'Copying licensed content');
 
-var cmd = 'cp -r ' + path.join(__dirname, '../../', 'uxebu.com-cdn') + ' ' + appConfig.releaseDir + '/static/cdn';
+var cmd = 'cp -r ' + path.join(__dirname, '../../', 'uxebu.com-data') + ' ' + appConfig.releaseDir + '/static/cdn';
 
 exec(cmd,
     function (err, stdout, stderr) {
