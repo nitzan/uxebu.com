@@ -69,7 +69,11 @@ clean(function(){
 
     if (appConfig.postProcessor){
         console.log('Firing up post processor');
-        require(appConfig.postProcessor);
+        try{
+            require(appConfig.postProcessor);
+        }catch(e){
+            appUtil.statusLog('ERROR in post processor\t Can\'t include ' + appConfig.postProcessor + '. Make sure the path is correct');
+        }
     }
 });
 
