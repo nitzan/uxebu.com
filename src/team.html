@@ -17,6 +17,17 @@
     <script src="../static/js/main.js"></script>
     <script type="text/javascript" src="http://use.typekit.com/vlx3ppb.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-4832590-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 </head>
 <body id="team">
     <div class="container">
@@ -183,7 +194,7 @@
                         {{/block1}}
                     </div>
                 </div>
-                <div class="mod mod-skin1">
+                <div class="mod mod-skin1 text">
                     {{#block2}}
                     {{!twitterBox}}
                     <div class="hd"><h2 class="h5 twitter"><a href="http://twitter.com/{{username}}" target="_blank">@{{username}}:</a></h2></div>
