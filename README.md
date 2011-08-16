@@ -9,20 +9,20 @@ Building HTML
 
 1. node build.js
 
-    - Enable verbose mode
+**verbose mode**
 
 ```javascript
 node build.js -v
 ```
 
 
-    - Enable debugging
+**debugging mode**
 
 ```javascript
 node build.js -d
 ```
 
-    - Kick of the post processor:
+**kicking of the post processor**
 
 ```javascript
 node build.js -p ./path/processor.js
