@@ -34,6 +34,17 @@ node build.js -p ./path/processor.js
 
 All deployable content lies in ./release
 
+Content editing
+---------------
+
+All content lies in the ./content directory.  
+Make sure that you write the content as it is required by the containing box.
+
+Template editing
+----------------
+
+Website templates are located in ./src
+
 Mapping of Markdown and HTML templates
 --------------------------------------
 
@@ -48,14 +59,3 @@ var mapping = exports.mapping = {
 ```
 
 This would now result in the team.html file in the src directory to be the template for all Markdown files within the team directory in the content directory.
-
-Content editing
----------------
-
-All content lies in the ./content directory.  
-Make sure that you write the content as it is required by the containing box.
-
-Template editing
-----------------
-
-Website templates are located in ./src
