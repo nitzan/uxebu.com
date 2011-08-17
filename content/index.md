@@ -121,7 +121,7 @@ uxebu team
 Address & Phone
 ===============
 
-uxebu was founded in 2008 and based in Munich, Amsterdam and Palo Alto
+uxebu was founded in 2008 and is based in Munich, Amsterdam and Palo Alto.
 
 **uxebu Consulting Ltd. & Co. KG**  
 Richard-Strauss-Str. 21  
