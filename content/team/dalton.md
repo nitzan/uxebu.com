@@ -1,7 +1,7 @@
 John-David Dalton
 =================
 
-JavaScript Developer
+JavaScript developer
 --------------------
 
 [John David Dalton](../media/img/team/dalton.jpg)
