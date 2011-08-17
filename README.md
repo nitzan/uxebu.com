@@ -4,6 +4,48 @@ uxebu.com
 This is the node/markdown based HTML generator for uxebu.com  
 Content is maintained through Markdown files which map to HMTL templates.
 
+Quickstart
+----------
+
+**1. Creating the HTML Template**
+
+Create a index.html HTML template and put it into the src directory
+
+```html
+<doctype html>
+<html>
+    <head>
+        <title>Ohai</title>
+    </head>
+    <body>
+        {{#block0}}
+        {{!simpleBox}}
+            <h1>{{title}}</h1>
+            {{{content}}}
+            <p><a href="{{link}}" class="alternative">{{{linkContent}}}</a></p>
+        </div>
+        {{/block0}}        
+    </body>
+</html>
+```
+
+You see that we are using the simpleBox renderer in this block which essentially means that we expect a certain type of markdown for this section.
+
+**2. Creating the Markdown content**
+
+Now create a Markdown file with the same name as the HTML file in the content directory (index.md)
+
+```markdown
+Welcome folks
+=============
+
+This is a demo of our super simple Markdown to HTML converter.
+
+[Visit our blog](http://uxebu.com/blog)
+```
+
+After you have done this you can move on to building the site.
+
 How to build a new site
 -----------------------
 
@@ -34,6 +76,23 @@ node build.js -p ./path/processor.js
 
 All deployable content lies in ./release
 
+Static content
+--------------
+
+The build tool currently supports three types of static content:
+
+1. src/static
+
+Everything within this directory gets copied over to the release directory. Use this directory for JS, CSS and other stuff which is independent from your content
+
+2. content/media
+
+This is all the static content which is related to the actual content of your site. For example pictures of your team would land in here.
+
+3. content/favicon.ico
+
+The build script copies the favicon from the content dir to the release dir.
+
 Content editing
 ---------------
 
@@ -53,6 +112,14 @@ Some text of block two.
 ```
 
 Make sure that you write the content as it is required by the containing box.
+
+You can find the available Markdown to HTML blocks in:
+
+blocks/block.js
+
+If you want to add a custom block, simply add it do the block.js and reference it in your template using a comment such as:
+
+{{!simpleBox}}
 
 Template editing
 ----------------
