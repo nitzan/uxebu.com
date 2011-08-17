@@ -81,15 +81,15 @@ Static content
 
 The build tool currently supports three types of static content:
 
-1. src/static
+- src/static
 
 Everything within this directory gets copied over to the release directory. Use this directory for JS, CSS and other stuff which is independent from your content
 
-2. content/media
+- content/media
 
 This is all the static content which is related to the actual content of your site. For example pictures of your team would land in here.
 
-3. content/favicon.ico
+- content/favicon.ico
 
 The build script copies the favicon from the content dir to the release dir.
 
